@@ -106,7 +106,7 @@
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303113401.png">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303121655.png">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/sp170303_140247.png">
-<meta property="og:updated_time" content="2017-03-03T08:04:31.079Z">
+<meta property="og:updated_time" content="2017-03-03T09:27:55.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用 Github 和 hexo 搭建自己的博客">
 <meta name="twitter:description" content="为什么要搭建自己的博客？
@@ -385,7 +385,7 @@
 </ul>
 <hr>
 <p>我的系统 : windows 10 x64 （win7 也可以）</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>进入<a href="https://github.com/" target="_blank" rel="external">Github</a>点击<a href="https://github.com/new" target="_blank" rel="external">新建库（New repository）</a> 记住红框2的内容：username<br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303113401.png" alt="1"><br>在创建页面填入域名，域名格式：username.github.io (所以我需要填写为 zealotce.github.io 网址好像不区分大小写的)<br>具体设置如图所示填写就好了。到此github网页部分完成。<br>打开安装好的git ，这里使用git bash（git客户端的命令行工具，比界面版（GUI）好用）。<br>执行命令1：<code>git global user.name [username]</code><br>比如我的就是：<code>git global user.name zealotce</code> 请不要使用这个，仅作为示例。<br>执行命令2：<code>git global user.email [你的github邮箱名]</code><br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303121655.png" alt="2 "><br>执行命令3：<code>ssh-keygen -t rsa -C</code> 然后一直enter 3下（这里会问你是否需要密码，是否确定等，略过就好，不用太操心）<br>然后在 C:\Users\这里是你的用户名.ssh 下找到文件：id_rsa.pub 用记事本打开，复制里面的内容。<br>回到 <a href="https://github.com/settings/ssh" target="_blank" rel="external">GitHub设置</a>，Add SSH key，粘贴进去。<br>到此github部分结束</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>进入<a href="https://github.com/" target="_blank" rel="external">Github</a>点击<a href="https://github.com/new" target="_blank" rel="external">新建库（New repository）</a> 记住红框2的内容：username<br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303113401.png" alt="1"><br>在创建页面填入域名，域名格式：username.github.io (所以我需要填写为 zealotce.github.io 网址好像不区分大小写的)<br>具体设置如图所示填写就好了。到此github网页部分完成。<br>打开安装好的git ，这里使用git bash（git客户端的命令行工具，比界面版（GUI）好用）。<br>执行命令1：<code>git global --config user.name [username]</code><br>比如我的就是：<code>git global --config user.name zealotce</code> 请不要使用这个，仅作为示例。<br>执行命令2：<code>git global user.email [你的github邮箱名]</code><br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303121655.png" alt="2 "><br>执行命令3：<code>ssh-keygen -t rsa -C</code> 然后一直enter 3下（这里会问你是否需要密码，是否确定等，略过就好，不用太操心）<br>然后在 C:\Users\这里是你的用户名.ssh 下找到文件：id_rsa.pub 用记事本打开，复制里面的内容。<br>回到 <a href="https://github.com/settings/ssh" target="_blank" rel="external">GitHub设置</a>，Add SSH key，粘贴进去。<br>到此github部分结束</p>
 <h2 id="node-js-amp-hexo-amp-建站"><a href="#node-js-amp-hexo-amp-建站" class="headerlink" title="node.js &amp; hexo &amp; 建站"></a>node.js &amp; hexo &amp; 建站</h2><p>将nodejs的安装包下载安装好后，在任意位置创建一个文件夹，快捷键<code>shift + 鼠标右键</code> 在此处打开CMD窗口<br>输入指令1：<code>npm install -g hexo-cli</code><br>这里会比比较慢，等等就好。完成后继续输入<br>输入指令2：<code>hexo init</code><br>输入指令3：<code>hexo install</code><br>完成后会有：_config.yml、package.json等等的文件和文件夹。</p>
 <p>这样准备工作基本都结束了，我们来试一下是不是可以用了。<br>输入指令1：<code>hexo generate</code><br>输入指令2：<code>hexo server</code><br>这样本地已经可以浏览了，不信你可以去<a href="localhost:4000" target="_blank" rel="external">localhost:4000</a> 查看。你会看到一份hello world 的文章，这个文章是放在你刚刚创建的那个文件夹的 source/_posts 这个文件夹下。</p>
 <p>####部署到网络上<br>在你创建的文件夹下找到 _config.yml 并打开，修改最后一段。第二段的 <strong>zealotCE</strong> 请改成你的。<br>注意输入这些的时候一定要是英文，且冒号之后必须有空格。不然你输入命令的时候会没有反应<br><img src="http://om80aljc8.bkt.clouddn.com/sp170303_140247.png" alt=""></p>
@@ -394,6 +394,12 @@
 <p>至此建站完成</p>
 <p>#后记<br>如果你以后要写文章，在cmd 输入命令 <code>hexo new &quot;新文章&quot;</code> 然后去source/_post 文件夹下就可以看到一个 新文章.md 的文件，会有一点内容：<br>title-你的文章名字，不填写就是没有，date-编辑时间，tags-标签<br>比如你现在看到的这篇是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: 利用 Github 和 hexo 搭建自己的博客</div><div class="line">date: 2017-03-03 10:58:33</div><div class="line">tags: Github hexo</div></pre></td></tr></table></figure></p>
 <p>接下来你就可以按照 <a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/1.html" target="_blank" rel="external">MarkDown</a> 的方式写博客了。<br>hexo文档地址：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hexo文档</a><br>如果你喜欢我用的主题：<a href="http://theme-next.iissnan.com/getting-started.html#select-scheme" target="_blank" rel="external">Next主题</a><br>git 教程，我推荐廖雪峰老师的：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">git 教程</a></p>
+<blockquote class="blockquote-center">When you are old</blockquote>
+
+<blockquote>
+<p>最近访客</p>
+</blockquote>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
       
     </div>
 
@@ -768,6 +774,15 @@
 
 
   
-
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+    <script type="text/javascript">
+      jQuery(function() {          
+          jQuery("img").lazyload({
+            placeholder:"http://www.arao.me/loading.gif",
+              effect:"fadeIn"
+            });
+          });
+    </script>
+	
 </body>
 </html>
