@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Github hexo,">
+  <meta name="keywords" content="GitHub,hexo,">
 
 
 
@@ -89,8 +89,7 @@
 
 
 
-<meta name="description" content="#为什么要搭建自己的博客？
-
+<meta name="description" content="为什么要搭建自己的博客？
 想自己练练手。
 不想遇到被管理员删帖的事情,至少有一个自己保底的地方。
 随意，这里可以和大家很随意的分享一些东西。
@@ -99,8 +98,7 @@
 <meta property="og:title" content="利用 Github 和 hexo 搭建自己的博客">
 <meta property="og:url" content="http://yoursite.com/2017/03/03/first-article/index.html">
 <meta property="og:site_name" content="zealotCE">
-<meta property="og:description" content="#为什么要搭建自己的博客？
-
+<meta property="og:description" content="为什么要搭建自己的博客？
 想自己练练手。
 不想遇到被管理员删帖的事情,至少有一个自己保底的地方。
 随意，这里可以和大家很随意的分享一些东西。
@@ -108,11 +106,10 @@
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303113401.png">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303121655.png">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/sp170303_140247.png">
-<meta property="og:updated_time" content="2017-03-03T07:10:48.112Z">
+<meta property="og:updated_time" content="2017-03-03T08:04:31.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用 Github 和 hexo 搭建自己的博客">
-<meta name="twitter:description" content="#为什么要搭建自己的博客？
-
+<meta name="twitter:description" content="为什么要搭建自己的博客？
 想自己练练手。
 不想遇到被管理员删帖的事情,至少有一个自己保底的地方。
 随意，这里可以和大家很随意的分享一些东西。
@@ -317,6 +314,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -352,35 +371,29 @@
       
 
       
-        <p>#为什么要搭建自己的博客？</p>
-<ul>
+        <h1 id="为什么要搭建自己的博客？"><a href="#为什么要搭建自己的博客？" class="headerlink" title="为什么要搭建自己的博客？"></a>为什么要搭建自己的博客？</h1><ul>
 <li>想自己练练手。</li>
 <li>不想遇到被管理员删帖的事情,至少有一个自己保底的地方。</li>
 <li>随意，这里可以和大家很随意的分享一些东西。</li>
 <li>谁让知乎一直不支持 Markdown 呢？</li>
 </ul>
 <a id="more"></a>
-<p>#搭建博客需要条件</p>
-<ul>
+<h1 id="搭建博客需要条件"><a href="#搭建博客需要条件" class="headerlink" title="搭建博客需要条件"></a>搭建博客需要条件</h1><ul>
 <li><a href="https://www.github.com" target="_blank" rel="external">Github帐号</a></li>
 <li><a href="https://github.com/waylau/git-for-win" target="_blank" rel="external">下载git客户端</a>如果不能下载可以在这里下载<a href="https://pan.baidu.com/s/1Hkewm" target="_blank" rel="external">百度云</a></li>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">下载node.js</a></li>
 </ul>
 <hr>
 <p>我的系统 : windows 10 x64 （win7 也可以）</p>
-<p>#步骤</p>
-<h2 id="一、GitHub"><a href="#一、GitHub" class="headerlink" title="一、GitHub"></a>一、GitHub</h2><p>进入<a href="https://github.com/" target="_blank" rel="external">Github</a>点击<a href="https://github.com/new" target="_blank" rel="external">新建库（New repository）</a> 记住红框2的内容：username<br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303113401.png" alt="1"><br>在创建页面填入域名，域名格式：username.github.io (所以我需要填写为 zealotce.github.io 网址好像不区分大小写的)<br>具体设置如图所示填写就好了。到此github网页部分完成。<br>打开安装好的git ，这里使用git bash（git客户端的命令行工具，比界面版（GUI）好用）。<br>执行命令1：<code>git global user.name [username]</code><br>比如我的就是：<code>git global user.name zealotce</code> 请不要使用这个，仅作为示例。<br>执行命令2：<code>git global user.email [你的github邮箱名]</code><br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303121655.png" alt="2 "><br>执行命令3：<code>ssh-keygen -t rsa -C</code> 然后一直enter 3下（这里会问你是否需要密码，是否确定等，略过就好，不用太操心）<br>然后在 C:\Users\这里是你的用户名.ssh 下找到文件：id_rsa.pub 用记事本打开，复制里面的内容。<br>回到 <a href="https://github.com/settings/ssh" target="_blank" rel="external">GitHub设置</a>，Add SSH key，粘贴进去。<br>到此github部分结束</p>
-<h2 id="node-js-amp-hexo"><a href="#node-js-amp-hexo" class="headerlink" title="node.js &amp; hexo"></a>node.js &amp; hexo</h2><p>将nodejs的安装包下载安装好后，在任意位置创建一个文件夹，快捷键<code>shift + 鼠标右键</code> 在此处打开CMD窗口<br>输入指令1：<code>npm install -g hexo-cli</code><br>这里会比比较慢，等等就好。完成后继续输入<br>输入指令2：<code>hexo init</code><br>输入指令3：<code>hexo install</code><br>完成后会有：_config.yml、package.json等等的文件和文件夹。</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>进入<a href="https://github.com/" target="_blank" rel="external">Github</a>点击<a href="https://github.com/new" target="_blank" rel="external">新建库（New repository）</a> 记住红框2的内容：username<br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303113401.png" alt="1"><br>在创建页面填入域名，域名格式：username.github.io (所以我需要填写为 zealotce.github.io 网址好像不区分大小写的)<br>具体设置如图所示填写就好了。到此github网页部分完成。<br>打开安装好的git ，这里使用git bash（git客户端的命令行工具，比界面版（GUI）好用）。<br>执行命令1：<code>git global user.name [username]</code><br>比如我的就是：<code>git global user.name zealotce</code> 请不要使用这个，仅作为示例。<br>执行命令2：<code>git global user.email [你的github邮箱名]</code><br><img src="http://om80aljc8.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170303121655.png" alt="2 "><br>执行命令3：<code>ssh-keygen -t rsa -C</code> 然后一直enter 3下（这里会问你是否需要密码，是否确定等，略过就好，不用太操心）<br>然后在 C:\Users\这里是你的用户名.ssh 下找到文件：id_rsa.pub 用记事本打开，复制里面的内容。<br>回到 <a href="https://github.com/settings/ssh" target="_blank" rel="external">GitHub设置</a>，Add SSH key，粘贴进去。<br>到此github部分结束</p>
+<h2 id="node-js-amp-hexo-amp-建站"><a href="#node-js-amp-hexo-amp-建站" class="headerlink" title="node.js &amp; hexo &amp; 建站"></a>node.js &amp; hexo &amp; 建站</h2><p>将nodejs的安装包下载安装好后，在任意位置创建一个文件夹，快捷键<code>shift + 鼠标右键</code> 在此处打开CMD窗口<br>输入指令1：<code>npm install -g hexo-cli</code><br>这里会比比较慢，等等就好。完成后继续输入<br>输入指令2：<code>hexo init</code><br>输入指令3：<code>hexo install</code><br>完成后会有：_config.yml、package.json等等的文件和文件夹。</p>
 <p>这样准备工作基本都结束了，我们来试一下是不是可以用了。<br>输入指令1：<code>hexo generate</code><br>输入指令2：<code>hexo server</code><br>这样本地已经可以浏览了，不信你可以去<a href="localhost:4000" target="_blank" rel="external">localhost:4000</a> 查看。你会看到一份hello world 的文章，这个文章是放在你刚刚创建的那个文件夹的 source/_posts 这个文件夹下。</p>
 <p>####部署到网络上<br>在你创建的文件夹下找到 _config.yml 并打开，修改最后一段。第二段的 <strong>zealotCE</strong> 请改成你的。<br>注意输入这些的时候一定要是英文，且冒号之后必须有空格。不然你输入命令的时候会没有反应<br><img src="http://om80aljc8.bkt.clouddn.com/sp170303_140247.png" alt=""></p>
 <p>输入命令1：<code>hexo generate</code><br>输入命令2：<code>hexo deploy</code><br>你会看到弹出一大段东西，最后会提示 [info] Deploy done: git  这样就对了<br>你上你的网站： username.github.io 就可以看到了，username换成你的。</p>
 <p>可能的问题：<br>输入<code>hexo deploy</code> 时没有任何反应，请主意是_config.yml 最后否填写了空格。</p>
 <p>至此建站完成</p>
-<p>#后记<br>如果你以后要写文章，在cmd 输入命令 <code>hexo new &quot;新文章&quot;</code> 然后去source/_post 文件夹下就可以看到一个 新文章.md 的文件，会有一点内容：<br>title-你的文章名字，不填写就是没有，date-编辑时间，tags-标签<br>比如你现在看到的这篇是：</p>
-<blockquote>
-<p>title: 利用 Github 和 hexo 搭建自己的博客<br>date: 2017-03-03 10:58:33<br>tags: Github hexo </p>
-</blockquote>
-<p>接下来你就可以按照 <a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/1.html" target="_blank" rel="external">MarkDown</a> 的方式写博客了。<br>hexo文档地址：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a><br>如果你喜欢我用的主题：<a href="http://theme-next.iissnan.com/getting-started.html#select-scheme" target="_blank" rel="external">Next主题</a><br>git 教程，我推荐廖雪峰老师的：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">git 教程</a></p>
+<p>#后记<br>如果你以后要写文章，在cmd 输入命令 <code>hexo new &quot;新文章&quot;</code> 然后去source/_post 文件夹下就可以看到一个 新文章.md 的文件，会有一点内容：<br>title-你的文章名字，不填写就是没有，date-编辑时间，tags-标签<br>比如你现在看到的这篇是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: 利用 Github 和 hexo 搭建自己的博客</div><div class="line">date: 2017-03-03 10:58:33</div><div class="line">tags: Github hexo</div></pre></td></tr></table></figure></p>
+<p>接下来你就可以按照 <a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/1.html" target="_blank" rel="external">MarkDown</a> 的方式写博客了。<br>hexo文档地址：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hexo文档</a><br>如果你喜欢我用的主题：<a href="http://theme-next.iissnan.com/getting-started.html#select-scheme" target="_blank" rel="external">Next主题</a><br>git 教程，我推荐廖雪峰老师的：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">git 教程</a></p>
       
     </div>
 
@@ -403,7 +416,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Github-hexo/" rel="tag"># Github hexo</a>
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
         </div>
       
@@ -504,11 +519,18 @@
           
 
           
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -561,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、GitHub"><span class="nav-number">1.</span> <span class="nav-text">一、GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node-js-amp-hexo"><span class="nav-number">2.</span> <span class="nav-text">node.js & hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要搭建自己的博客？"><span class="nav-number">1.</span> <span class="nav-text">为什么要搭建自己的博客？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建博客需要条件"><span class="nav-number">2.</span> <span class="nav-text">搭建博客需要条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub"><span class="nav-number">3.1.</span> <span class="nav-text">GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node-js-amp-hexo-amp-建站"><span class="nav-number">3.2.</span> <span class="nav-text">node.js & hexo & 建站</span></a></li></ol></li></ol></div>
             
 
           </div>
