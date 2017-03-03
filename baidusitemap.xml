@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/03/%E6%9C%AA%E6%9D%A5%E4%BC%9A%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9/</loc>
+    <lastmod>2017-03-03T07:01:48.278Z</lastmod>
+    <data>
+        <display>
+        <title>未来会更新的内容</title>
+        <pubTime>2017-03-03T06:57:01.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/03/first-article/</loc>
+    <lastmod>2017-03-03T06:25:08.008Z</lastmod>
+    <data>
+        <display>
+        <title>利用 Github 和 hexo 搭建自己的博客</title>
+        <pubTime>2017-03-03T02:58:33.000Z</pubTime>
+        
+        <tag>Github hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
