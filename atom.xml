@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-05T10:53:31.064Z</updated>
+  <updated>2017-03-05T10:58:42.420Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/04/%E4%B8%80%E4%BA%9Bmarkdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
     <id>http://yoursite.com/2017/03/04/一些markdown常用语法/</id>
     <published>2017-03-04T10:38:37.000Z</published>
-    <updated>2017-03-05T10:53:31.064Z</updated>
+    <updated>2017-03-05T10:58:42.420Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一些-Markdown-常用语法"><a href="#一些-Markdown-常用语法" class="headerlink" title="一些 Markdown 常用语法"></a>一些 Markdown 常用语法</h1><blockquote>
 <p>以前用Word写东西，总是要拿鼠标各种修改格式什么的真的好麻烦，直到我遇到了Markdown。</p>
@@ -31,8 +31,10 @@
 <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>[文字](url)</p>
 <h3 id="放图"><a href="#放图" class="headerlink" title="放图"></a>放图</h3><p>语法   ![中括号里面可以不写](url)</p>
 <p><img src="https://ooo.0o0.ooo/2017/03/04/58ba95dfce457.png" alt="sp170304_181540.png"></p>
-<p>索尼大法罪恶滔天，骗我钱财，颓我精神（<del>害我单身</del>）。<img src="http://om80aljc8.bkt.clouddn.com/17-3-5/36467830-file_1488711028878_2e53.png" alt=""><img src="http://om80aljc8.bkt.clouddn.com/17-3-5/9214555-file_1488711051773_f3d0.png" alt=""></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>使用 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">````python</div><div class="line">print (&quot;hello world&quot;)</div><div class="line">print (&quot;zealotＣＥ&quot;)</div><div class="line">`</div></pre></td></tr></table></figure></p>
+<p>索尼大法罪恶滔天，骗我钱财，颓我精神（<del>害我单身</del>）。</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-5/36467830-file_1488711028878_2e53.png" alt=""><img src="http://om80aljc8.bkt.clouddn.com/17-3-5/9214555-file_1488711051773_f3d0.png" alt=""></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>使用 ``` 包裹住你的代码就好了<img src="http://om80aljc8.bkt.clouddn.com/17-3-5/33654154-file_1488709762489_a6e4.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> (<span class="string">"hello world"</span>)</div><div class="line"><span class="keyword">print</span> (<span class="string">"zealotＣＥ"</span>)</div></pre></td></tr></table></figure>
 <p>后面还有很多，慢慢补充</p>
 <h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a><del>删除线</del></h3><p>只要加上两个~号,左右包裹住内容就可以了。</p>
 <p>~~删除线~~ </p>
