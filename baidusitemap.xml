@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/04/%E4%B8%80%E4%BA%9Bmarkdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2017-03-05T10:01:21.503Z</lastmod>
+    <data>
+        <display>
+        <title>一些 Markdown 常用语法</title>
+        <pubTime>2017-03-04T10:38:37.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Markdown" url="http://yoursite.com/categories/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
     <loc>http://yoursite.com/2017/03/03/first-article/</loc>
     <lastmod>2017-03-03T09:31:50.821Z</lastmod>
     <data>
@@ -44,6 +66,4 @@
     </data>
     </url>
 
-    
-    
 </urlset>
