@@ -113,6 +113,7 @@
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/61901452-file_1489038367812_b8bf.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/24363035-file_1489038956087_249e.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/66596157-file_1489039088931_12bbf.jpg">
+<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/49617338-file_1489048189534_d5a8.png">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/5673490-file_1489039915695_3cf0.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/6285807-file_1489039980899_5c8e.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/65143091-file_1489040038333_a233.jpg">
@@ -123,7 +124,7 @@
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/23315174-file_1489040483042_f148.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/18454776-file_1489040684114_1196b.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-9/83511602-file_1489040744178_1582a.jpg">
-<meta property="og:updated_time" content="2017-03-09T08:27:53.381Z">
+<meta property="og:updated_time" content="2017-03-09T08:30:49.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5种相关分析方法 - 为什么说Excel是神器">
 <meta name="twitter:description" content="前言昨晚看文章的时候突然想到了利用数据相关性进行数据分析预测的手段，所以在这里简单聊聊这个话题。
@@ -456,6 +457,10 @@
 <p>在实际生活中我们不需要自己去计算，可以使用 <strong>Excel</strong> 中的数据分析模块选择 <strong>相关系数</strong> 功能直接计算。在下图可以看到广告曝光量和相关系数结果与手动计算一致。</p>
 <p><img src="http://om80aljc8.bkt.clouddn.com/17-3-9/66596157-file_1489039088931_12bbf.jpg" alt=""></p>
 <p><strong>注意：</strong> 相关系数的优点是可以<strong>度量变量之间的关系，且带有方向性</strong> 。缺点是<strong>无法利用这种关系对数据进行预测</strong>。 简单说就是没有变量间的关系进行提炼和固化。多个相关系数之间无法进行对比，获取权重系数。</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-9/49617338-file_1489048189534_d5a8.png" alt=""></p>
+<blockquote>
+<p>数据点分布形状和对应的相关系数</p>
+</blockquote>
 <h4 id="一元回归以及多元回归"><a href="#一元回归以及多元回归" class="headerlink" title="一元回归以及多元回归"></a>一元回归以及多元回归</h4><p>为了解决相关系数无法预测的问题，就需要使用回归分析。回归分析是确定两组或两组以上变量之间关系的统计方法。回归分析按照变量的数量分为一元回归和多元回归。两个变量使用一元回归，两个以上的变量使用多元回归。</p>
 <p>进行回归分析时需要做两件事：确定变量的数量、确定自变量和因变量。当前使用的数据中只有两个变量因此使用一元回归。根据经验来说广告曝光量是随着费用成本变化而改变，所以费用成本设置为自变量 x ，广告曝光量设置为因变量 y 。</p>
 <p>以下是一元回归方程，其中y表示广告曝光量，x表示费用成本。b0为方程的截距，b1为斜率，同时也表示了两个变量间的关系。我们的目标就是b0和b1的值，知道了这两个值也就知道了变量间的关系。并且可以通过这个关系在已知成本费用的情况下预测广告曝光量。</p>
