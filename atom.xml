@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-09T08:45:43.983Z</updated>
+  <updated>2017-03-13T09:43:15.733Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>善用同步-让你随时随地写博客</title>
+    <link href="http://yoursite.com/2017/03/10/%E4%BD%BF%E7%94%A8Git%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/</id>
+    <published>2017-03-10T10:10:13.000Z</published>
+    <updated>2017-03-13T09:43:15.733Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧<del>其实就是懒</del>。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。</p>
+<a id="more"></a>
+<h3 id="同步方法："><a href="#同步方法：" class="headerlink" title="同步方法："></a>同步方法：</h3><p>有三种办法：</p>
+<ol>
+<li>百度云之类的云盘同步</li>
+</ol>
+<ol>
+<li>微软的OneDrive同步</li>
+<li>Git仓库同步</li>
+</ol>
+<h4 id="云盘同步（不推荐）"><a href="#云盘同步（不推荐）" class="headerlink" title="云盘同步（不推荐）"></a>云盘同步（不推荐）</h4><p>这个是国内接触得最多的方法了，但是目前各大服务商在网盘业务上不盈利导致放弃支持了。</p>
+<h4 id="微软OneDrive（推荐）"><a href="#微软OneDrive（推荐）" class="headerlink" title="微软OneDrive（推荐）"></a>微软OneDrive（推荐）</h4><p>微软的OneDrive可以说是最方便的网盘了，如果你是win10系统那么它是绝对的唯一最棒的选择，系统自带，只要两台PC是同一个设备就可以方便的同步自己的文件了。如果你是win7 请安装OneDrive程序。</p>
+<p>使用方法，win10 直接登陆微软账号之后就可以直接使用了，win7等在OneDrive 程序上登陆一下就可以使用了</p>
+<p>把你的Hexo的整个文件夹放到OneDrive上去就好。很简单，在此就不赘述了。</p>
+<p><strong>缺点：</strong> 只能同步文件，无法提供如git的分支功能</p>
+<h4 id="Git-仓库同步"><a href="#Git-仓库同步" class="headerlink" title="Git 仓库同步"></a>Git 仓库同步</h4><p>Git 仓库服务稍显麻烦，但是胜在功能强大。</p>
+<p>操作步骤：</p>
+<h5 id="选择仓库："><a href="#选择仓库：" class="headerlink" title="选择仓库："></a>选择仓库：</h5><p>去 GitHub、Coding、Gitlab等托管网站注册账号，并创建一个仓库即可（这一个步骤在<a href="https://zealotce.github.io/2017/03/03/first-article/" target="_blank" rel="external">利用 Github 和 hexo 搭建自己的博客</a>已经有提到）。但是鉴于国内的网络情况，我建议使用Coding的仓库服务，而且Coding的私人仓库是免费的。</p>
+<h5 id="创建coding仓库并同步"><a href="#创建coding仓库并同步" class="headerlink" title="创建coding仓库并同步"></a>创建coding仓库并同步</h5><p>进入<a href="https://coding.net" target="_blank" rel="external">Coding</a>的网站注册一个账号，进入你的<a href="https://coding.net/user/projects" target="_blank" rel="external">项目首页</a>，点击创建项目。<img src="http://om80aljc8.bkt.clouddn.com/17-3-13/93758004-file_1489395057891_5feb.png" alt="img"></p>
+<h5 id="填写你的ssh公钥"><a href="#填写你的ssh公钥" class="headerlink" title="填写你的ssh公钥"></a>填写你的ssh公钥</h5><p>如果你看过我第一篇文章应该就不会陌生了。建议去阅读或者搜一下即可。本地记事本打开你的<code>id_rsa.pub</code>文件，复制全部内容，在将其填写到<a href="https://coding.net/user/account/setting/keys" target="_blank" rel="external">Coding SSH公钥设置</a> 保存即可。</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/14493515-file_1489395903375_1458b.png" alt="">填写你的项目信息，<strong>注意</strong> 这里请设置为私有，不然所有文件别人都看到了。<img src="http://om80aljc8.bkt.clouddn.com/17-3-13/95463661-file_1489395225330_7cb8.png" alt=""></p>
+<h5 id="点击创建项目后-进入所在项目的代码页面，获得仓库地址-建议使用SSH方式链接（懒得手打）"><a href="#点击创建项目后-进入所在项目的代码页面，获得仓库地址-建议使用SSH方式链接（懒得手打）" class="headerlink" title="点击创建项目后,进入所在项目的代码页面，获得仓库地址 建议使用SSH方式链接（懒得手打）"></a>点击创建项目后,进入所在项目的代码页面，获得仓库地址 <strong>建议使用SSH方式链接</strong>（懒得手打）</h5><p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/45396925-file_1489395405030_8b22.png" alt=""></p>
+<p>其实这里也提示了怎么将文件同步到仓库的办法。</p>
+<p>到你存放博客文件的位置 <code>Shift + 鼠标右键</code> 点击 <code>Git Brash Here</code>即可</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/90434619-file_1489396067836_10873.png" alt=""></p>
+<p>依次输入几段命令即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init #这段命令的作用是创建版本库，完成后你会看到一个 .git 的文件夹。</div><div class="line">git add . #这段命令的作用是将文件夹内所有文件加入上传列表</div><div class="line">git commit -m &quot;the first commit&quot; # -m 后引号包裹的信息是你的上传信息，方便你以后分辨。建议认真填写（内容随意）</div><div class="line">git remote add origin https://git.coding.net/zealotce/my_Blog.git </div><div class="line">git push -u origin master #这两段就是真正将文件提交到你在coding上的仓库了，等待上传完毕即可</div></pre></td></tr></table></figure>
+<p>完了回到<a href="https://coding.net/u/zealotce/p/my_Blog/git" target="_blank" rel="external">coding仓库</a> 你就可以看到所有的文档了，回家在用git 同步下来就好了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://git.coding.net/zealotce/my_Blog.git #这样你的hexo博客文件就都会来了</div></pre></td></tr></table></figure>
+<h6 id="Hexo-编写发布"><a href="#Hexo-编写发布" class="headerlink" title="Hexo 编写发布"></a>Hexo 编写发布</h6><p>当你家里的电脑仍然需要有hexo环境的。但是由于你已经有了所有的文件了，所以只要使用<code>npm install</code>命令即可，不要使用<code>hexo init</code>他会把已有的git仓库环境给初始化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<p>然后编写发布还是正常的hexo命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s #本地预览</div><div class="line">hexo d -g #直接发布</div></pre></td></tr></table></figure>
+<p>最后执行 <code>git status</code>把新修改的文件<code>git add</code>和<code>git commit</code>以及<code>git push</code>到私有仓库。这样换设备的时候直接修改就好了</p>
+<h5 id="Hexo-仓库更新"><a href="#Hexo-仓库更新" class="headerlink" title="Hexo 仓库更新"></a>Hexo 仓库更新</h5><p>下次进行Hexo 仓库拉取请执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch --all #将git上所有文件拉取到本地</div><div class="line">git reset --hard origin/master  #强制将本地内容指向刚刚同步git云端内容</div></pre></td></tr></table></figure>
+<p>reset 对所拉取的文件不做任何处理，此处不用 pull 是因为本地尚有许多文件，使用 pull 会有一些版本冲突，解决起来也麻烦，而本地的文件都是初始化生成的文件，较拉取的库里面的文件而言基本无用，所以直接丢弃。</p>
+<p>END</p>
+<p>最后部分参考文章：<a href="http://ricky.moe/2017/01/13/hexo-perfect-synchronize/" target="_blank" rel="external">最完美的Hexo多电脑同步方法</a></p>
+<blockquote class="blockquote-center">When you are old</blockquote>
+
+<blockquote>
+<p>最近访客</p>
+</blockquote>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧&lt;del&gt;其实就是懒&lt;/del&gt;。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+      <category term="coding" scheme="http://yoursite.com/tags/coding/"/>
+    
+      <category term="同步" scheme="http://yoursite.com/tags/%E5%90%8C%E6%AD%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>5种相关分析方法 - 为什么说Excel是神器</title>
