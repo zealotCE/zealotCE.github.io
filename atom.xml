@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-13T09:43:15.733Z</updated>
+  <updated>2017-03-13T09:52:03.198Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="http://yoursite.com/2017/03/10/%E4%BD%BF%E7%94%A8Git%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/</id>
     <published>2017-03-10T10:10:13.000Z</published>
-    <updated>2017-03-13T09:43:15.733Z</updated>
+    <updated>2017-03-13T09:52:03.198Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧<del>其实就是懒</del>。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。</p>
+<p>先放一张我最爱的游戏——风之旅人journey</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/39543288-file_1489398654397_5b73.jpg" alt=""></p>
 <a id="more"></a>
 <h3 id="同步方法："><a href="#同步方法：" class="headerlink" title="同步方法："></a>同步方法：</h3><p>有三种办法：</p>
 <ol>
@@ -71,6 +73,8 @@
     <summary type="html">
     
       &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧&lt;del&gt;其实就是懒&lt;/del&gt;。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。&lt;/p&gt;
+&lt;p&gt;先放一张我最爱的游戏——风之旅人journey&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://om80aljc8.bkt.clouddn.com/17-3-13/39543288-file_1489398654397_5b73.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
