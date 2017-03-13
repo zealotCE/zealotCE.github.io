@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-13T09:52:03.198Z</updated>
+  <updated>2017-03-13T09:54:16.950Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/10/%E4%BD%BF%E7%94%A8Git%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/</id>
     <published>2017-03-10T10:10:13.000Z</published>
-    <updated>2017-03-13T09:52:03.198Z</updated>
+    <updated>2017-03-13T09:54:16.950Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧<del>其实就是懒</del>。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。</p>
 <p>先放一张我最爱的游戏——风之旅人journey</p>
@@ -53,7 +53,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init #这段命令的作用是创建版本库，完成后你会看到一个 .git 的文件夹。</div><div class="line">git add . #这段命令的作用是将文件夹内所有文件加入上传列表</div><div class="line">git commit -m &quot;the first commit&quot; # -m 后引号包裹的信息是你的上传信息，方便你以后分辨。建议认真填写（内容随意）</div><div class="line">git remote add origin https://git.coding.net/zealotce/my_Blog.git </div><div class="line">git push -u origin master #这两段就是真正将文件提交到你在coding上的仓库了，等待上传完毕即可</div></pre></td></tr></table></figure>
 <p>完了回到<a href="https://coding.net/u/zealotce/p/my_Blog/git" target="_blank" rel="external">coding仓库</a> 你就可以看到所有的文档了，回家在用git 同步下来就好了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://git.coding.net/zealotce/my_Blog.git #这样你的hexo博客文件就都会来了</div></pre></td></tr></table></figure>
-<h6 id="Hexo-编写发布"><a href="#Hexo-编写发布" class="headerlink" title="Hexo 编写发布"></a>Hexo 编写发布</h6><p>当你家里的电脑仍然需要有hexo环境的。但是由于你已经有了所有的文件了，所以只要使用<code>npm install</code>命令即可，不要使用<code>hexo init</code>他会把已有的git仓库环境给初始化。</p>
+<h5 id="Hexo-编写发布"><a href="#Hexo-编写发布" class="headerlink" title="Hexo 编写发布"></a>Hexo 编写发布</h5><p>当你家里的电脑仍然需要有hexo环境的。但是由于你已经有了所有的文件了，所以只要使用<code>npm install</code>命令即可，不要使用<code>hexo init</code>他会把已有的git仓库环境给初始化。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
 <p>然后编写发布还是正常的hexo命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s #本地预览</div><div class="line">hexo d -g #直接发布</div></pre></td></tr></table></figure>
