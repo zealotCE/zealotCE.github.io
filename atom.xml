@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-13T09:54:16.950Z</updated>
+  <updated>2017-03-13T10:03:26.919Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/10/%E4%BD%BF%E7%94%A8Git%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/</id>
     <published>2017-03-10T10:10:13.000Z</published>
-    <updated>2017-03-13T09:54:16.950Z</updated>
+    <updated>2017-03-13T10:03:26.919Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧<del>其实就是懒</del>。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。</p>
 <p>先放一张我最爱的游戏——风之旅人journey</p>
@@ -61,6 +61,7 @@
 <h5 id="Hexo-仓库更新"><a href="#Hexo-仓库更新" class="headerlink" title="Hexo 仓库更新"></a>Hexo 仓库更新</h5><p>下次进行Hexo 仓库拉取请执行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch --all #将git上所有文件拉取到本地</div><div class="line">git reset --hard origin/master  #强制将本地内容指向刚刚同步git云端内容</div></pre></td></tr></table></figure>
 <p>reset 对所拉取的文件不做任何处理，此处不用 pull 是因为本地尚有许多文件，使用 pull 会有一些版本冲突，解决起来也麻烦，而本地的文件都是初始化生成的文件，较拉取的库里面的文件而言基本无用，所以直接丢弃。</p>
+<p><strong>说了这么多，我觉得还是OneDrive最好用</strong></p>
 <p>END</p>
 <p>最后部分参考文章：<a href="http://ricky.moe/2017/01/13/hexo-perfect-synchronize/" target="_blank" rel="external">最完美的Hexo多电脑同步方法</a></p>
 <blockquote class="blockquote-center">When you are old</blockquote>
