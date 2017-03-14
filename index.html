@@ -270,6 +270,179 @@
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/一个修改文件名的小脚本/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zealot CE">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://om80aljc8.bkt.clouddn.com/blog_%E5%A4%B4%E5%83%8F.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zealotCE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/14/一个修改文件名的小脚本/" itemprop="url">
+                  一个修改文件名的小脚本
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T16:06:48+08:00">
+                2017-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/14/一个修改文件名的小脚本/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/14/一个修改文件名的小脚本/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/14/一个修改文件名的小脚本/" class="leancloud_visitors" data-flag-title="一个修改文件名的小脚本">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <a id="more"></a>
+<p>今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-14/83430985-file_1489479033011_1901.jpg" alt=""></p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 这是python3 代码</span></div><div class="line"><span class="comment"># coding : utf-8</span></div><div class="line"><span class="comment">#导入 os库</span></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="comment">#获取当前python文件所在的目录</span></div><div class="line">address = os.path.split(os.path.realpath(__file__))[<span class="number">0</span>]</div><div class="line"><span class="keyword">print</span> (<span class="string">"当前目录为:&#123;&#125;"</span>.format(address))</div><div class="line"><span class="comment">#定义后缀名</span></div><div class="line">houzhui = <span class="string">'.c'</span></div><div class="line">newhouzhui = <span class="string">'.txt'</span></div><div class="line">os.chdir(address)</div><div class="line"><span class="comment">#获得当前目录的文件名列表</span></div><div class="line">files = os.listdir()</div><div class="line"><span class="keyword">print</span> (<span class="string">"查找到&#123;&#125;个后缀名为&#123;&#125;的文件"</span>.format(len(files),houzhui))</div><div class="line"><span class="comment">#遍历列表,并使用os.path.splitext方法分解文件名与格式</span></div><div class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> files:</div><div class="line">     a , b = os.path.splitext(filename)</div><div class="line">     <span class="comment">#如果文件后缀为 .sql</span></div><div class="line">     <span class="keyword">if</span> b == houzhui:</div><div class="line">         <span class="comment">#将新的后缀拼接成新的文件名</span></div><div class="line">         newname = a+newhouzhui</div><div class="line">         <span class="comment">#跳转到指定目录,我也不知道为什么,不指定要报错</span></div><div class="line">         os.chdir(address)</div><div class="line">         <span class="comment">#重命名</span></div><div class="line">         os.rename(filename,newname)</div><div class="line">         print(<span class="string">"将&#123;&#125;的格式名修改为&#123;&#125;"</span>.format(filename,newhouzhui))</div><div class="line">print(<span class="string">"已经将&#123;&#125;个文件的后缀修改完毕"</span>.format(len(files)))</div><div class="line">input(<span class="string">"Press Enter"</span>)</div></pre></td></tr></table></figure>
+<p>说明一下 获取目录那一段我本来是准备使用 <code>os.getcwd()</code>的，但是顺手查了一下据说<a href="http://codecloud.net/107431.html" target="_blank" rel="external">python3修改了</a><del>我没查证，反正目前可用</del> 。</p>
+<p>然后最后一句 <code>input(&quot;Press Enter&quot;)</code> 是多余的，我加这句是因为我<a href="http://blog.topspeedsnail.com/archives/1139" target="_blank" rel="external">把python程序弄成了双击运行</a>所以为了不让命令行窗口不自动退出才加入的</p>
+<p>注：python2 中的<code>raw_input()</code>在python3中改为了<code>input()</code></p>
+<p>感觉自己还是菜啊，代码写得少了，标准库的那些方法都不清楚，只能去查一下。</p>
+<blockquote class="blockquote-center">When you are old</blockquote>
+
+<blockquote>
+<p>最近访客</p>
+</blockquote>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1107,7 +1280,7 @@
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/first-article/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/利用 Github 和 hexo 搭建自己的博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zealot CE">
@@ -1129,7 +1302,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/03/first-article/" itemprop="url">
+                <a class="post-title-link" href="/2017/03/03/利用 Github 和 hexo 搭建自己的博客/" itemprop="url">
                   利用 Github 和 hexo 搭建自己的博客
                 </a>
               
@@ -1187,8 +1360,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/03/first-article/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/first-article/" itemprop="commentCount"></span>
+                <a href="/2017/03/03/利用 Github 和 hexo 搭建自己的博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/利用 Github 和 hexo 搭建自己的博客/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1196,7 +1369,7 @@
 
           
           
-             <span id="/2017/03/03/first-article/" class="leancloud_visitors" data-flag-title="利用 Github 和 hexo 搭建自己的博客">
+             <span id="/2017/03/03/利用 Github 和 hexo 搭建自己的博客/" class="leancloud_visitors" data-flag-title="利用 Github 和 hexo 搭建自己的博客">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1234,7 +1407,7 @@
 </ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/03/first-article/#more" rel="contents">
+            <a class="btn" href="/2017/03/03/利用 Github 和 hexo 搭建自己的博客/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1311,7 +1484,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1320,7 +1493,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1329,7 +1502,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
