@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="zealotCE">
 <meta property="og:description" content="今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-14/83430985-file_1489479033011_1901.jpg">
-<meta property="og:updated_time" content="2017-03-14T08:34:32.655Z">
+<meta property="og:updated_time" content="2017-03-14T09:22:38.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个修改文件名的小脚本">
 <meta name="twitter:description" content="今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3">
@@ -395,6 +395,10 @@
 <p>说明一下 获取目录那一段我本来是准备使用 <code>os.getcwd()</code>的，但是顺手查了一下据说<a href="http://codecloud.net/107431.html" target="_blank" rel="external">python3修改了</a><del>我没查证，反正目前可用</del> 。</p>
 <p>然后最后一句 <code>input(&quot;Press Enter&quot;)</code> 是多余的，我加这句是因为我<a href="http://blog.topspeedsnail.com/archives/1139" target="_blank" rel="external">把python程序弄成了双击运行</a>所以为了不让命令行窗口不自动退出才加入的</p>
 <p>注：python2 中的<code>raw_input()</code>在python3中改为了<code>input()</code></p>
+<h4 id="bat-改名以及合并txt"><a href="#bat-改名以及合并txt" class="headerlink" title="bat 改名以及合并txt"></a>bat 改名以及合并txt</h4><p>如果你用bat命令的话，实现这些功能是非常简单的。有多简单呢？那就是一句话的事情</p>
+<p>来感受一下吧~~</p>
+<h5 id="修改后缀名"><a href="#修改后缀名" class="headerlink" title="修改后缀名"></a>修改后缀名</h5><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">ren</span> *.c *.txt  #这里 *.c是你要改的格式名，*.txt 是你要修改后的名字</div></pre></td></tr></table></figure>
+<h5 id="合并txt"><a href="#合并txt" class="headerlink" title="合并txt"></a>合并txt</h5><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">type</span>  *.txt  &gt;  a.txt #把所有txt 文档合并到a.txt中</div></pre></td></tr></table></figure>
 <p>感觉自己还是菜啊，代码写得少了，标准库的那些方法都不清楚，只能去查一下。</p>
 <blockquote class="blockquote-center">When you are old</blockquote>
 
@@ -607,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bat-改名以及合并txt"><span class="nav-number">2.</span> <span class="nav-text">bat 改名以及合并txt</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#修改后缀名"><span class="nav-number">2.1.</span> <span class="nav-text">修改后缀名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#合并txt"><span class="nav-number">2.2.</span> <span class="nav-text">合并txt</span></a></li></ol></li></ol></div>
             
 
           </div>
