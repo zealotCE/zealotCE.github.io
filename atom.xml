@@ -276,10 +276,10 @@
   
   <entry>
     <title>一些 Markdown 常用语法</title>
-    <link href="http://yoursite.com/2017/03/04/%E4%B8%80%E4%BA%9Bmarkdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2017/03/04/一些markdown常用语法/</id>
+    <link href="http://yoursite.com/2017/03/04/about%20markdown/"/>
+    <id>http://yoursite.com/2017/03/04/about markdown/</id>
     <published>2017-03-04T10:38:37.000Z</published>
-    <updated>2017-03-05T11:42:42.961Z</updated>
+    <updated>2017-03-17T06:51:34.867Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一些-Markdown-常用语法"><a href="#一些-Markdown-常用语法" class="headerlink" title="一些 Markdown 常用语法"></a>一些 Markdown 常用语法</h1><blockquote>
 <p>以前用Word写东西，总是要拿鼠标各种修改格式什么的真的好麻烦，直到我遇到了Markdown。</p>
@@ -308,7 +308,7 @@
 <h3 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h3><p>两个*号或者_号包裹住。</p>
 <p>比如： *<em>加粗的内容*</em></p>
 <h3 id="倾斜加粗"><a href="#倾斜加粗" class="headerlink" title="倾斜加粗"></a>倾斜加粗</h3><p>三个*号或者_号包裹住。</p>
-<p>比如：<strong><em>倾斜加粗</em></strong>    ***倾斜加粗<em>*</em></p>
+<p>比如：<strong><em>倾斜加粗</em></strong>         ***倾斜加粗<em>*</em></p>
 <h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>在每行开头加 + / - / * 号都可以，记得加一个空格。</p>
 <p>- zealotCE的博客</p>
 <p>+ zealotCE的博客</p>

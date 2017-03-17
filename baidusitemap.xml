@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/04/about%20markdown/</loc>
+    <lastmod>2017-03-17T06:51:34.867Z</lastmod>
+    <data>
+        <display>
+        <title>一些 Markdown 常用语法</title>
+        <pubTime>2017-03-04T10:38:37.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Markdown" url="http://yoursite.com/categories/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/14/%E4%B8%80%E4%B8%AA%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D%E7%9A%84%E5%B0%8F%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2017-03-14T09:22:38.204Z</lastmod>
     <data>
@@ -107,26 +127,6 @@
            
              
               <breadCrumb title="随笔" url="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/03/04/%E4%B8%80%E4%BA%9Bmarkdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2017-03-05T11:42:42.961Z</lastmod>
-    <data>
-        <display>
-        <title>一些 Markdown 常用语法</title>
-        <pubTime>2017-03-04T10:38:37.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Markdown" url="http://yoursite.com/categories/Markdown/"/>
           
         </display>
     </data>
