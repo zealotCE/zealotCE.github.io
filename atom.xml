@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-20T02:18:45.247Z</updated>
+  <updated>2017-03-27T10:35:39.744Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>因为多说评论服务关闭</title>
+    <link href="http://yoursite.com/2017/03/27/%E5%9B%A0%E4%B8%BA%E5%A4%9A%E8%AF%B4%E8%AF%84%E8%AE%BA%E6%9C%8D%E5%8A%A1%E5%85%B3%E9%97%AD/"/>
+    <id>http://yoursite.com/2017/03/27/因为多说评论服务关闭/</id>
+    <published>2017-03-27T10:02:42.000Z</published>
+    <updated>2017-03-27T10:35:39.744Z</updated>
+    
+    <content type="html"><![CDATA[<p>在3月22日的晚上，一个普通的周末突然看到了一封意外的邮件。<strong>重要通知：多说即将下线</strong></p>
+<p>当时只有<strong>震惊</strong>与<strong>难过</strong>了。国内的网络问题导致Disqus基本用不了，而多说这一倒突然有点儿难以适从，毕竟这评论和分享得重新弄了。或许：<strong>免费的才是最贵的</strong> </p>
+<p>刚刚把博客的评论和分享分别替换成了<a href="https://livere.com" target="_blank" rel="external">来必力</a>和<a href="https://www.addthis.com/" target="_blank" rel="external">Add this</a></p>
+<a id="more"></a>
+<h3 id="来必力评论"><a href="#来必力评论" class="headerlink" title="来必力评论"></a>来必力评论</h3><p>网易云跟帖和搜狐畅言有些不太好的毛病导致我没有使用。</p>
+<p><a href="https://livere.com" target="_blank" rel="external">来必力</a>是一个韩国人开发的评论系统，网站有种文化但是不完全，在登陆验证那里还是韩文。不过还可以用吧。</p>
+<p>使用方法：登陆/注册<a href="https://livere.com" target="_blank" rel="external">来必力</a>，获取你的 LiveRe UID（来比力网站提供的代码中的data-uid字段的值），填写到next主题配置文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">livere_uid: enter_your_livere_uid</div></pre></td></tr></table></figure>
+<h3 id="Add-this分享"><a href="#Add-this分享" class="headerlink" title="Add this分享"></a>Add this分享</h3><p>Add this是一个比较优秀的分享服务，支持国内多个网站且分享的样式等等都可定制挺好用的。</p>
+<p><a href="https://www.addthis.com/" target="_blank" rel="external">Add this</a>可以直接使用Google+或Facebook直接登陆。定制好你的分享后从下面菜单获得 AddThis id:More.. –&gt; General –&gt; ID</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-27/24939402-file_1490610861438_ec64.png" alt=""></p>
+<blockquote>
+<p>好像一切都没变，但是一切都变了。</p>
+</blockquote>
+<blockquote class="blockquote-center">When you are old</blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在3月22日的晚上，一个普通的周末突然看到了一封意外的邮件。&lt;strong&gt;重要通知：多说即将下线&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当时只有&lt;strong&gt;震惊&lt;/strong&gt;与&lt;strong&gt;难过&lt;/strong&gt;了。国内的网络问题导致Disqus基本用不了，而多说这一倒突然有点儿难以适从，毕竟这评论和分享得重新弄了。或许：&lt;strong&gt;免费的才是最贵的&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;刚刚把博客的评论和分享分别替换成了&lt;a href=&quot;https://livere.com&quot;&gt;来必力&lt;/a&gt;和&lt;a href=&quot;https://www.addthis.com/&quot;&gt;Add this&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="多说" scheme="http://yoursite.com/tags/%E5%A4%9A%E8%AF%B4/"/>
+    
+      <category term="来比力评论" scheme="http://yoursite.com/tags/%E6%9D%A5%E6%AF%94%E5%8A%9B%E8%AF%84%E8%AE%BA/"/>
+    
+      <category term="Add this" scheme="http://yoursite.com/tags/Add-this/"/>
+    
+  </entry>
   
   <entry>
     <title>犯了一个错误————为什么我对国内游戏市场呈悲观态度</title>
