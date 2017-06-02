@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="hexo,Git,coding,同步,">
+  <meta name="keywords" content="python,脚本,">
 
 
 
@@ -89,26 +89,18 @@
 
 
 
-<meta name="description" content="前言由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧其实就是懒。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。
-先放一张我最爱的游戏——风之旅人journey">
+<meta name="description" content="今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="善用同步-让你随时随地写博客">
-<meta property="og:url" content="http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/index.html">
+<meta property="og:title" content="一个修改文件名的小脚本">
+<meta property="og:url" content="http://yoursite.com/2017/03/14/a_bat_for_change_filename/index.html">
 <meta property="og:site_name" content="zealotCE">
-<meta property="og:description" content="前言由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧其实就是懒。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。
-先放一张我最爱的游戏——风之旅人journey">
-<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-13/39543288-file_1489398654397_5b73.jpg">
-<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-13/93758004-file_1489395057891_5feb.png">
-<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-13/95463661-file_1489395225330_7cb8.png">
-<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-13/14493515-file_1489395903375_1458b.png">
-<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-13/45396925-file_1489395405030_8b22.png">
-<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-13/90434619-file_1489396067836_10873.png">
-<meta property="og:updated_time" content="2017-03-14T03:03:58.000Z">
+<meta property="og:description" content="今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3">
+<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-3-14/83430985-file_1489479033011_1901.jpg">
+<meta property="og:updated_time" content="2017-03-14T09:22:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="善用同步-让你随时随地写博客">
-<meta name="twitter:description" content="前言由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧其实就是懒。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。
-先放一张我最爱的游戏——风之旅人journey">
-<meta name="twitter:image" content="http://om80aljc8.bkt.clouddn.com/17-3-13/39543288-file_1489398654397_5b73.jpg">
+<meta name="twitter:title" content="一个修改文件名的小脚本">
+<meta name="twitter:description" content="今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3">
+<meta name="twitter:image" content="http://om80aljc8.bkt.clouddn.com/17-3-14/83430985-file_1489479033011_1901.jpg">
 
 
 
@@ -136,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/">
+  <link rel="canonical" href="http://yoursite.com/2017/03/14/a_bat_for_change_filename/">
 
 
 
 
 
-  <title> 善用同步-让你随时随地写博客 | zealotCE </title>
+  <title> 一个修改文件名的小脚本 | zealotCE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -281,7 +273,7 @@
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/使用Git同步你的Hexo博客文件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/a_bat_for_change_filename/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zealot CE">
@@ -302,7 +294,7 @@
             
             
               
-                善用同步-让你随时随地写博客
+                一个修改文件名的小脚本
               
             
           </h1>
@@ -317,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T18:10:13+08:00">
-                2017-03-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T16:06:48+08:00">
+                2017-03-14
               </time>
             
 
@@ -340,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -357,7 +349,7 @@
 
           
           
-             <span id="/2017/03/10/使用Git同步你的Hexo博客文件/" class="leancloud_visitors" data-flag-title="善用同步-让你随时随地写博客">
+             <span id="/2017/03/14/a_bat_for_change_filename/" class="leancloud_visitors" data-flag-title="一个修改文件名的小脚本">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -386,58 +378,18 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于hexo的博客文件系统是在本地的，要是在博客写了一部分之后，换到新的电脑上就很麻烦，总不能把文档拷回去吧<del>其实就是懒</del>。这就需要进行文件同步了，这样在家在公司都可以很方便的编辑博客了。</p>
-<p>先放一张我最爱的游戏——风之旅人journey</p>
-<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/39543288-file_1489398654397_5b73.jpg" alt=""></p>
+        <p>今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-14/83430985-file_1489479033011_1901.jpg" alt=""></p>
 <a id="more"></a>
-<h3 id="同步方法："><a href="#同步方法：" class="headerlink" title="同步方法："></a>同步方法：</h3><p>有三种办法：</p>
-<ol>
-<li>百度云之类的云盘同步</li>
-</ol>
-<ol>
-<li>微软的OneDrive同步</li>
-<li>Git仓库同步</li>
-</ol>
-<h4 id="云盘同步（不推荐）"><a href="#云盘同步（不推荐）" class="headerlink" title="云盘同步（不推荐）"></a>云盘同步（不推荐）</h4><p>这个是国内接触得最多的方法了，原本是最接地气的方法，但是目前各大服务商在网盘业务上不盈利导致放弃支持了。</p>
-<p><strong>优点：</strong> 安装一个客户端即可（已失效）</p>
-<h4 id="微软OneDrive（推荐）"><a href="#微软OneDrive（推荐）" class="headerlink" title="微软OneDrive（推荐）"></a>微软OneDrive（推荐）</h4><p>不论你使用什么操作系统，微软OneDrive都是一个不错的选择。微软的产品最大的优点就是易用性都不错，如果你是使用的 win10 系统，那么他就是你的最佳选择。如果你是使用win7 or 其他操作系统只要安装OneDrive 客户端即可。</p>
-<p>具体操作步骤：</p>
-<ol>
-<li>安装OneDrive 客户端（win8/win10 系统自带）</li>
-<li>登陆你的微软账号（两台设备的需要登陆相同的账号）</li>
-<li>将你的hexo的所有文件都放入OneDrive中。</li>
-</ol>
-<p><strong>缺点：</strong> 只能同步文件，无法提供如git的分支功能</p>
-<p>我个人最推荐使用OneDrive，不需要什么复杂的操作简单，够用。虽然我最终的选择是OneDrive + Git。</p>
-<h4 id="Git-仓库同步"><a href="#Git-仓库同步" class="headerlink" title="Git 仓库同步"></a>Git 仓库同步</h4><p>Git 仓库服务稍显麻烦，但是胜在功能强大。</p>
-<p>操作步骤：</p>
-<h5 id="选择仓库："><a href="#选择仓库：" class="headerlink" title="选择仓库："></a>选择仓库：</h5><p>去 GitHub、Coding、Gitlab等托管网站注册账号，并创建一个仓库即可（这一个步骤在<a href="https://zealotce.github.io/2017/03/03/first-article/" target="_blank" rel="external">利用 Github 和 hexo 搭建自己的博客</a>已经有提到）。但是鉴于国内的网络情况，我建议使用Coding的仓库服务，而且Coding的私人仓库是免费的。</p>
-<h5 id="创建coding仓库并同步"><a href="#创建coding仓库并同步" class="headerlink" title="创建coding仓库并同步"></a>创建coding仓库并同步</h5><p>进入<a href="https://coding.net" target="_blank" rel="external">Coding</a>的网站注册一个账号，进入你的<a href="https://coding.net/user/projects" target="_blank" rel="external">项目首页</a>，点击创建项目。</p>
-<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/93758004-file_1489395057891_5feb.png" alt="img"></p>
-<p>填写你的项目信息，<strong>注意</strong> 这里请设置为私有，不然所有文件别人都看到了。<img src="http://om80aljc8.bkt.clouddn.com/17-3-13/95463661-file_1489395225330_7cb8.png" alt=""></p>
-<h5 id="填写你的ssh公钥"><a href="#填写你的ssh公钥" class="headerlink" title="填写你的ssh公钥"></a>填写你的ssh公钥</h5><p>等一下，这里你还要把你的ssh公钥填写一下，否则Coidng仓库会拒绝我们的上传需求的。</p>
-<p>如果你看过我<a href="https://zealotce.github.io/2017/03/03/first-article/" target="_blank" rel="external">第一篇文章</a>应该就不会陌生了。建议去阅读或者搜一下 <strong>Git SSH 公钥</strong>  即可。本地记事本打开你的<code>id_rsa.pub</code>文件，复制全部内容，在将其填写到<a href="https://coding.net/user/account/setting/keys" target="_blank" rel="external">Coding SSH公钥设置</a> 保存即可。</p>
-<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/14493515-file_1489395903375_1458b.png" alt=""></p>
-<h4 id="连接仓库并同步"><a href="#连接仓库并同步" class="headerlink" title="连接仓库并同步"></a>连接仓库并同步</h4><p>点击创建项目后,进入所在项目的代码页面，获得仓库地址 <strong>建议使用SSH方式链接</strong>（懒得手打）</p>
-<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/45396925-file_1489395405030_8b22.png" alt=""></p>
-<p>其实这里也提示了怎么将文件同步到仓库的办法。</p>
-<p>到你存放博客文件的位置 <code>Shift + 鼠标右键</code> 点击 <code>Git Brash Here</code>即可</p>
-<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-13/90434619-file_1489396067836_10873.png" alt=""></p>
-<p>依次输入几段命令即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init #这段命令的作用是创建版本库，完成后你会看到一个 .git 的文件夹。</div><div class="line">git add . #这段命令的作用是将文件夹内所有文件加入上传列表</div><div class="line">git commit -m &quot;the first commit&quot; # -m 后引号包裹的信息是你的上传信息，方便你以后分辨。建议认真填写（内容随意）</div><div class="line">git remote add origin https://git.coding.net/zealotce/my_Blog.git </div><div class="line">git push -u origin master #这两段就是真正将文件提交到你在coding上的仓库了，等待上传完毕即可</div></pre></td></tr></table></figure>
-<p>完了回到<a href="https://coding.net/u/zealotce/p/my_Blog/git" target="_blank" rel="external">coding仓库</a> 你就可以看到所有的文档了，回家在用git 同步下来就好了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://git.coding.net/zealotce/my_Blog.git #这样你的hexo博客文件就都会来了</div></pre></td></tr></table></figure>
-<h5 id="Hexo-编写发布"><a href="#Hexo-编写发布" class="headerlink" title="Hexo 编写发布"></a>Hexo 编写发布</h5><p>当你家里的电脑仍然需要有hexo环境的。但是由于你已经有了所有的文件了，所以只要使用<code>npm install</code>命令即可，不要使用<code>hexo init</code>他会把已有的git仓库环境给初始化。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
-<p>然后编写发布还是正常的hexo命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s #本地预览</div><div class="line">hexo d -g #直接发布</div></pre></td></tr></table></figure>
-<p>最后执行 <code>git status</code>把新修改的文件<code>git add</code>和<code>git commit</code>以及<code>git push</code>到私有仓库。这样换设备的时候直接修改就好了</p>
-<h5 id="Hexo-仓库更新"><a href="#Hexo-仓库更新" class="headerlink" title="Hexo 仓库更新"></a>Hexo 仓库更新</h5><p>下次进行Hexo 仓库拉取请执行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git pull #编辑前请同步一下，不然就要解决冲突了。作用：将远程仓库中的文件同步到本地</div><div class="line">git add . #将所有文件提交到上传列表</div><div class="line">git commit #提交到本地仓库</div><div class="line">git push -u origin master  #推送到远程仓库中</div><div class="line">#下面两个我没怎么使用过</div><div class="line">git fetch --all #将git上所有文件拉取到本地</div><div class="line">git reset --hard origin/master  #强制将本地内容指向刚刚同步git云端内容</div></pre></td></tr></table></figure>
-<p>reset 对所拉取的文件不做任何处理，此处不用 pull 是因为本地尚有许多文件，使用 pull 会有一些版本冲突，解决起来也麻烦，而本地的文件都是初始化生成的文件，较拉取的库里面的文件而言基本无用，所以直接丢弃。</p>
-<p><strong>说了这么多，我觉得还是OneDrive最好用</strong></p>
-<p>END</p>
-<p>最后部分参考文章：<a href="http://ricky.moe/2017/01/13/hexo-perfect-synchronize/" target="_blank" rel="external">最完美的Hexo多电脑同步方法</a></p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 这是python3 代码</span></div><div class="line"><span class="comment"># coding : utf-8</span></div><div class="line"><span class="comment">#导入 os库</span></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="comment">#获取当前python文件所在的目录</span></div><div class="line">address = os.path.split(os.path.realpath(__file__))[<span class="number">0</span>]</div><div class="line"><span class="keyword">print</span> (<span class="string">"当前目录为:&#123;&#125;"</span>.format(address))</div><div class="line"><span class="comment">#定义后缀名</span></div><div class="line">houzhui = <span class="string">'.c'</span></div><div class="line">newhouzhui = <span class="string">'.txt'</span></div><div class="line">os.chdir(address)</div><div class="line"><span class="comment">#获得当前目录的文件名列表</span></div><div class="line">files = os.listdir()</div><div class="line"><span class="keyword">print</span> (<span class="string">"查找到&#123;&#125;个后缀名为&#123;&#125;的文件"</span>.format(len(files),houzhui))</div><div class="line"><span class="comment">#遍历列表,并使用os.path.splitext方法分解文件名与格式</span></div><div class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> files:</div><div class="line">     a , b = os.path.splitext(filename)</div><div class="line">     <span class="comment">#如果文件后缀为 .sql</span></div><div class="line">     <span class="keyword">if</span> b == houzhui:</div><div class="line">         <span class="comment">#将新的后缀拼接成新的文件名</span></div><div class="line">         newname = a+newhouzhui</div><div class="line">         <span class="comment">#跳转到指定目录,我也不知道为什么,不指定要报错</span></div><div class="line">         os.chdir(address)</div><div class="line">         <span class="comment">#重命名</span></div><div class="line">         os.rename(filename,newname)</div><div class="line">         print(<span class="string">"将&#123;&#125;的格式名修改为&#123;&#125;"</span>.format(filename,newhouzhui))</div><div class="line">print(<span class="string">"已经将&#123;&#125;个文件的后缀修改完毕"</span>.format(len(files)))</div><div class="line">input(<span class="string">"Press Enter"</span>)</div></pre></td></tr></table></figure>
+<p>说明一下 获取目录那一段我本来是准备使用 <code>os.getcwd()</code>的，但是顺手查了一下据说<a href="http://codecloud.net/107431.html" target="_blank" rel="external">python3修改了</a><del>我没查证，反正目前可用</del> 。</p>
+<p>然后最后一句 <code>input(&quot;Press Enter&quot;)</code> 是多余的，我加这句是因为我<a href="http://blog.topspeedsnail.com/archives/1139" target="_blank" rel="external">把python程序弄成了双击运行</a>所以为了不让命令行窗口不自动退出才加入的</p>
+<p>注：python2 中的<code>raw_input()</code>在python3中改为了<code>input()</code></p>
+<h4 id="bat-改名以及合并txt"><a href="#bat-改名以及合并txt" class="headerlink" title="bat 改名以及合并txt"></a>bat 改名以及合并txt</h4><p>如果你用bat命令的话，实现这些功能是非常简单的。有多简单呢？那就是一句话的事情</p>
+<p>来感受一下吧~~</p>
+<h5 id="修改后缀名"><a href="#修改后缀名" class="headerlink" title="修改后缀名"></a>修改后缀名</h5><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">ren</span> *.c *.txt  #这里 *.c是你要改的格式名，*.txt 是你要修改后的名字</div></pre></td></tr></table></figure>
+<h5 id="合并txt"><a href="#合并txt" class="headerlink" title="合并txt"></a>合并txt</h5><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">type</span>  *.txt  &gt;  a.txt #把所有txt 文档合并到a.txt中</div></pre></td></tr></table></figure>
+<p>感觉自己还是菜啊，代码写得少了，标准库的那些方法都不清楚，只能去查一下。</p>
 <blockquote class="blockquote-center">When you are old</blockquote>
 
 <blockquote>
@@ -466,13 +418,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/Git/" rel="tag"># Git</a>
-          
-            <a href="/tags/coding/" rel="tag"># coding</a>
-          
-            <a href="/tags/同步/" rel="tag"># 同步</a>
+            <a href="/tags/脚本/" rel="tag"># 脚本</a>
           
         </div>
       
@@ -485,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/09/聊聊谈数据分析中相关性如何寻找本质/" rel="next" title="5种相关分析方法 - 为什么说Excel是神器">
-                <i class="fa fa-chevron-left"></i> 5种相关分析方法 - 为什么说Excel是神器
+              <a href="/2017/03/10/synchronize_your_blog_with_git/" rel="next" title="善用同步-让你随时随地写博客">
+                <i class="fa fa-chevron-left"></i> 善用同步-让你随时随地写博客
               </a>
             
           </div>
@@ -495,8 +443,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/14/一个修改文件名的小脚本/" rel="prev" title="一个修改文件名的小脚本">
-                一个修改文件名的小脚本 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/18/make_a_distake/" rel="prev" title="犯了一个错误————为什么我对国内游戏市场呈悲观态度">
+                犯了一个错误————为什么我对国内游戏市场呈悲观态度 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -592,7 +540,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -656,7 +604,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步方法："><span class="nav-number">2.</span> <span class="nav-text">同步方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#云盘同步（不推荐）"><span class="nav-number">2.1.</span> <span class="nav-text">云盘同步（不推荐）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微软OneDrive（推荐）"><span class="nav-number">2.2.</span> <span class="nav-text">微软OneDrive（推荐）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-仓库同步"><span class="nav-number">2.3.</span> <span class="nav-text">Git 仓库同步</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#选择仓库："><span class="nav-number">2.3.1.</span> <span class="nav-text">选择仓库：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建coding仓库并同步"><span class="nav-number">2.3.2.</span> <span class="nav-text">创建coding仓库并同步</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#填写你的ssh公钥"><span class="nav-number">2.3.3.</span> <span class="nav-text">填写你的ssh公钥</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连接仓库并同步"><span class="nav-number">2.4.</span> <span class="nav-text">连接仓库并同步</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Hexo-编写发布"><span class="nav-number">2.4.1.</span> <span class="nav-text">Hexo 编写发布</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hexo-仓库更新"><span class="nav-number">2.4.2.</span> <span class="nav-text">Hexo 仓库更新</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bat-改名以及合并txt"><span class="nav-number">2.</span> <span class="nav-text">bat 改名以及合并txt</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#修改后缀名"><span class="nav-number">2.1.</span> <span class="nav-text">修改后缀名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#合并txt"><span class="nav-number">2.2.</span> <span class="nav-text">合并txt</span></a></li></ol></li></ol></div>
             
 
           </div>
