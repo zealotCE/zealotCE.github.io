@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-02T05:22:11.993Z</updated>
+  <updated>2017-07-19T10:49:28.414Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,166 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>发一波壁纸。</title>
+    <link href="http://yoursite.com/2017/07/19/WallpaperGet/"/>
+    <id>http://yoursite.com/2017/07/19/WallpaperGet/</id>
+    <published>2017-07-19T09:28:04.000Z</published>
+    <updated>2017-07-19T10:49:28.414Z</updated>
+    
+    <content type="html"><![CDATA[<p>win10的锁屏壁纸还挺好看的。鉴于微软自己会更新壁纸，所以还是授人以渔，代码在最后。</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/84170274.jpg" alt=""></p>
+<a id="more"></a> 
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/2411457.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/69978859.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/69818022.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/70497480.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/69818022.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/22768401.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/65347131.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/26589476.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/48043823.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/51072838.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/24386489.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/84170274.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/97582822.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/16244393.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/62813273.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/41634711.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/28064749.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/77264909.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/644108.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/99359348.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/73943203.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/32580602.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/75305251.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/51943145.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/94828505.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/32567182.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/74351452.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/49542051.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/61315571.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/29557809.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/97477337.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/23215208.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/40584414.jpg" alt=""></p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div></pre></td><td class="code"><pre><div class="line"># 这是python3 代码</div><div class="line"># coding : utf-8</div><div class="line"></div><div class="line">&apos;&apos;&apos;</div><div class="line">为了把win10锁屏壁纸挪到我的onedrive上去</div><div class="line">&apos;&apos;&apos;</div><div class="line"></div><div class="line">#导入库</div><div class="line">import os</div><div class="line">import shutil</div><div class="line">import time</div><div class="line">from hashlib import md5</div><div class="line">from PIL import Image as img</div><div class="line">import getpass </div><div class="line"></div><div class="line">&apos;&apos;&apos;</div><div class="line">初始化路径</div><div class="line">&apos;&apos;&apos;</div><div class="line">username = getpass.getuser()</div><div class="line">src = os.path.join(r&apos;C:\Users&apos;,username,r&apos;AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets&apos;)</div><div class="line">dst = os.getcwd()</div><div class="line">#dst = r&apos;E:\onedrive\图片\wallpaper&apos;</div><div class="line"></div><div class="line"></div><div class="line">&apos;&apos;&apos;</div><div class="line">获取当前时间并格式化</div><div class="line">&apos;&apos;&apos;</div><div class="line">def GetTime():</div><div class="line">    ISOTIMEFORMAT = r&apos;%y-%m-%d--%H-%H-%S&apos;</div><div class="line">    #ISOTIMEFORMAT = r&apos;%y-%m-%d&apos;</div><div class="line">    now = time.strftime(ISOTIMEFORMAT, time.localtime())</div><div class="line">    return now</div><div class="line"></div><div class="line"></div><div class="line">&apos;&apos;&apos;</div><div class="line">获取文件的MD5</div><div class="line">&apos;&apos;&apos;</div><div class="line">def md5_file(path):</div><div class="line">    m = md5()</div><div class="line">    a_file = open(path, &apos;rb&apos;)    #需要使用二进制格式读取文件内容</div><div class="line">    m.update(a_file.read())</div><div class="line">    a_file.close()</div><div class="line">    return m.hexdigest()</div><div class="line">    </div><div class="line">&apos;&apos;&apos;</div><div class="line">获取目标文件中的以string形式存储的dict，并用eval把str转为dict。</div><div class="line">&apos;&apos;&apos;</div><div class="line">def get_existing_files(Md5_file_path):</div><div class="line">    with open(Md5_file_path,&apos;r&apos;) as f:</div><div class="line">        data = eval(f.read())</div><div class="line">    return data</div><div class="line"></div><div class="line"></div><div class="line">&apos;&apos;&apos;</div><div class="line">获取以list形式发送过来的path，查询其md5值，并以dict返回。</div><div class="line">&apos;&apos;&apos;</div><div class="line">def get_path_files_md5(path):</div><div class="line">    data = &#123;&#125;</div><div class="line">    for file in path:</div><div class="line">        try:</div><div class="line">            md5_value = md5_file(os.path.join(path,file))</div><div class="line">            data[md5_value]=file</div><div class="line">        except:</div><div class="line">            pass</div><div class="line">    return data</div><div class="line"></div><div class="line"></div><div class="line">&apos;&apos;&apos;</div><div class="line">将大于100k的文件，复制到目标文件夹（我的是onedrive），文件名为 时间</div><div class="line">&apos;&apos;&apos;</div><div class="line"></div><div class="line">def get_Wallpaper(src,dst):</div><div class="line">    files = os.listdir(src)</div><div class="line">    dst_table=os.path.join(dst,&apos;桌面壁纸&apos;)</div><div class="line">    dst_phone=os.path.join(dst,&apos;手机壁纸&apos;)</div><div class="line">    </div><div class="line">    #检查文件夹是否存在，没有就创建</div><div class="line">    if os.path.exists(dst_table):</div><div class="line">        pass</div><div class="line">    else:</div><div class="line">        os.mkdir(&apos;桌面壁纸&apos;)</div><div class="line">    if os.path.exists(dst_phone):</div><div class="line">        pass</div><div class="line">    else:</div><div class="line">        os.mkdir(&apos;手机壁纸&apos;)</div><div class="line">    </div><div class="line">    #获取file_list</div><div class="line">    phone_list = os.listdir(dst_phone)</div><div class="line">    table_list = os.listdir(dst_table)</div><div class="line">    file_list = set(table_list+phone_list)</div><div class="line">    data = get_path_files_md5(file_list)</div><div class="line">    </div><div class="line">    #正式处理文件</div><div class="line">    for i in files:</div><div class="line">        src_filename = os.path.join(src,i)</div><div class="line">        a , b = os.path.splitext(src_filename)</div><div class="line">        file_size = os.stat(os.path.join(src,i)).st_size</div><div class="line">        #说明一下win10的壁纸文件是没有格式的，所以需要甄别，并添加后缀</div><div class="line">        if file_size &gt; 100000:</div><div class="line">        #获取图片分辨率</div><div class="line">            x,y = img.open(src_filename).size </div><div class="line">            #判断后缀</div><div class="line">            if b == &quot;.jpg&quot;:</div><div class="line">                pic_md5 = md5_file(os.path.join(src,i))                </div><div class="line">                if data.get(pic_md5) == None:                    </div><div class="line">                    #由于win10的wallpapaer文件是没有格式的，所以就没有必要做这个判断</div><div class="line">                    #这个功能是给转移其他位置的图片使用的                    </div><div class="line">                    new_name = GetTime()</div><div class="line">                    if x == 1080:</div><div class="line">                        shutil.move(os.path.join(src,i),os.path.join(dst_phone,&apos;&apos;,new_name))</div><div class="line">                    elif x == 1920:</div><div class="line">                        shutil.move(os.path.join(src,i),os.path.join(dst_table,&apos;&apos;,new_name))      </div><div class="line">                    print(&quot;hey guy,i found one  wallpaper pic&quot;)</div><div class="line">                    data[pic_md5]=new_name</div><div class="line">                    time.sleep(1)                    </div><div class="line">            else:</div><div class="line">                pic_md5 = md5_file(os.path.join(src,i))                </div><div class="line">                if data.get(pic_md5) == None:                    </div><div class="line">                    new_name = GetTime()+&apos;.jpg&apos;</div><div class="line">                    #复制并改名</div><div class="line">                    if x == 1080:</div><div class="line">                        shutil.copy2(os.path.join(src,i),os.path.join(dst_phone,&apos;&apos;,new_name))</div><div class="line">                    elif x == 1920:</div><div class="line">                        shutil.copy2(os.path.join(src,i),os.path.join(dst_table,&apos;&apos;,new_name))                                        </div><div class="line">                    data[pic_md5]=new_name</div><div class="line">                    time.sleep(1)</div><div class="line">                else:</div><div class="line">                    pass</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    get_Wallpaper(src,dst)</div></pre></td></tr></table></figure>
+<p>代码里面已经做了文件校验，多次运行也不会复制重复的图进去哦。</p>
+<p>win10建议增加一个bat启动py文件，然后再放入计划任务。就可以每天自动去抓去图片啦。</p>
+<p>bat 内容参考：</p>
+<p>路径自己修改咯</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python "E:\onedrive\python_codes\my-tools\win10wallpaper.py"</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;win10的锁屏壁纸还挺好看的。鉴于微软自己会更新壁纸，所以还是授人以渔，代码在最后。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://om80aljc8.bkt.clouddn.com/17-7-19/84170274.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于中印边境问题</title>
+    <link href="http://yoursite.com/2017/07/03/talk-about-china-and-india/"/>
+    <id>http://yoursite.com/2017/07/03/talk-about-china-and-india/</id>
+    <published>2017-07-03T05:28:04.000Z</published>
+    <updated>2017-07-19T10:49:18.926Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近国内新闻关于印度越境这事儿折腾的很热闹，网上总是能看到很多人在讨论这个问题。</p>
+<p><strong>其实这事儿表现出了我们是优势，而且优势很大。</strong></p>
+<p>因为这表现我们在这个地区的控制力在逐渐加强，看待一个事物的时候应着眼于实际而不是名声。</p>
+<a id="more"></a>
+<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>从历史上来说，中印边境线就是一笔烂账。这一切的罪魁祸首是<strong>英国</strong>划定的<strong>麦克马洪线</strong>，在印度没有控制印度之前印度只是一个地名，也就是说历史上是没有印度这个国家的，是英国人控制土邦的方式建立了印度（那时的印度就是现在的：印度+巴基斯坦+孟加拉国）。在英国控制印度的后期，英国人开始觊觎西藏地区，先是考虑吞并，后面是削弱中国政府与西藏的联系，但是都没有成功。</p>
+<p>1913-1914年英国人在西姆拉召开会议，英国人与西藏地方政府（与北洋军阀政府分开的，属于西藏地方的政府，享有自治权）勾结炮制以喜马拉雅主脉为分水岭为边界线，这就是后来的麦克马洪线。划线这事儿还是背着中国中央政府做的，所以英国人自知理亏，所以没有官方承认过，但是事实已经产生了，影响也已经不可免了。</p>
+<p>这一切就是中印边界问题的又来。</p>
+<h3 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h3><p>印度诞生后其实一直是无往不利的历史，吞并锡金、分裂东巴基斯坦（现孟加拉国）等。但是印度人来说有一个躲不开的痛——1962年对印反击战。</p>
+<p>这场战争其实是印度对中国实行蚕食吞并领土的前进政策的一次激烈反应。因为当时的印度以世界第三自居，所以瞧不上中国这个该从战火中重生的国家，而且我们当时力量确实很弱小，在西藏方面就更加不行了。</p>
+<p>但是最终在毛主席的计划下，利用了美苏古巴导弹危机牵扯精力，无法顾及的情况下。进行了对印反击战（一个炊事班俘虏一个连）彻底打垮了印度的脊梁骨.</p>
+<h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><p>先说观点，目前中国对印度的战略对比，中国是优势。</p>
+<p>原因还简单，中国有地理优势，印度没有。不多说看图</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/38391584.jpg" alt=""></p>
+<p>阿里地区，1962年对印反击战，中方出击位置。离新德里300公里，中间没有任何天险，可以说一马平川。</p>
+<p>亚东县，中印中部边界唯一不在高海拔区的缺口。</p>
+<p>西里古里走廊，印度本土和东北邦唯一的连接线。</p>
+<p>所以中国在战略上一直是优势，中国在西藏边界上驻兵，本身对于印度来说就是一把达摩克利斯之剑。借助我们能下去，印度上不来的地形优势，我们只需要少量驻兵就可以逼迫印度在中印边界驻扎大量部队。</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/45836141.jpg" alt=""></p>
+<p>通过比例尺我们可以知道如果中国从亚东县出兵的话，只需要前进几十公里就可以掐断印度本土和东北邦的联系。要知道印度的东北邦，一直是有以印共为代表的独立武装存在的。一旦失去联系，我想印度就会永远失去这7个邦。</p>
+<p>所以，对印度人来说，我进攻你完全吃亏，青藏高原的天险让我成本无法承受；但是你进攻我，我可能首都都要被打烂。这是战略上的压制，没有办法解开的问题，地图上已经没的说的差别。</p>
+<p>然后中国又开始在西藏大肆进行基建（修路），由于目前印度的基建非常差，所以在短时间内中国可以完全可以依靠强大的交通从印度的每一个薄弱地点集合优势兵力出击。这也就是这次中国在亚东县修路造成中印冲突的历史原因。</p>
+<p>当然中印冲突的原因可能不止这一种，因为在冲突发生时，印度正在进行一次税改，一场触动了一度地方势力利益的改革，这次冲突很有可能是印度向转移国内视线诞生的。</p>
+<p>毕竟印度的财政部长是兼任国防部长的。</p>
+<p>如果你熟悉对越自卫反击战，那么你会注意到，中国利用地理优势牵制印度大量驻兵，利用军事压力逼迫印度将大量财富养这群驻兵的玩法跟中国对越反击战后放血如出一辙。</p>
+<blockquote>
+<p>对越自卫反击战结束后，中国将军队放在与越南的边境上，存在地理优势的争议地区（比如老山）。逼迫越南在北方陈兵百万，还不能在北方进行大肆的建设，活活拖死了越南。最后1991年， 摆平了内部纷争的阮文灵北上中国求和，重新又回到了中国的怀抱。</p>
+</blockquote>
+<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>未来是不可捉摸呢，但是我们也许可以从历史规律中去判断可能的走向。</p>
+<p>目前我们可以确定的是：中国在基建方面对印度的优势是非常大的，一旦西藏路网彻底完成并且与新疆、青海、四川、云南彻底连上之后，印度就彻底在中国在西藏竖起的达摩克利斯之剑的阴影下生活了。</p>
+<p>而且印度作为一个人均粮食消费严重不足还进行粮食出口，外汇连一些小国都不如的国家。我不觉得它有太大的威胁。</p>
+<p>如果你说印度有大量的廉价劳动力，那我只能说，去年美的可是把库卡给收购了。</p>
+<p>如果印度未来有巨大威胁，那一定是我没睡醒。</p>
+<p>欢迎拍砖，理性讨论。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近国内新闻关于印度越境这事儿折腾的很热闹，网上总是能看到很多人在讨论这个问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其实这事儿表现出了我们是优势，而且优势很大。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因为这表现我们在这个地区的控制力在逐渐加强，看待一个事物的时候应着眼于实际而不是名声。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo new 之后立即打开文稿</title>
+    <link href="http://yoursite.com/2017/06/02/open_you_markdown_file_when_hexo_new/"/>
+    <id>http://yoursite.com/2017/06/02/open_you_markdown_file_when_hexo_new/</id>
+    <published>2017-06-02T05:28:04.000Z</published>
+    <updated>2017-07-19T10:49:12.792Z</updated>
+    
+    <content type="html"><![CDATA[<p>hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去<code>`hexo-home/source/_post</code> `文件夹里狂翻真的事一件不优雅的事情。</p>
+<p>这个问题上很多人都有过类似的需求，解决方法都是监听<code>hexo new</code>命令然后使用编辑器打开。</p>
+<p>方法如下：</p>
+<p>在hexo目录下新建一个scripts目录，然后新建一个js脚本，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line">// windos 10</div><div class="line">// Hexo 3.2.2</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;start E:\\Typora\\Typora.exe&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>start后面是你的markdown编辑器路径<br>如果你是 OS X 代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line"></div><div class="line">// Hexo 2.x</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;open -a &quot;/Applications/Sublime Text.app&quot; &apos; + path);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>代码转自<a href="https://liam0205.me/2015/05/01/open-editor-after-hexo-new-immediately/" target="_blank" rel="external">在 hexo new 之后立即打开新建的 Markdown 文稿</a>hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去<code>`hexo-home/source/_post</code> `文件夹里狂翻真的事一件不优雅的事情。</p>
+<p>这个问题上很多人都有过类似的需求，解决方法都是监听<code>hexo new</code>命令然后使用编辑器打开。</p>
+<p>方法如下：</p>
+<p>在hexo目录下新建一个scripts目录，然后新建一个js脚本，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line">// windos 10</div><div class="line">// Hexo 3.2.2</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;start E:\\Typora\\Typora.exe&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>start后面是你的markdown编辑器路径<br>如果你是 OS X 代码如下</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line"></div><div class="line">// Hexo 2.x</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;open -a &quot;/Applications/Sublime Text.app&quot; &apos; + path);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>代码转自<a href="https://liam0205.me/2015/05/01/open-editor-after-hexo-new-immediately/" target="_blank" rel="external">在 hexo new 之后立即打开新建的 Markdown 文稿</a></p>
+</blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去&lt;code&gt;`hexo-home/source/_post&lt;/code&gt; `文件夹里狂翻真的事一件不优雅的事情。&lt;/p&gt;
+&lt;p&gt;这个问题上很多人都有过类似的需求，解决方法都是监听&lt;code&gt;hexo ne
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo new 之后立即打开文稿</title>
@@ -401,7 +561,7 @@
     
       &lt;p&gt;在3月22日的晚上，一个普通的周末突然看到了一封意外的邮件。&lt;strong&gt;重要通知：多说即将下线&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;当时只有&lt;strong&gt;震惊&lt;/strong&gt;与&lt;strong&gt;难过&lt;/strong&gt;了。国内的网络问题导致Disqus基本用不了，而多说这一倒突然有点儿难以适从，毕竟这评论和分享得重新弄了。或许：&lt;strong&gt;免费的才是最贵的&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;刚刚把博客的评论和分享分别替换成了&lt;a href=&quot;https://livere.com&quot;&gt;来必力&lt;/a&gt;和&lt;a href=&quot;https://www.addthis.com/&quot;&gt;Add this&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;刚刚把博客的评论和分享分别替换成了&lt;a href=&quot;https://livere.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;来必力&lt;/a&gt;和&lt;a href=&quot;https://www.addthis.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Add this&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -667,7 +827,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h3&gt;&lt;p&gt;朋友突然发了一条知乎的回答&lt;a href=&quot;https://www.zhihu.com/question/40001810/answer/87849062?utm_source=wechat_session&amp;amp;utm_medium=social&quot;&gt;如何看待13岁少年列席深圳两会：勿让考卷决定未来&lt;/a&gt; 对于这个问题他的看法是这种回答的方式很好，但是观点并不能认同。&lt;/p&gt;
+      &lt;h3 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h3&gt;&lt;p&gt;朋友突然发了一条知乎的回答&lt;a href=&quot;https://www.zhihu.com/question/40001810/answer/87849062?utm_source=wechat_session&amp;amp;utm_medium=social&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何看待13岁少年列席深圳两会：勿让考卷决定未来&lt;/a&gt; 对于这个问题他的看法是这种回答的方式很好，但是观点并不能认同。&lt;/p&gt;
 &lt;p&gt;主要论述就是 &lt;strong&gt;高考并不是公平的，但是却是当下唯一的选择。&lt;/strong&gt;我认同此结论，但是并不能完全接受他的分析过程。这里我会简单表达一下我的看法。&lt;/p&gt;
     
     </summary>
