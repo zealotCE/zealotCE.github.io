@@ -58,11 +58,12 @@
     <link href="http://yoursite.com/2017/05/02/anticipate_and_confidence/"/>
     <id>http://yoursite.com/2017/05/02/anticipate_and_confidence/</id>
     <published>2017-05-02T13:28:04.000Z</published>
-    <updated>2017-05-05T04:22:30.000Z</updated>
+    <updated>2017-07-03T05:41:13.652Z</updated>
     
     <content type="html"><![CDATA[<p>博客已经好久没有更新了，这几天其实一直在想写些什么，但是苦于没找到切入点。</p>
 <p>只要你对游戏行业有一些了解，那么你自然可以知道：世界上最优秀，投资最大的游戏都始终处于主机游戏市场之中。</p>
 <p>主机市场之中存在一个理想国逻辑：投资者愿意加大投资优秀的产品，制作人愿意制作优秀的公司，用户愿意为制作优秀的作品买单。</p>
+<a id="more"></a>
 <p>引用<a href="https://zhuanlan.zhihu.com/p/21389337" target="_blank" rel="external">旗舰评论</a>的话游戏主机的商业模式由一下四个部分组成：</p>
 <blockquote>
 <ol>
@@ -84,7 +85,6 @@
 </blockquote>
 <p>但是历史来说当代主机模式基本是正确的，但是少了点东西。我将在下文中解释我的看法。</p>
 <p>不过讲这个必须要结合历史来说，所以在讲解商业模式之前先讲讲游戏业的历史吧</p>
-<a id="more"></a>
 <h3 id="已知的游戏业历史"><a href="#已知的游戏业历史" class="headerlink" title="已知的游戏业历史"></a>已知的游戏业历史</h3><p>这里很长，并且基本都是引用。</p>
 <h4 id="ATARI-SHOCK"><a href="#ATARI-SHOCK" class="headerlink" title="ATARI SHOCK"></a>ATARI SHOCK</h4><p>如果你熟悉游戏发展史我想对于上个世纪80年代的<a href="https://zh.wikipedia.org/wiki/1983%E5%B9%B4%E7%BE%8E%E5%9B%BD%E6%B8%B8%E6%88%8F%E4%B8%9A%E8%90%A7%E6%9D%A1%E4%BA%8B%E4%BB%B6" target="_blank" rel="external">雅达利大崩溃</a>（实际上应该叫做1983年美国游戏业萧条事件）一定非常熟悉（看看国内的手游和页游），也知道它对于游戏发展史中的地位。把一个市值 33 亿美金（1983）的市场缩水到了 1 亿美金（1985），无数游戏公司倒闭。</p>
 <blockquote>
@@ -287,27 +287,6 @@
       &lt;p&gt;博客已经好久没有更新了，这几天其实一直在想写些什么，但是苦于没找到切入点。&lt;/p&gt;
 &lt;p&gt;只要你对游戏行业有一些了解，那么你自然可以知道：世界上最优秀，投资最大的游戏都始终处于主机游戏市场之中。&lt;/p&gt;
 &lt;p&gt;主机市场之中存在一个理想国逻辑：投资者愿意加大投资优秀的产品，制作人愿意制作优秀的公司，用户愿意为制作优秀的作品买单。&lt;/p&gt;
-&lt;p&gt;引用&lt;a href=&quot;https://zhuanlan.zhihu.com/p/21389337&quot;&gt;旗舰评论&lt;/a&gt;的话游戏主机的商业模式由一下四个部分组成：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;游戏专用硬件销售作为核心。这些硬件纵然添加再多功能，其核心用途，和用户的购买理由是且只是玩游戏。&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;硬件厂商控制游戏主机上的游戏质量，在主机上发售中、高质量的游戏，并协助进行宣传与销售。不满足硬件厂商制定的标准的游戏，不能够在该游戏主机上发售。&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;硬件厂商从出售的每一款游戏中收取高昂的授权金，以获取自身的利润。&lt;/strong&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;虽然不成文，但每个硬件厂商事实上以亲自开发、第一方投资或官方推荐的形式支持该游戏主机上的游戏开发业务。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这一模型下，玩家获得技术允许的最好的游戏，硬件商获得旱涝保收的垄断利润，而游戏开发商则会借助那些划时代的产品一跃成为业内顶尖的公司，形成一个三方得利的闭环，直到下一世代的技术进步到来，新一轮的主机战争再次展开。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;但是这个模式本身是不应该存在的，它不符合资本主义的客观规律：&lt;strong&gt;资本边际效率下降进而投资下降，市场开始萎缩&lt;/strong&gt; 。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;资本的边际效率规律是指，在其他条件不变的条件下，随着资本生产物的增加，资本边际效率呈现递减趋势，这必然导致投资的下降，因为资本边际效率是刺激资本家 增加投资的动力，加之不肯定性、风险、期望、投资者的态度和信心等因素的影响，更扩大了聚集需求量和现实消费量之间的裂痕。&lt;/p&gt;
-&lt;p&gt;摘自 - 凯恩斯 《就业、利息和货币通论》&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;但是历史来说当代主机模式基本是正确的，但是少了点东西。我将在下文中解释我的看法。&lt;/p&gt;
-&lt;p&gt;不过讲这个必须要结合历史来说，所以在讲解商业模式之前先讲讲游戏业的历史吧&lt;/p&gt;
     
     </summary>
     
@@ -480,48 +459,6 @@
     
     
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个修改文件名的小脚本</title>
-    <link href="http://yoursite.com/2017/03/14/a_bat_for_change_filename/"/>
-    <id>http://yoursite.com/2017/03/14/a_bat_for_change_filename/</id>
-    <published>2017-03-14T08:06:48.000Z</published>
-    <updated>2017-03-14T09:22:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3</p>
-<p><img src="http://om80aljc8.bkt.clouddn.com/17-3-14/83430985-file_1489479033011_1901.jpg" alt=""></p>
-<a id="more"></a>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 这是python3 代码</span></div><div class="line"><span class="comment"># coding : utf-8</span></div><div class="line"><span class="comment">#导入 os库</span></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="comment">#获取当前python文件所在的目录</span></div><div class="line">address = os.path.split(os.path.realpath(__file__))[<span class="number">0</span>]</div><div class="line"><span class="keyword">print</span> (<span class="string">"当前目录为:&#123;&#125;"</span>.format(address))</div><div class="line"><span class="comment">#定义后缀名</span></div><div class="line">houzhui = <span class="string">'.c'</span></div><div class="line">newhouzhui = <span class="string">'.txt'</span></div><div class="line">os.chdir(address)</div><div class="line"><span class="comment">#获得当前目录的文件名列表</span></div><div class="line">files = os.listdir()</div><div class="line"><span class="keyword">print</span> (<span class="string">"查找到&#123;&#125;个后缀名为&#123;&#125;的文件"</span>.format(len(files),houzhui))</div><div class="line"><span class="comment">#遍历列表,并使用os.path.splitext方法分解文件名与格式</span></div><div class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> files:</div><div class="line">     a , b = os.path.splitext(filename)</div><div class="line">     <span class="comment">#如果文件后缀为 .sql</span></div><div class="line">     <span class="keyword">if</span> b == houzhui:</div><div class="line">         <span class="comment">#将新的后缀拼接成新的文件名</span></div><div class="line">         newname = a+newhouzhui</div><div class="line">         <span class="comment">#跳转到指定目录,我也不知道为什么,不指定要报错</span></div><div class="line">         os.chdir(address)</div><div class="line">         <span class="comment">#重命名</span></div><div class="line">         os.rename(filename,newname)</div><div class="line">         print(<span class="string">"将&#123;&#125;的格式名修改为&#123;&#125;"</span>.format(filename,newhouzhui))</div><div class="line">print(<span class="string">"已经将&#123;&#125;个文件的后缀修改完毕"</span>.format(len(files)))</div><div class="line">input(<span class="string">"Press Enter"</span>)</div></pre></td></tr></table></figure>
-<p>说明一下 获取目录那一段我本来是准备使用 <code>os.getcwd()</code>的，但是顺手查了一下据说<a href="http://codecloud.net/107431.html" target="_blank" rel="external">python3修改了</a><del>我没查证，反正目前可用</del> 。</p>
-<p>然后最后一句 <code>input(&quot;Press Enter&quot;)</code> 是多余的，我加这句是因为我<a href="http://blog.topspeedsnail.com/archives/1139" target="_blank" rel="external">把python程序弄成了双击运行</a>所以为了不让命令行窗口不自动退出才加入的</p>
-<p>注：python2 中的<code>raw_input()</code>在python3中改为了<code>input()</code></p>
-<h4 id="bat-改名以及合并txt"><a href="#bat-改名以及合并txt" class="headerlink" title="bat 改名以及合并txt"></a>bat 改名以及合并txt</h4><p>如果你用bat命令的话，实现这些功能是非常简单的。有多简单呢？那就是一句话的事情</p>
-<p>来感受一下吧~~</p>
-<h5 id="修改后缀名"><a href="#修改后缀名" class="headerlink" title="修改后缀名"></a>修改后缀名</h5><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">ren</span> *.c *.txt  #这里 *.c是你要改的格式名，*.txt 是你要修改后的名字</div></pre></td></tr></table></figure>
-<h5 id="合并txt"><a href="#合并txt" class="headerlink" title="合并txt"></a>合并txt</h5><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">type</span>  *.txt  &gt;  a.txt #把所有txt 文档合并到a.txt中</div></pre></td></tr></table></figure>
-<p>感觉自己还是菜啊，代码写得少了，标准库的那些方法都不清楚，只能去查一下。</p>
-<blockquote class="blockquote-center">When you are old</blockquote>
-
-<blockquote>
-<p>最近访客</p>
-</blockquote>
-<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天突然同事发来了一大堆文件，我需要把文件改改名字，方便用office汇总处理，所以就顺手写了一个小脚本。好久没玩python了，所以就没有用bat写，还是python吧。我的环境是python3&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://om80aljc8.bkt.clouddn.com/17-3-14/83430985-file_1489479033011_1901.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="脚本" scheme="http://yoursite.com/tags/%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
@@ -888,9 +825,9 @@
       <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
       <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
