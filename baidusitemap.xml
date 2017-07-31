@@ -4,11 +4,33 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/07/19/WallpaperGet/</loc>
-    <lastmod>2017-07-19T10:49:28.414Z</lastmod>
+    <loc>http://yoursite.com/2017/07/31/Notes-with-Numpy/</loc>
+    <lastmod>2017-07-31T08:19:22.554Z</lastmod>
     <data>
         <display>
-        <title>发一波壁纸。</title>
+        <title>Numpy 笔记</title>
+        <pubTime>2017-07-31T08:17:37.000Z</pubTime>
+        
+        <tag>Numpy</tag>
+         
+        <tag>Pyton</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://yoursite.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/07/19/WallpaperGet/</loc>
+    <lastmod>2017-07-31T08:19:09.296Z</lastmod>
+    <data>
+        <display>
+        <title>发一波壁纸</title>
         <pubTime>2017-07-19T09:28:04.000Z</pubTime>
         
         <tag>随笔</tag>
@@ -223,9 +245,9 @@
         <title>利用 Github 和 hexo 搭建自己的博客</title>
         <pubTime>2017-03-03T02:58:33.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>GitHub</tag>
+         
+        <tag>hexo</tag>
          
          
            
