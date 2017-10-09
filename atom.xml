@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-09T02:10:55.366Z</updated>
+  <updated>2017-10-09T02:16:20.113Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>主机商业模式-本不该存在的商业模式</title>
+    <title>小说人物关系可视化</title>
     <link href="http://yoursite.com/2017/10/09/Character-interaction-visualization/"/>
     <id>http://yoursite.com/2017/10/09/Character-interaction-visualization/</id>
     <published>2017-10-09T13:28:04.000Z</published>
-    <updated>2017-10-09T02:10:55.366Z</updated>
+    <updated>2017-10-09T02:16:20.113Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/79525580.jpg" alt=""><br><strong>随缘更新</strong></p>
 <p>之前看到了一些关于小说人物之间联系的可视化，看起来挺好玩的。（真的很简单）由于网上给的教程不完善，所以就自己实现了一下。<br><a id="more"></a></p>
