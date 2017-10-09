@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-31T08:19:22.554Z</updated>
+  <updated>2017-10-09T02:10:55.366Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,87 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>主机商业模式-本不该存在的商业模式</title>
+    <link href="http://yoursite.com/2017/10/09/Character-interaction-visualization/"/>
+    <id>http://yoursite.com/2017/10/09/Character-interaction-visualization/</id>
+    <published>2017-10-09T13:28:04.000Z</published>
+    <updated>2017-10-09T02:10:55.366Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/79525580.jpg" alt=""><br><strong>随缘更新</strong></p>
+<p>之前看到了一些关于小说人物之间联系的可视化，看起来挺好玩的。（真的很简单）由于网上给的教程不完善，所以就自己实现了一下。<br><a id="more"></a></p>
+<p>##原理</p>
+<p>人物出场次数：用jieba分词后对人名出现次数进行统计</p>
+<p>人物互动关系：将小说按段落划分后进行jieba分词与人名匹配。然后将出现的人名两两配对后计数。</p>
+<p>配置输出：将人物出场次数（Id,Label,Weight，如：name1,name1,times）任务互动关系（Source,Target,Weight，如：name1,name2,times）存储为gephi接受的csv格式</p>
+<p>可视化（gephi）：导入数据后调整可视化参数即可。</p>
+<p>文末会附一份教程word，本身这个教程也是因为朋友需要才写的，所以完全0基础也可以使用。</p>
+<p>##流程</p>
+<p>###文件准备</p>
+<p>准备一份「小说.txt」 和 一份「人名.txt」。</p>
+<p>「人名.txt」长这样：<br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/96431115.jpg" alt=""></p>
+<p>###环境</p>
+<ol>
+<li>python3 (依赖 jieba)<blockquote>
+<p><code>pip install jieba</code></p>
+</blockquote>
+</li>
+<li>java</li>
+<li>getphi</li>
+</ol>
+<p>###怎么处理呢？</p>
+<p>这段只作为说明，实际可用代码见文末</p>
+<p>先让 jieba 加载字典。<br>使用 readlines 逐行读取。<br>使用 jieba.cut 分词。<br>给这行维护一个list。<br>将出现的人名维护进list。<br>将人名list 放入 dict 作为 key，出现一次 +1 （人物出现的次数就统计出来了）。<br>将一段中两两出现的人计数（任务互动的关系也出来了）。<br>将二者存储为gephi 接收的csv格式就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import jieba</div><div class="line">names = &#123;&#125;              # 姓名字典</div><div class="line">lineNames = []          # 姓名检索</div><div class="line">relationships = &#123;&#125;	# 关系字典</div><div class="line">jieba.load_userdict(jieba_dict)</div><div class="line">with codesc.open(filepath,&apos;r&apos;,&apos;utf-8&apos;) as f:</div><div class="line">    for lines in f.readlines():</div><div class="line">        poss = jieba.cut(lines)</div><div class="line">        lineNames.append([])</div><div class="line">        for w in poss:</div><div class="line">            if w not in name_set:       # 如果关键字不在 name_set 中存在就跳过</div><div class="line">                continue                </div><div class="line">                self._lineNames[-1].append(w)</div><div class="line">                if self._names.get(w) is None:</div><div class="line">                    self._names[w] = 0</div><div class="line">                    relationships[w] = &#123;&#125;</div><div class="line">                self._names[w] += 1</div><div class="line"></div><div class="line">for line in lineNames:			# 对于每一段</div><div class="line">    for name1 in line:					</div><div class="line">        for name2 in line:		# 每段中的任意两个人</div><div class="line">            if name1 == name2:</div><div class="line">                continue</div><div class="line">            if relationships[name1].get(name2) is None:	 # 若两人尚未同时出现则新建项</div><div class="line">                relationships[name1][name2]= 1</div><div class="line">            else:</div><div class="line">                relationships[name1][name2] = relationships[name1][name2]+ 1</div></pre></td></tr></table></figure></p>
+<p>最后我们只要把数据导入到gephi中去生成自己喜欢的图形就好啦。</p>
+<p>文末会附上详细的使用文档。</p>
+<p>看看gephi生成的关系图吧。<br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/79525580.jpg" alt=""><br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/20898144.jpg" alt=""><br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/62753186.jpg" alt=""><br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/37318684.jpg" alt=""></p>
+<p>代码和说明：<a href="https://github.com/zealotCE/Character-interaction-visualization" target="_blank" rel="external">zealotCE/Character-interaction-visualization</a></p>
+<p>感谢前人探路：<a href="https://zhuanlan.zhihu.com/p/24767513" target="_blank" rel="external">基于共现发现人物关系的python实现</a></p>
+<p>gephi教程（虽然没看）：<a href="http://link.zhihu.com/?target=https%3A//www.udemy.com/gephi/" target="_blank" rel="external">Gephi 中文教程 - Udemy</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om80aljc8.bkt.clouddn.com/17-10-9/79525580.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;strong&gt;随缘更新&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;之前看到了一些关于小说人物之间联系的可视化，看起来挺好玩的。（真的很简单）由于网上给的教程不完善，所以就自己实现了一下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="数据可视化" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="gephi" scheme="http://yoursite.com/tags/gephi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/08/22/pandas%E6%95%B0%E6%8D%AE%E5%90%88%E5%B9%B6/"/>
+    <id>http://yoursite.com/2017/08/22/pandas数据合并/</id>
+    <published>2017-08-22T10:50:15.881Z</published>
+    <updated>2017-08-22T10:50:16.083Z</updated>
+    
+    <content type="html"><![CDATA[<p>Pandas 合并数据表的方法</p>
+<h3 id="append"><a href="#append" class="headerlink" title="append"></a>append</h3><h3 id="merge（SQL的join）"><a href="#merge（SQL的join）" class="headerlink" title="merge（SQL的join）"></a>merge（SQL的join）</h3><h3 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Pandas 合并数据表的方法&lt;/p&gt;
+&lt;h3 id=&quot;append&quot;&gt;&lt;a href=&quot;#append&quot; class=&quot;headerlink&quot; title=&quot;append&quot;&gt;&lt;/a&gt;append&lt;/h3&gt;&lt;h3 id=&quot;merge（SQL的join）&quot;&gt;&lt;a href=&quot;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Numpy 笔记</title>
     <link href="http://yoursite.com/2017/07/31/Notes-with-Numpy/"/>
     <id>http://yoursite.com/2017/07/31/Notes-with-Numpy/</id>
     <published>2017-07-31T08:17:37.000Z</published>
-    <updated>2017-07-31T08:19:22.554Z</updated>
+    <updated>2017-07-31T10:34:08.102Z</updated>
     
     <content type="html"><![CDATA[<p>我使用的环境是 ipython，所以很多时候会不使用<code>print()</code>，而是直接使用变量输出。</p>
 <h3 id="导入-numpy-库"><a href="#导入-numpy-库" class="headerlink" title="导入 numpy 库"></a>导入 numpy 库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div></pre></td></tr></table></figure>
@@ -92,7 +168,114 @@
 <h4 id="错误演示"><a href="#错误演示" class="headerlink" title="错误演示"></a>错误演示</h4><p>3x2 + 1x3 会怎么样呢</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">a = np.ones((<span class="number">3</span>,<span class="number">2</span>))</div><div class="line">b =range(<span class="number">3</span>)</div><div class="line">a + b</div><div class="line"><span class="comment">#报错</span></div><div class="line">ValueError: operands could <span class="keyword">not</span> be broadcast together <span class="keyword">with</span> shapes (<span class="number">3</span>,<span class="number">2</span>) (<span class="number">3</span>,)</div></pre></td></tr></table></figure>
 <p>如果是 2x 3 + 3x2 呢？ 就不能满足这个状态了，只能将两个array合并。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">a = ([[<span class="number">1.0</span>,<span class="number">2.0</span>,<span class="number">3.0</span>],[<span class="number">4.0</span>,<span class="number">5.0</span>,<span class="number">6.0</span>]])</div><div class="line">b = ([[<span class="number">10.0</span>,<span class="number">20.0</span>],[<span class="number">30.0</span>,<span class="number">40.0</span>],[<span class="number">50.0</span>,<span class="number">60.0</span>]])</div><div class="line">print(a+b</div><div class="line">Out:</div><div class="line">[[<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>], [<span class="number">4.0</span>, <span class="number">5.0</span>, <span class="number">6.0</span>], [<span class="number">10.0</span>, <span class="number">20.0</span>], [<span class="number">30.0</span>, <span class="number">40.0</span>], [<span class="number">50.0</span>, <span class="number">60.0</span>]]</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">a = ([[<span class="number">1.0</span>,<span class="number">2.0</span>,<span class="number">3.0</span>],[<span class="number">4.0</span>,<span class="number">5.0</span>,<span class="number">6.0</span>]])</div><div class="line">b = ([[<span class="number">10.0</span>,<span class="number">20.0</span>],[<span class="number">30.0</span>,<span class="number">40.0</span>],[<span class="number">50.0</span>,<span class="number">60.0</span>]])</div><div class="line">print(a+b)</div><div class="line">Out:</div><div class="line">[[<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>], [<span class="number">4.0</span>, <span class="number">5.0</span>, <span class="number">6.0</span>], [<span class="number">10.0</span>, <span class="number">20.0</span>], [<span class="number">30.0</span>, <span class="number">40.0</span>], [<span class="number">50.0</span>, <span class="number">60.0</span>]]</div></pre></td></tr></table></figure>
+<h3 id="数组迭代"><a href="#数组迭代" class="headerlink" title="数组迭代"></a>数组迭代</h3><p>数组迭代需要使用 numpy.nditer() ，可以迭代出数据（默认导出为零维数组）</p>
+<p>代码说明</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">0</span>,<span class="number">60</span>,<span class="number">5</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</div><div class="line">print(a)</div><div class="line">Out:</div><div class="line">[[ <span class="number">0</span> <span class="number">5</span> <span class="number">10</span> <span class="number">15</span>]</div><div class="line"> [<span class="number">20</span> <span class="number">25</span> <span class="number">30</span> <span class="number">35</span>]</div><div class="line"> [<span class="number">40</span> <span class="number">45</span> <span class="number">50</span> <span class="number">55</span>]]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> np.nditer(a):</div><div class="line">	<span class="keyword">print</span> (i)</div><div class="line">Out:</div><div class="line">    <span class="number">0</span> <span class="number">5</span> <span class="number">10</span> <span class="number">15</span> <span class="number">20</span> <span class="number">25</span> <span class="number">30</span> <span class="number">35</span> <span class="number">40</span> <span class="number">45</span> <span class="number">50</span> <span class="number">55</span></div></pre></td></tr></table></figure>
+<p>迭代顺序</p>
+<p>array使用的存储风格不同（有F ，C，默认为F）根据排序不同，实际在迭代输出的也不同</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">0</span>,<span class="number">60</span>,<span class="number">5</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</div><div class="line">b = a.T</div><div class="line">print(b)</div><div class="line">Out:</div><div class="line">[[ <span class="number">0</span> <span class="number">20</span> <span class="number">40</span>]</div><div class="line"> [ <span class="number">5</span> <span class="number">25</span> <span class="number">45</span>]</div><div class="line"> [<span class="number">10</span> <span class="number">30</span> <span class="number">50</span>]</div><div class="line"> [<span class="number">15</span> <span class="number">35</span> <span class="number">55</span>]]</div><div class="line"></div><div class="line">c = b.copy(order=<span class="string">'C'</span>)</div><div class="line"><span class="keyword">print</span> (c)</div><div class="line">Out:</div><div class="line">[[ <span class="number">0</span> <span class="number">20</span> <span class="number">40</span>]</div><div class="line"> [ <span class="number">5</span> <span class="number">25</span> <span class="number">45</span>]</div><div class="line"> [<span class="number">10</span> <span class="number">30</span> <span class="number">50</span>]</div><div class="line"> [<span class="number">15</span> <span class="number">35</span> <span class="number">55</span>]] </div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> np.nditer(c):</div><div class="line">	<span class="keyword">print</span> (i)</div><div class="line">Out:</div><div class="line"><span class="number">0</span> <span class="number">20</span> <span class="number">40</span> <span class="number">5</span> <span class="number">25</span> <span class="number">45</span> <span class="number">10</span> <span class="number">30</span> <span class="number">50</span> <span class="number">15</span> <span class="number">35</span> <span class="number">55</span> </div><div class="line"></div><div class="line">d = b.copy(order=<span class="string">'F'</span>)</div><div class="line"><span class="keyword">print</span> (d)</div><div class="line">Out:</div><div class="line">[[ <span class="number">0</span> <span class="number">20</span> <span class="number">40</span>]</div><div class="line"> [ <span class="number">5</span> <span class="number">25</span> <span class="number">45</span>]</div><div class="line"> [<span class="number">10</span> <span class="number">30</span> <span class="number">50</span>]</div><div class="line"> [<span class="number">15</span> <span class="number">35</span> <span class="number">55</span>]] </div><div class="line"></div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> np.nditer(d):</div><div class="line">	<span class="keyword">print</span> (x)</div><div class="line">Out:</div><div class="line"> <span class="number">0</span> <span class="number">5</span> <span class="number">10</span> <span class="number">15</span> <span class="number">20</span> <span class="number">25</span> <span class="number">30</span> <span class="number">35</span> <span class="number">40</span> <span class="number">45</span> <span class="number">50</span> <span class="number">55</span></div></pre></td></tr></table></figure>
+<p>当然你也可以在输出的时候再去指定风格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">0</span>,<span class="number">60</span>,<span class="number">5</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> np.nditer(a, order =  <span class="string">'C'</span>):</div><div class="line">    <span class="keyword">print</span> (i)</div><div class="line">Out:</div><div class="line"><span class="number">0</span> <span class="number">20</span> <span class="number">40</span> <span class="number">5</span> <span class="number">25</span> <span class="number">45</span> <span class="number">10</span> <span class="number">30</span> <span class="number">50</span> <span class="number">15</span> <span class="number">35</span> <span class="number">55</span>     </div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> np.nditer(a, order =  <span class="string">'F'</span>):</div><div class="line">    <span class="keyword">print</span> (i)    </div><div class="line">Out:</div><div class="line"> <span class="number">0</span> <span class="number">5</span> <span class="number">10</span> <span class="number">15</span> <span class="number">20</span> <span class="number">25</span> <span class="number">30</span> <span class="number">35</span> <span class="number">40</span> <span class="number">45</span> <span class="number">50</span> <span class="number">55</span></div></pre></td></tr></table></figure>
+<h4 id="修改数组的值"><a href="#修改数组的值" class="headerlink" title="修改数组的值"></a>修改数组的值</h4><p>迭代的时候nditer也是可以修改值的（默认为read 只读），我们只需要将参数 op_flags的状态改为’readwrite’即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">0</span>,<span class="number">60</span>,<span class="number">5</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> np.nditer(a, op_flags=[<span class="string">'readwrite'</span>]): </div><div class="line">    i[...] = <span class="number">3</span>*i</div><div class="line"><span class="keyword">print</span> (a)</div><div class="line">Out:</div><div class="line">[[  <span class="number">0</span>  <span class="number">15</span>  <span class="number">30</span>  <span class="number">45</span>]</div><div class="line"> [ <span class="number">60</span>  <span class="number">75</span>  <span class="number">90</span> <span class="number">105</span>]</div><div class="line"> [<span class="number">120</span> <span class="number">135</span> <span class="number">150</span> <span class="number">165</span>]]</div></pre></td></tr></table></figure>
+<p>导出一维数组</p>
+<p>将flags 参数设为[‘external_loop’] 即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">0</span>,<span class="number">60</span>,<span class="number">5</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> np.nditer(a, flags =  [<span class="string">'external_loop'</span>], order =  <span class="string">'F'</span>): </div><div class="line">    <span class="keyword">print</span> (i)</div><div class="line">Out:</div><div class="line">[ <span class="number">0</span> <span class="number">20</span> <span class="number">40</span>]</div><div class="line">[ <span class="number">5</span> <span class="number">25</span> <span class="number">45</span>]</div><div class="line">[<span class="number">10</span> <span class="number">30</span> <span class="number">50</span>]</div><div class="line">[<span class="number">15</span> <span class="number">35</span> <span class="number">55</span>]</div></pre></td></tr></table></figure>
+<p>广播迭代</p>
+<p>如果是两个数组是可广播的那么nditer可以同时迭代他们</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">0</span>,<span class="number">60</span>,<span class="number">5</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</div><div class="line">b = np.array([<span class="number">1</span>,  <span class="number">2</span>,  <span class="number">3</span>,  <span class="number">4</span>])</div><div class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> np.nditer([a,b]):  </div><div class="line">    <span class="keyword">print</span>  (<span class="string">"&#123;&#125;:&#123;&#125;"</span>.format(x,y))</div><div class="line">Out:</div><div class="line"><span class="number">0</span>:<span class="number">1</span> <span class="number">5</span>:<span class="number">2</span> <span class="number">10</span>:<span class="number">3</span> <span class="number">15</span>:<span class="number">4</span> <span class="number">20</span>:<span class="number">1</span> <span class="number">25</span>:<span class="number">2</span> <span class="number">30</span>:<span class="number">3</span> <span class="number">35</span>:<span class="number">4</span> <span class="number">40</span>:<span class="number">1</span> <span class="number">45</span>:<span class="number">2</span> <span class="number">50</span>:<span class="number">3</span> <span class="number">55</span>:<span class="number">4</span></div></pre></td></tr></table></figure>
+<h3 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h3><p>修改形状的四种方式</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>形状及描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td><code>reshape</code> 不改变数据的条件下修改形状</td>
+</tr>
+<tr>
+<td>2.</td>
+<td><code>flat</code> 数组上的一维迭代器</td>
+</tr>
+<tr>
+<td>3.</td>
+<td><code>flatten</code> 返回折叠为一维的数组副本</td>
+</tr>
+<tr>
+<td>4.</td>
+<td><code>ravel</code> 返回连续的展开数组</td>
+</tr>
+</tbody>
+</table>
+<h4 id="numpy-reshape"><a href="#numpy-reshape" class="headerlink" title="numpy.reshape"></a>numpy.reshape</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">0</span>,<span class="number">60</span>,<span class="number">5</span>)</div><div class="line">print(a)</div><div class="line">Out:</div><div class="line">[ <span class="number">0</span>  <span class="number">5</span> <span class="number">10</span> <span class="number">15</span> <span class="number">20</span> <span class="number">25</span> <span class="number">30</span> <span class="number">35</span> <span class="number">40</span> <span class="number">45</span> <span class="number">50</span> <span class="number">55</span>]</div><div class="line">print(a.reshape(<span class="number">3</span>,<span class="number">4</span>))</div><div class="line">Out:</div><div class="line">[[ <span class="number">0</span>  <span class="number">5</span> <span class="number">10</span> <span class="number">15</span>]</div><div class="line"> [<span class="number">20</span> <span class="number">25</span> <span class="number">30</span> <span class="number">35</span>]</div><div class="line"> [<span class="number">40</span> <span class="number">45</span> <span class="number">50</span> <span class="number">55</span>]]</div></pre></td></tr></table></figure>
+<h4 id="numpy-ndarray-flat"><a href="#numpy-ndarray-flat" class="headerlink" title="numpy.ndarray.flat"></a>numpy.ndarray.flat</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">8</span>).reshape(<span class="number">2</span>,<span class="number">4</span>)</div><div class="line">print(a)</div><div class="line">Out:</div><div class="line">[[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</div><div class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>]]</div><div class="line"><span class="keyword">print</span> (a.flat[<span class="number">5</span>])</div><div class="line">Out:</div><div class="line"><span class="number">5</span></div></pre></td></tr></table></figure>
+<h4 id="numpy-ndarray-flatten"><a href="#numpy-ndarray-flatten" class="headerlink" title="numpy.ndarray.flatten"></a>numpy.ndarray.flatten</h4><p>该函数返回折叠为一维的数组副本，函数接受下列参数：</p>
+<p>ndarray.flatten(order)</p>
+<ul>
+<li><code>order</code>：<code>&#39;C&#39;</code> – 按行，<code>&#39;F&#39;</code> – 按列，<code>&#39;A&#39;</code> – 原顺序，<code>&#39;k&#39;</code> – 元素在内存中的出现顺序。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">8</span>).reshape(<span class="number">2</span>,<span class="number">4</span>)</div><div class="line"><span class="keyword">print</span> (a.flatten())</div><div class="line">Out:</div><div class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>]</div><div class="line"><span class="keyword">print</span> (a.flatten(order = <span class="string">'F'</span>))</div><div class="line">Out:</div><div class="line">[<span class="number">0</span> <span class="number">4</span> <span class="number">1</span> <span class="number">5</span> <span class="number">2</span> <span class="number">6</span> <span class="number">3</span> <span class="number">7</span>]</div></pre></td></tr></table></figure>
+<h4 id="numpy-ravel"><a href="#numpy-ravel" class="headerlink" title="numpy.ravel"></a>numpy.ravel</h4><p>这个函数返回展开的一维数组，并且按需生成副本。返回的数组和输入数组拥有相同数据类型。这个函数接受两个参数。</p>
+<p>numpy.ravel(array, order)</p>
+<ul>
+<li><code>array</code>:要转置的array</li>
+</ul>
+<ul>
+<li><code>order</code>：<code>&#39;C&#39;</code> – 按行，<code>&#39;F&#39;</code> – 按列，<code>&#39;A&#39;</code> – 原顺序，<code>&#39;k&#39;</code> – 元素在内存中的出现顺序</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a = np.arange(<span class="number">8</span>).reshape(<span class="number">2</span>,<span class="number">4</span>)</div><div class="line"><span class="keyword">print</span> (a.ravel())</div><div class="line">Out:</div><div class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>]</div><div class="line"><span class="keyword">print</span> (a.ravel(order = <span class="string">'F'</span>))</div><div class="line">Out:</div><div class="line">[<span class="number">0</span> <span class="number">4</span> <span class="number">1</span> <span class="number">5</span> <span class="number">2</span> <span class="number">6</span> <span class="number">3</span> <span class="number">7</span>]</div></pre></td></tr></table></figure>
+<h3 id="数组翻转（转置）"><a href="#数组翻转（转置）" class="headerlink" title="数组翻转（转置）"></a>数组翻转（转置）</h3><p>转置是一个经常操作的操作，存在一下集中方式</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>操作及描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td><code>transpose</code> 翻转数组的维度</td>
+</tr>
+<tr>
+<td>2.</td>
+<td><code>ndarray.T</code> 和<code>self.transpose()</code>相同</td>
+</tr>
+<tr>
+<td>3.</td>
+<td><code>rollaxis</code> 向后滚动指定的轴</td>
+</tr>
+<tr>
+<td>4.</td>
+<td><code>swapaxes</code> 互换数组的两个轴</td>
+</tr>
+</tbody>
+</table>
+<p><code>#[:,np.newaxis]</code> 作用是转置</p>
+<h4 id="numpy-transpose"><a href="#numpy-transpose" class="headerlink" title="numpy.transpose"></a>numpy.transpose</h4><p>numpy.transpose(arr, axes=None)</p>
+<ul>
+<li><code>array</code>:要转置的array</li>
+<li><code>axes</code>:整数的列表，对应维度，通常所有维度都会翻转。（该参数略过）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x = np.arange(<span class="number">4</span>).reshape((<span class="number">2</span>,<span class="number">2</span>))</div><div class="line">np.transpose(x)</div><div class="line">Out:</div><div class="line">array([[<span class="number">0</span>, <span class="number">2</span>],</div><div class="line">       [<span class="number">1</span>, <span class="number">3</span>]])</div></pre></td></tr></table></figure>
+<p>ndarray.T 与上面完全相同（所以经常用的是它）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x = np.arange(<span class="number">4</span>).reshape((<span class="number">2</span>,<span class="number">2</span>))</div><div class="line">x.T</div><div class="line">Out:</div><div class="line">array([[<span class="number">0</span>, <span class="number">2</span>],</div><div class="line">       [<span class="number">1</span>, <span class="number">3</span>]])   <span class="comment">#一毛一样</span></div></pre></td></tr></table></figure>
+<h4 id="numpy-rollaxis（这个难懂）"><a href="#numpy-rollaxis（这个难懂）" class="headerlink" title="numpy.rollaxis（这个难懂）"></a>numpy.rollaxis（这个难懂）</h4><p>该函数向后滚动特定的轴，直到一个特定位置。这个函数接受三个参数：</p>
+<p>numpy.rollaxis(arr, axis, start)</p>
+<ul>
+<li><code>arr</code>：输入数组</li>
+<li><code>axis</code>：要向后滚动的轴，其它轴的相对位置不会改变</li>
+<li><code>start</code>：默认为零，表示完整的滚动。会滚动到特定位置。</li>
+</ul>
+<p>第二个参数为要滚动的轴，第三个为滚动的目标位置。</p>
+<p>这里容易搞不懂 axis/axes ，所以请看<a href="https://zhuanlan.zhihu.com/p/25761406" target="_blank" rel="external">Numpy小记——有关axis/axes的理解</a></p>
+<p>直接上代码，多想想吧，想通了就好理解了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">x = np.arange(<span class="number">0</span>,<span class="number">120</span>,<span class="number">10</span>).reshape(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>)</div><div class="line">x</div><div class="line">Out[<span class="number">152</span>]:</div><div class="line">array([[[  <span class="number">0</span>,  <span class="number">10</span>,  <span class="number">20</span>],</div><div class="line">        [ <span class="number">30</span>,  <span class="number">40</span>,  <span class="number">50</span>]],</div><div class="line"></div><div class="line">       [[ <span class="number">60</span>,  <span class="number">70</span>,  <span class="number">80</span>],</div><div class="line">        [ <span class="number">90</span>, <span class="number">100</span>, <span class="number">110</span>]]])</div><div class="line"></div><div class="line"></div><div class="line">np.rollaxis(x,<span class="number">1</span>)</div><div class="line">Out:</div><div class="line">array([[[  <span class="number">0</span>,  <span class="number">10</span>,  <span class="number">20</span>],</div><div class="line">        [ <span class="number">60</span>,  <span class="number">70</span>,  <span class="number">80</span>]],</div><div class="line"></div><div class="line">       [[ <span class="number">30</span>,  <span class="number">40</span>,  <span class="number">50</span>],</div><div class="line">        [ <span class="number">90</span>, <span class="number">100</span>, <span class="number">110</span>]]])</div><div class="line"></div><div class="line"></div><div class="line">np.rollaxis(x,<span class="number">2</span>)</div><div class="line">Out:</div><div class="line">array([[[  <span class="number">0</span>,  <span class="number">30</span>],</div><div class="line">        [ <span class="number">60</span>,  <span class="number">90</span>]],</div><div class="line"></div><div class="line">       [[ <span class="number">10</span>,  <span class="number">40</span>],</div><div class="line">        [ <span class="number">70</span>, <span class="number">100</span>]],</div><div class="line"></div><div class="line">       [[ <span class="number">20</span>,  <span class="number">50</span>],</div><div class="line">        [ <span class="number">80</span>, <span class="number">110</span>]]])</div><div class="line"></div><div class="line"></div><div class="line">np.rollaxis(x,<span class="number">2</span>,<span class="number">1</span>)</div><div class="line">Out:</div><div class="line">array([[[  <span class="number">0</span>,  <span class="number">30</span>],</div><div class="line">        [ <span class="number">10</span>,  <span class="number">40</span>],</div><div class="line">        [ <span class="number">20</span>,  <span class="number">50</span>]],</div><div class="line"></div><div class="line">       [[ <span class="number">60</span>,  <span class="number">90</span>],</div><div class="line">        [ <span class="number">70</span>, <span class="number">100</span>],</div><div class="line">        [ <span class="number">80</span>, <span class="number">110</span>]]])</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -233,47 +416,8 @@
   
   <entry>
     <title>hexo new 之后立即打开文稿</title>
-    <link href="http://yoursite.com/2017/06/02/open_you_markdown_file_when_hexo_new/"/>
-    <id>http://yoursite.com/2017/06/02/open_you_markdown_file_when_hexo_new/</id>
-    <published>2017-06-02T05:28:04.000Z</published>
-    <updated>2017-07-19T10:49:12.792Z</updated>
-    
-    <content type="html"><![CDATA[<p>hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去<code>`hexo-home/source/_post</code> `文件夹里狂翻真的事一件不优雅的事情。</p>
-<p>这个问题上很多人都有过类似的需求，解决方法都是监听<code>hexo new</code>命令然后使用编辑器打开。</p>
-<p>方法如下：</p>
-<p>在hexo目录下新建一个scripts目录，然后新建一个js脚本，代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line">// windos 10</div><div class="line">// Hexo 3.2.2</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;start E:\\Typora\\Typora.exe&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>start后面是你的markdown编辑器路径<br>如果你是 OS X 代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line"></div><div class="line">// Hexo 2.x</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;open -a &quot;/Applications/Sublime Text.app&quot; &apos; + path);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>代码转自<a href="https://liam0205.me/2015/05/01/open-editor-after-hexo-new-immediately/" target="_blank" rel="external">在 hexo new 之后立即打开新建的 Markdown 文稿</a>hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去<code>`hexo-home/source/_post</code> `文件夹里狂翻真的事一件不优雅的事情。</p>
-<p>这个问题上很多人都有过类似的需求，解决方法都是监听<code>hexo new</code>命令然后使用编辑器打开。</p>
-<p>方法如下：</p>
-<p>在hexo目录下新建一个scripts目录，然后新建一个js脚本，代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line">// windos 10</div><div class="line">// Hexo 3.2.2</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;start E:\\Typora\\Typora.exe&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>start后面是你的markdown编辑器路径<br>如果你是 OS X 代码如下</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var exec = require(&apos;child_process&apos;).exec;</div><div class="line"></div><div class="line">// Hexo 2.x</div><div class="line">hexo.on(&apos;new&apos;, function(path)&#123;</div><div class="line">    exec(&apos;open -a &quot;/Applications/Sublime Text.app&quot; &apos; + path);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>代码转自<a href="https://liam0205.me/2015/05/01/open-editor-after-hexo-new-immediately/" target="_blank" rel="external">在 hexo new 之后立即打开新建的 Markdown 文稿</a></p>
-</blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去&lt;code&gt;`hexo-home/source/_post&lt;/code&gt; `文件夹里狂翻真的事一件不优雅的事情。&lt;/p&gt;
-&lt;p&gt;这个问题上很多人都有过类似的需求，解决方法都是监听&lt;code&gt;hexo ne
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo new 之后立即打开文稿</title>
-    <link href="http://yoursite.com/2017/06/02/open_you_%20markdown_file_when_hexo_new/"/>
-    <id>http://yoursite.com/2017/06/02/open_you_ markdown_file_when_hexo_new/</id>
+    <link href="http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/"/>
+    <id>http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/</id>
     <published>2017-06-02T04:55:07.000Z</published>
     <updated>2017-06-02T05:22:11.993Z</updated>
     
@@ -1080,9 +1224,9 @@
       <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
       <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
