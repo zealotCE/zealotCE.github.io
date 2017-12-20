@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-10-9/20898144.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-10-9/62753186.jpg">
 <meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/17-10-9/37318684.jpg">
-<meta property="og:updated_time" content="2017-10-09T02:16:20.113Z">
+<meta property="og:updated_time" content="2017-10-09T02:16:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小说人物关系可视化">
 <meta name="twitter:description" content="随缘更新 之前看到了一些关于小说人物之间联系的可视化，看起来挺好玩的。（真的很简单）由于网上给的教程不完善，所以就自己实现了一下。">
@@ -406,7 +406,8 @@
 </ol>
 <p>###怎么处理呢？</p>
 <p>这段只作为说明，实际可用代码见文末</p>
-<p>先让 jieba 加载字典。<br>使用 readlines 逐行读取。<br>使用 jieba.cut 分词。<br>给这行维护一个list。<br>将出现的人名维护进list。<br>将人名list 放入 dict 作为 key，出现一次 +1 （人物出现的次数就统计出来了）。<br>将一段中两两出现的人计数（任务互动的关系也出来了）。<br>将二者存储为gephi 接收的csv格式就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import jieba</div><div class="line">names = &#123;&#125;              # 姓名字典</div><div class="line">lineNames = []          # 姓名检索</div><div class="line">relationships = &#123;&#125;	# 关系字典</div><div class="line">jieba.load_userdict(jieba_dict)</div><div class="line">with codesc.open(filepath,&apos;r&apos;,&apos;utf-8&apos;) as f:</div><div class="line">    for lines in f.readlines():</div><div class="line">        poss = jieba.cut(lines)</div><div class="line">        lineNames.append([])</div><div class="line">        for w in poss:</div><div class="line">            if w not in name_set:       # 如果关键字不在 name_set 中存在就跳过</div><div class="line">                continue                </div><div class="line">                self._lineNames[-1].append(w)</div><div class="line">                if self._names.get(w) is None:</div><div class="line">                    self._names[w] = 0</div><div class="line">                    relationships[w] = &#123;&#125;</div><div class="line">                self._names[w] += 1</div><div class="line"></div><div class="line">for line in lineNames:			# 对于每一段</div><div class="line">    for name1 in line:					</div><div class="line">        for name2 in line:		# 每段中的任意两个人</div><div class="line">            if name1 == name2:</div><div class="line">                continue</div><div class="line">            if relationships[name1].get(name2) is None:	 # 若两人尚未同时出现则新建项</div><div class="line">                relationships[name1][name2]= 1</div><div class="line">            else:</div><div class="line">                relationships[name1][name2] = relationships[name1][name2]+ 1</div></pre></td></tr></table></figure></p>
+<p>先让 jieba 加载字典。<br>使用 readlines 逐行读取。<br>使用 jieba.cut 分词。<br>给这行维护一个list。<br>将出现的人名维护进list。<br>将人名list 放入 dict 作为 key，出现一次 +1 （人物出现的次数就统计出来了）。<br>将一段中两两出现的人计数（任务互动的关系也出来了）。<br>将二者存储为gephi 接收的csv格式就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import jieba</div><div class="line">names = &#123;&#125;              # 姓名字典</div><div class="line">lineNames = []          # 姓名检索</div><div class="line">relationships = &#123;&#125;	# 关系字典</div><div class="line">jieba.load_userdict(jieba_dict)</div><div class="line">with codesc.open(filepath,&apos;r&apos;,&apos;utf-8&apos;) as f:</div><div class="line">    for lines in f.readlines():</div><div class="line">        poss = jieba.cut(lines)</div><div class="line">        lineNames.append([])</div><div class="line">        for w in poss:</div><div class="line">            if w not in name_set:       # 如果关键字不在 name_set 中存在就跳过</div><div class="line">                continue                </div><div class="line">                self._lineNames[-1].append(w)</div><div class="line">                if self._names.get(w) is None:</div><div class="line">                    self._names[w] = 0</div><div class="line">                    relationships[w] = &#123;&#125;</div><div class="line">                self._names[w] += 1</div><div class="line"></div><div class="line">for line in lineNames:			# 对于每一段</div><div class="line">    for name1 in line:					</div><div class="line">        for name2 in line:		# 每段中的任意两个人</div><div class="line">            if name1 == name2:</div><div class="line">                continue</div><div class="line">            if relationships[name1].get(name2) is None:	 # 若两人尚未同时出现则新建项</div><div class="line">                relationships[name1][name2]= 1</div><div class="line">            else:</div><div class="line">                relationships[name1][name2] = relationships[name1][name2]+ 1</div></pre></td></tr></table></figure>
 <p>最后我们只要把数据导入到gephi中去生成自己喜欢的图形就好啦。</p>
 <p>文末会附上详细的使用文档。</p>
 <p>看看gephi生成的关系图吧。<br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/79525580.jpg" alt=""><br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/20898144.jpg" alt=""><br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/62753186.jpg" alt=""><br><img src="http://om80aljc8.bkt.clouddn.com/17-10-9/37318684.jpg" alt=""></p>
@@ -458,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/22/pandas数据合并/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2017/07/31/Notes-with-Numpy/" rel="next" title="Numpy 笔记">
+                <i class="fa fa-chevron-left"></i> Numpy 笔记
               </a>
             
           </div>
@@ -467,6 +468,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/20/AmericaOpposeAmerica/" rel="prev" title="美国反对美国">
+                美国反对美国 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
