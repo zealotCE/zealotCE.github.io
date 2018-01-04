@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-04T10:10:33.284Z</updated>
+  <updated>2018-01-04T10:14:17.547Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://yoursite.com/2018/01/04/kaggle/"/>
     <id>http://yoursite.com/2018/01/04/kaggle/</id>
     <published>2018-01-04T09:49:33.000Z</published>
-    <updated>2018-01-04T10:10:33.284Z</updated>
+    <updated>2018-01-04T10:14:17.547Z</updated>
     
     <content type="html"><![CDATA[<h2 id="A-Data-Science-Framework-To-Achieve-99-Accuracy"><a href="#A-Data-Science-Framework-To-Achieve-99-Accuracy" class="headerlink" title="A Data Science Framework: To Achieve 99% Accuracy"></a>A Data Science Framework: To Achieve 99% Accuracy</h2><blockquote>
 <p>很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。<br><a id="more"></a></p>
 </blockquote>
 <p>Hello and Welcome to Kaggle, the online Data Science Community to learn, share, and compete. Most beginners get lost in the field, because they fall into the black box approach, using libraries and algorithms they don’t understand. This tutorial will give you a 1-2-year head start over your peers, by providing a framework that teaches you how-to think like a data scientist vs what to think/code. Not only will you be able to submit your first competition, but you’ll be able to solve any problem thrown your way. I provide clear explanations, clean code, and plenty of links to resources. Please Note: This Kernel is still being improved. So check the Change Logs below for updates. Also, please be sure to upvote, fork, and comment and I’ll continue to develop. Thanks, and may you have “statistically significant” luck!</p>
-<p>欢迎来到Kaggle，在一个在线数据科学社区学习，分享和参与。大多数初学者在这里迷路了，因为他们陷入了黑盒子的方式，使用他们不明白的库和算法。本教程通过提供一个框架，教会您如何像数据科学家一样思考和思考/编码，从而使您在同行中获得1-2年的领先优势。你不仅可以提交你的第一场比赛，但你可以解决任何问题。我提供了清晰的解释，干净的代码和大量的资源链接。请注意：这个内核还在改进之中。因此请查看下面的更改日志以获取更新。另外，请务必注意，分叉和评论，我会继续发展。谢谢，可能你有“统计意义上的”运气！</p>
+<p>欢迎来到Kaggle，在一个在线数据科学社区学习，分享和参与。大多数初学者在这里迷路了，因为他们陷入了黑盒子的方式，使用他们不明白的库和算法。本教程通过提供一个框架，教会您如何像数据科学家一样思考和思考/编程，从而使您在同行中获得1-2年的领先优势。你不仅可以提交你的第一场比赛，但你可以解决任何问题。我提供了清晰的解释，干净的代码和大量的资源链接。请注意：这个内核还在改进之中。因此请查看下面的更改日志以获取更新。另外，请务必注意，分叉和评论，我会继续发展。谢谢，可能你有“统计意义上的”运气！</p>
 <h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><p>Chapter 1 - How a Data Scientist Beat the Odds<br>Chapter 2 - A Data Science Framework<br>Chapter 3 - Step 1: Define the Problem and Step 2: Gather the Data<br>Chapter 4 - Step 3: Prepare Data for Consumption<br>Chapter 5 - The 4 C’s of Data Cleaning: Correcting, Completing, Creating, and Converting<br>Chapter 6 - Step 4: Perform Exploratory Analysis with Statistics<br>Chapter 7 - Step 5: Model Data<br>Chapter 8 - Evaluate Model Performance<br>Chapter 9 - Tune Model with Hyper-Parameters<br>Chapter 10 - Tune Model with Feature Selection<br>Chapter 11 - Step 6: Validate and Implement<br>Chapter 12 - Conclusion and Step 7: Optimize and Strategize<br>Change Log</p>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
 <li>第一章 - 数据科学家如何击败概率</li>
@@ -43,7 +43,7 @@
 <li>第12章 - 总结</li>
 </ol>
 <p>Credits<br>How-to Use this Tutorial: Read the explanations provided in this Kernel and the links to developer documentation. The goal is to not just learn the whats, but the whys. If you don’t understand something in the code the print() function is your best friend. In coding, it’s okay to try, fail, and try again. If you do run into problems, Google is your second best friend, because 99.99% of the time, someone else had the same question/problem and already asked the coding community. If you’ve exhausted all your resources, the Kaggle Community via forums and comments can help too.</p>
-<p>关于：<br>如何使用本教程：阅读此内核中提供的解释和开发者文档的链接。目标是不只是学习什么，而是什么。如果你不’ 不懂代码的东西print（）函数是你最好的朋友。在编码方面，可以尝试，失败，然后重试。如果你遇到问题，Google是你的第二好朋友，因为99.99％的时间，别人有同样的问题和问题，并已经问过编码社区。如果你已经耗尽了所有的资源，通过论坛和评论Kaggle社区也可以帮助。</p>
+<p>关于：<br>如何使用本教程：阅读此内核中提供的解释和开发者文档的链接。目标是不只是学习什么，而是什么。如果你不不懂代码的东西，那么print（）函数是你最好的朋友。在编码方面，可以尝试，失败，然后重试。如果你遇到问题，Google是你的第二好朋友，因为99.99％的时间，别人有同样的问题和问题，并已经问过编程社区。如果你已经耗尽了所有的资源，通过论坛和评论Kaggle社区也可以帮助。</p>
 <h2 id="How-a-Data-Scientist-Beat-the-Odds"><a href="#How-a-Data-Scientist-Beat-the-Odds" class="headerlink" title="How a Data Scientist Beat the Odds"></a>How a Data Scientist Beat the Odds</h2><p>It’s the classical problem, predict the outcome of a binary event. In laymen terms this means, it either occurred or did not occur. For example, you won or did not win, you passed the test or did not pass the test, you were accepted or not accepted, and you get the point. A common business application is churn or customer retention. Another popular use case is, healthcare’s mortality rate or survival analysis. Binary events create an interesting dynamic, because we know statistically, a random guess should achieve a 50% accuracy rate, without creating one single algorithm or writing one single line of code. However, just like autocorrect spellcheck technology, sometimes we humans can be too smart for our own good and actually underperform a coin flip. In this kernel, I use Kaggle’s Getting Started Competition, Titanic: Machine Learning from Disaster, to walk the reader through, how-to use the data science framework to beat the odds.</p>
 <p>What happens when technology is too smart for its own good? </p>
 <h2 id="数据科学家如何击败概率"><a href="#数据科学家如何击败概率" class="headerlink" title="数据科学家如何击败概率"></a>数据科学家如何击败概率</h2><p>这是一个经典问题，预测二元事件的结果。从外行的角度来说，这意味着，它不是发生就是没有发生。例如，你赢了或者没有赢，你通过了考试或者没有通过考试，你被接受或者不被接受，你就明白了。常见的业务应用程序是流失或客户保留。另一个流行的用例是医疗保健的死亡率或生存分析。二元事件产生了一个有趣的动态，因为我们统计可以知道，随机猜测应该达到50％的准确率，而不需要创建一个单一的算法或编写一行代码。但是，就像自动纠正拼写检查技术一样，有时我们人类可能对我们自己而言太聪明，实际上表现不及投掷硬币。在这个内核中，我使用Kaggle的入门比赛，泰坦尼克号：<br>当技术过于聪明而不利于自身时，会发生什么？ </p>
