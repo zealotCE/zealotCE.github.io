@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-04T09:53:42.348Z</updated>
+  <updated>2018-01-04T09:58:58.904Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://yoursite.com/2018/01/04/kaggle/"/>
     <id>http://yoursite.com/2018/01/04/kaggle/</id>
     <published>2018-01-04T09:49:33.000Z</published>
-    <updated>2018-01-04T09:53:42.348Z</updated>
+    <updated>2018-01-04T09:58:58.904Z</updated>
     
     <content type="html"><![CDATA[<p>##A Data Science Framework: To Achieve 99% Accuracy</p>
 <blockquote>
-<p>很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。</p>
+<p>很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。<br><a id="more"></a></p>
 </blockquote>
 <p>Hello and Welcome to Kaggle, the online Data Science Community to learn, share, and compete. Most beginners get lost in the field, because they fall into the black box approach, using libraries and algorithms they don’t understand. This tutorial will give you a 1-2-year head start over your peers, by providing a framework that teaches you how-to think like a data scientist vs what to think/code. Not only will you be able to submit your first competition, but you’ll be able to solve any problem thrown your way. I provide clear explanations, clean code, and plenty of links to resources. Please Note: This Kernel is still being improved. So check the Change Logs below for updates. Also, please be sure to upvote, fork, and comment and I’ll continue to develop. Thanks, and may you have “statistically significant” luck!</p>
 <p>欢迎来到Kaggle，在一个在线数据科学社区学习，分享和参与。大多数初学者在这里迷路了，因为他们陷入了黑盒子的方式，使用他们不明白的库和算法。本教程通过提供一个框架，教会您如何像数据科学家一样思考和思考/编码，从而使您在同行中获得1-2年的领先优势。你不仅可以提交你的第一场比赛，但你可以解决任何问题。我提供了清晰的解释，干净的代码和大量的资源链接。请注意：这个内核还在改进之中。因此请查看下面的更改日志以获取更新。另外，请务必注意，分叉和评论，我会继续发展。谢谢，可能你有“统计意义上的”运气！</p>
@@ -866,8 +866,7 @@ Name: Survived, dtype: float64
     
       &lt;p&gt;##A Data Science Framework: To Achieve 99% Accuracy&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。&lt;br&gt;
     
     </summary>
     
