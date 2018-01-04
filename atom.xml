@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-04T09:58:58.904Z</updated>
+  <updated>2018-01-04T10:00:40.979Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://yoursite.com/2018/01/04/kaggle/"/>
     <id>http://yoursite.com/2018/01/04/kaggle/</id>
     <published>2018-01-04T09:49:33.000Z</published>
-    <updated>2018-01-04T09:58:58.904Z</updated>
+    <updated>2018-01-04T10:00:40.979Z</updated>
     
-    <content type="html"><![CDATA[<p>##A Data Science Framework: To Achieve 99% Accuracy</p>
-<blockquote>
+    <content type="html"><![CDATA[<h2 id="A-Data-Science-Framework-To-Achieve-99-Accuracy"><a href="#A-Data-Science-Framework-To-Achieve-99-Accuracy" class="headerlink" title="A Data Science Framework: To Achieve 99% Accuracy"></a>A Data Science Framework: To Achieve 99% Accuracy</h2><blockquote>
 <p>很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。<br><a id="more"></a></p>
 </blockquote>
 <p>Hello and Welcome to Kaggle, the online Data Science Community to learn, share, and compete. Most beginners get lost in the field, because they fall into the black box approach, using libraries and algorithms they don’t understand. This tutorial will give you a 1-2-year head start over your peers, by providing a framework that teaches you how-to think like a data scientist vs what to think/code. Not only will you be able to submit your first competition, but you’ll be able to solve any problem thrown your way. I provide clear explanations, clean code, and plenty of links to resources. Please Note: This Kernel is still being improved. So check the Change Logs below for updates. Also, please be sure to upvote, fork, and comment and I’ll continue to develop. Thanks, and may you have “statistically significant” luck!</p>
@@ -864,8 +863,7 @@ Name: Survived, dtype: float64
     
     <summary type="html">
     
-      &lt;p&gt;##A Data Science Framework: To Achieve 99% Accuracy&lt;/p&gt;
-&lt;blockquote&gt;
+      &lt;h2 id=&quot;A-Data-Science-Framework-To-Achieve-99-Accuracy&quot;&gt;&lt;a href=&quot;#A-Data-Science-Framework-To-Achieve-99-Accuracy&quot; class=&quot;headerlink&quot; title=&quot;A Data Science Framework: To Achieve 99% Accuracy&quot;&gt;&lt;/a&gt;A Data Science Framework: To Achieve 99% Accuracy&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。&lt;br&gt;
     
     </summary>
