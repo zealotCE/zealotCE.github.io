@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="hexo,">
+  <meta name="keywords" content="Linux,Jupyter Notebook,">
 
 
 
@@ -95,18 +95,21 @@
 
 
 
-<meta name="description" content="hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去`hexo-home/source/_post `文件夹里狂翻真的事一件不优雅的事情。 这个问题上很多人都有过类似的需求，解决方法都是监听hexo new命令然后使用编辑器打开。">
-<meta name="keywords" content="hexo">
+<meta name="description" content="最近朋友买了个腾讯云的VPS，让我帮忙配置一下环境。然后我就想顺便配置一个Jupyter Notebook 服务（毕竟机器配置不错，不能浪费2333）. 所以记录一下配置过程。 安装Anaconda 首先去Anaconda官网获取linux 版本的下载链接，我现在拿到的是：  https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_6">
+<meta name="keywords" content="Linux,Jupyter Notebook">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo new 之后立即打开文稿">
-<meta property="og:url" content="http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/index.html">
+<meta property="og:title" content="远程配置Jupyter Notebook 服务">
+<meta property="og:url" content="http://yoursite.com/2017/03/04/Jupyter-Notebook_remote_service/index.html">
 <meta property="og:site_name" content="zealotCE">
-<meta property="og:description" content="hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去`hexo-home/source/_post `文件夹里狂翻真的事一件不优雅的事情。 这个问题上很多人都有过类似的需求，解决方法都是监听hexo new命令然后使用编辑器打开。">
+<meta property="og:description" content="最近朋友买了个腾讯云的VPS，让我帮忙配置一下环境。然后我就想顺便配置一个Jupyter Notebook 服务（毕竟机器配置不错，不能浪费2333）. 所以记录一下配置过程。 安装Anaconda 首先去Anaconda官网获取linux 版本的下载链接，我现在拿到的是：  https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_6">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-06-02T05:22:11.000Z">
+<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/18-3-19/99542104.jpg">
+<meta property="og:image" content="http://om80aljc8.bkt.clouddn.com/18-3-19/42519579.jpg">
+<meta property="og:updated_time" content="2018-03-19T13:33:49.886Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo new 之后立即打开文稿">
-<meta name="twitter:description" content="hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去`hexo-home/source/_post `文件夹里狂翻真的事一件不优雅的事情。 这个问题上很多人都有过类似的需求，解决方法都是监听hexo new命令然后使用编辑器打开。">
+<meta name="twitter:title" content="远程配置Jupyter Notebook 服务">
+<meta name="twitter:description" content="最近朋友买了个腾讯云的VPS，让我帮忙配置一下环境。然后我就想顺便配置一个Jupyter Notebook 服务（毕竟机器配置不错，不能浪费2333）. 所以记录一下配置过程。 安装Anaconda 首先去Anaconda官网获取linux 版本的下载链接，我现在拿到的是：  https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_6">
+<meta name="twitter:image" content="http://om80aljc8.bkt.clouddn.com/18-3-19/99542104.jpg">
 
 
 
@@ -134,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/">
+  <link rel="canonical" href="http://yoursite.com/2017/03/04/Jupyter-Notebook_remote_service/">
 
 
 
 
 
-  <title>hexo new 之后立即打开文稿 | zealotCE</title>
+  <title>远程配置Jupyter Notebook 服务 | zealotCE</title>
   
 
 
@@ -279,7 +282,7 @@
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/04/Jupyter-Notebook_remote_service/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zealot CE">
@@ -296,7 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo new 之后立即打开文稿</h1>
+          <h1 class="post-title" itemprop="name headline">远程配置Jupyter Notebook 服务</h1>
         
 
         <div class="post-meta">
@@ -308,8 +311,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-02T12:55:07+08:00">
-                2017-06-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-04T18:38:37+08:00">
+                2017-03-04
               </time>
             
 
@@ -331,8 +334,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -348,7 +351,7 @@
 
           
           
-             <span id="/2017/06/02/open_your_markdown_file_when_hexo_new/" class="leancloud_visitors" data-flag-title="hexo new 之后立即打开文稿">
+             <span id="/2017/03/04/Jupyter-Notebook_remote_service/" class="leancloud_visitors" data-flag-title="远程配置Jupyter Notebook 服务">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -376,22 +379,80 @@
       
 
       
-        <p>hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去<code>`hexo-home/source/_post</code> `文件夹里狂翻真的事一件不优雅的事情。</p>
-<p>这个问题上很多人都有过类似的需求，解决方法都是监听<code>hexo new</code>命令然后使用编辑器打开。</p>
-<a id="more"></a>
-<p>方法如下：</p>
-<p>在hexo目录下新建一个scripts目录，然后新建一个js脚本，代码如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</div><div class="line"><span class="comment">// windos 10</span></div><div class="line"><span class="comment">// Hexo 3.2.2</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">path</span>)</span>&#123;</div><div class="line">    exec(<span class="string">'start E:\\Typora\\Typora.exe'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>start后面是你的markdown编辑器路径<br>如果你是 OS X 代码如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</div><div class="line"></div><div class="line"><span class="comment">// Hexo 2.x</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">path</span>)</span>&#123;</div><div class="line">    exec(<span class="string">'open -a "/Applications/Sublime Text.app" '</span> + path);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+        <p>最近朋友买了个腾讯云的VPS，让我帮忙配置一下环境。然后我就想顺便配置一个Jupyter Notebook 服务（毕竟机器配置不错，不能浪费2333）.</p>
+<p>所以记录一下配置过程。</p>
+<h3 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h3><ol>
+<li>首先去<a href="https://www.anaconda.com/download/" target="_blank" rel="external">Anaconda官网</a>获取linux 版本的下载链接，我现在拿到的是：</li>
+</ol>
+<p><a href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh" target="_blank" rel="external">https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh</a></p>
+<ol>
+<li><p>使用xshell等方式连接上vps</p>
+</li>
+<li><p>下载文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https://repo.continuum.io/archive/Anaconda3<span class="number">-5.1</span><span class="number">.0</span>-Linux-x86_64.sh</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bash Anaconda3-5.1.0-Linux-x86_64.sh</div></pre></td></tr></table></figure>
+<p>or 要权限的话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bash Anaconda3-5.1.0-Linux-x86_64.sh</div></pre></td></tr></table></figure>
+<p>然后按照提示安装完Anaconda</p>
+</li>
+<li><p>测试 conda</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda --v</div></pre></td></tr></table></figure>
+<p>out: </p>
+<p>conda 4.4.10</p>
+<p>5.1 错误</p>
+<p>如果提示： -bash: conda ：command not found</p>
+<p>则输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"export PATH="</span>~/anaconda2/bin:<span class="string">"<span class="variable">$PATH</span> "</span> &gt;&gt; ~/.bashrc</div></pre></td></tr></table></figure>
+<p>这样就不会报错了</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/18-3-19/99542104.jpg" alt=""></p>
+</li>
+<li><p>配置jupyter notebook 远程服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jupyter notebook --generate-config</div></pre></td></tr></table></figure>
+<p>系统会提示 </p>
+<p>created /root/.jupyter/jupyter_notebook_config.py </p>
+</li>
+<li><p>生成密码：</p>
+<p>打开ipython</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ipython</div></pre></td></tr></table></figure>
+<p>输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">In [1]: from notebook.auth import passwd</div><div class="line">In [2]: passwd()</div><div class="line">Enter password: </div><div class="line">Verify password: </div><div class="line">Out[2]: &apos;sha1:--&apos;</div></pre></td></tr></table></figure>
+<p>输入两次你的密码，然后你就会获得一个 ‘sha1:——-‘ 的输出。</p>
+<p>复制它</p>
+</li>
+<li><p>修改jupyter_notebook_config.py</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vi [文件路径]</div><div class="line"><span class="comment">#比如我的是 vi /root/.jupyter/jupyter_notebook_config.py</span></div></pre></td></tr></table></figure>
+<p>这个是我的路径，请根据自己的情况修改</p>
+<p>主要是要修改四处设置：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">c</span>.NotebookApp.open_browser = False </div><div class="line"></div><div class="line"><span class="keyword">c</span>.NotebookApp.password = <span class="keyword">u</span><span class="string">'sha1:（填你的sha1）'</span></div><div class="line"><span class="keyword">c</span>.NotebookApp.ip = <span class="string">'*'</span></div><div class="line"><span class="keyword">c</span>.NotebookApp.port = <span class="number">8000</span> </div><div class="line">#port 看你喜欢填哪个</div></pre></td></tr></table></figure>
 <blockquote>
-<p>代码转自<a href="https://liam0205.me/2015/05/01/open-editor-after-hexo-new-immediately/" target="_blank" rel="external">在 hexo new 之后立即打开新建的 Markdown 文稿</a></p>
+<p>vim 查找文字的方式是  </p>
+<ul>
+<li><p>按 <code>Esc</code></p>
+</li>
+<li><p>输入 /text  ，其中text 是你要查找的文本</p>
+</li>
+<li><p><code>enter</code> 就可以跳转到你要找的段落了</p>
+</li>
+</ul>
+<p>对VIM的命令感兴趣可以<a href="http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html" target="_blank" rel="external">看这里</a> </p>
 </blockquote>
-<hr>
-<p>在命令行输入：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new "new blog"</div></pre></td></tr></table></figure>
-<p>即可</p>
-<blockquote class="blockquote-center">When you are old</blockquote>
+<p>然后：</p>
+<ul>
+<li><code>Esc</code></li>
+<li><code>:wq</code></li>
+</ul>
+<p>保存并退出</p>
+</li>
+<li><p>启动Jupyter Notebook 服务</p>
+<p>首先使用<code>jupyter notebook</code>系统会报错 提醒你添加 –allow-root </p>
+<p>所以实际的启动命令是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jupyer notebook --allow-root</div></pre></td></tr></table></figure>
+<p><img src="http://om80aljc8.bkt.clouddn.com/18-3-19/42519579.jpg" alt=""></p>
+<p>​</p>
+</li>
+</ol>
       
     </div>
 
@@ -420,7 +481,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/Jupyter-Notebook/" rel="tag"># Jupyter Notebook</a>
           
         </div>
       
@@ -433,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/02/anticipate_and_confidence/" rel="next" title="主机商业模式-本不该存在的商业模式">
-                <i class="fa fa-chevron-left"></i> 主机商业模式-本不该存在的商业模式
+              <a href="/2017/03/03/future_updates_of_content/" rel="next" title="未来会更新的内容">
+                <i class="fa fa-chevron-left"></i> 未来会更新的内容
               </a>
             
           </div>
@@ -443,8 +506,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/03/talk-about-china-and-india/" rel="prev" title="关于中印边境问题">
-                关于中印边境问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/04/about_markdown/" rel="prev" title="一些 Markdown 常用语法">
+                一些 Markdown 常用语法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -518,8 +581,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="http://om80aljc8.bkt.clouddn.com/blog_%E5%A4%B4%E5%83%8F.gif" alt="Zealot CE">
           <p class="site-author-name" itemprop="name">Zealot CE</p>
@@ -590,6 +662,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Anaconda"><span class="nav-number">1.</span> <span class="nav-text">安装Anaconda</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -2,30 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/03/04/Jupyter-Notebook_remote_service/</loc>
+    
+    <lastmod>2018-03-19T13:33:49.886Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/01/08/talk-aboout-Pandas-MutiIndex/</loc>
+    
+    <lastmod>2018-01-10T16:11:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/01/05/about_PD/</loc>
     
-    <lastmod>2018-01-05T03:24:20.575Z</lastmod>
+    <lastmod>2018-01-05T03:24:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2018/01/04/kaggle/</loc>
     
-    <lastmod>2018-01-04T10:25:17.986Z</lastmod>
+    <lastmod>2018-01-04T10:25:17.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/03/03/build_your_own_blog%20with%20git+hexo/</loc>
     
-    <lastmod>2017-12-20T09:36:38.590Z</lastmod>
+    <lastmod>2017-12-20T09:36:38.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/12/20/AmericaOpposeAmerica/</loc>
     
-    <lastmod>2017-12-20T09:32:24.787Z</lastmod>
+    <lastmod>2017-12-20T09:32:24.000Z</lastmod>
     
   </url>
   
@@ -39,35 +53,35 @@
   <url>
     <loc>http://yoursite.com/2017/07/31/Notes-with-Numpy/</loc>
     
-    <lastmod>2017-07-31T10:34:08.102Z</lastmod>
+    <lastmod>2017-07-31T10:34:08.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/07/19/WallpaperGet/</loc>
     
-    <lastmod>2017-07-31T08:19:09.296Z</lastmod>
+    <lastmod>2017-07-31T08:19:09.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/07/03/talk-about-china-and-india/</loc>
     
-    <lastmod>2017-07-19T10:49:18.926Z</lastmod>
+    <lastmod>2017-07-19T10:49:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/05/02/anticipate_and_confidence/</loc>
     
-    <lastmod>2017-07-03T05:41:13.652Z</lastmod>
+    <lastmod>2017-07-03T05:41:13.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/</loc>
     
-    <lastmod>2017-06-02T05:22:11.993Z</lastmod>
+    <lastmod>2017-06-02T05:22:11.000Z</lastmod>
     
   </url>
   

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-04T10:25:17.986Z</updated>
+  <updated>2018-01-10T16:11:52.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,81 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>聊聊 pandas 以及Feature Enginering</title>
+    <link href="http://yoursite.com/2018/01/08/talk-aboout-Pandas-MutiIndex/"/>
+    <id>http://yoursite.com/2018/01/08/talk-aboout-Pandas-MutiIndex/</id>
+    <published>2018-01-08T04:28:38.000Z</published>
+    <updated>2018-01-10T16:11:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近开始在天池上做题，进行数据清洗的时候发现 Pandas 的数据透视表是基于MutiIndex的，这是很大一个惊喜，不过发现用起来还是有些问题。比如说<code>iloc</code>属性没法使用（<code>ix</code>,<code>iat</code>估计也一样)。对于爱用 python 进行数据处理的人来说 pandas 真的是天赐宝物。</p>
+<p>所以在这里聊聊自己用 pandas 做 Feature Enginering 的一些小体会。</p>
+<a id="more"></a>
+<p>本来做特征工程的主要作用其实是给机器学习使用，提高模型的效率。</p>
+<h3 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h3><p>这几天空闲时间在做天池的一个竞赛题目，<a href="https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100066.0.0.540eb2c12cvst8&amp;raceId=231640" target="_blank" rel="external">汽车销量预测</a>。（不做另外一个的原因是，主办方在上牌预测中提供的训练数据实在是太少了。需要自行外部获取，我又对行业不了解。所以自然选择了这个）</p>
+<h3 id="初见"><a href="#初见" class="headerlink" title="初见"></a>初见</h3><p>开头从官网上下载数据的时候就发现了一些问题，比如<strong>训练集（train)</strong> 数据有多余的列。删除掉之后就继续做了。</p>
+<p>把数据简单看下没有大问题的情况下，我一般的习惯是使用 pandas 的<code>pd.DataFrame.describe</code>和<code>pd.DataFrame.corr</code>来了解情况。前者是可以看到每一个<strong>特征（Feature)</strong>的大概情况（见下表格）。而后者则是计算各个特征（Feature)的相关系数（下图是使用Seaborn 进行可视化后的数据）。</p>
+<div><br><br><style><br><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br></style><br><br><table border="1" class="dataframe"><br><br>  <thead><br><br>    <tr style="text-align: right"><br>      <th></th><br>      <th>sale_date</th><br>      <th>class_id</th><br>      <th>sale_quantity</th><br>      <th>brand_id</th><br>      <th>compartment</th><br>      <th>type_id</th><br>      <th>level_id</th><br>      <th>department_id</th><br>      <th>TR</th><br>      <th>gearbox_type</th><br>      <th>…</th><br>      <th>engine_torque</th><br>      <th>car_length</th><br>      <th>car_width</th><br>      <th>car_height</th><br>      <th>total_quality</th><br>      <th>equipment_quality</th><br>      <th>rated_passenger</th><br>      <th>wheelbase</th><br>      <th>front_track</th><br>      <th>rear_track</th><br>    </tr><br><br>  </thead><br><br>  <tbody><br><br>    <tr><br>      <th>count</th><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157.00000</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157</td><br>      <td>20157.000000</td><br>      <td>20157</td><br>      <td>20157</td><br>      <td>…</td><br>      <td>20157</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>      <td>20157.000000</td><br>    </tr><br>    <tr><br>      <th>unique</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>6</td><br>      <td>NaN</td><br>      <td>10</td><br>      <td>7</td><br>      <td>…</td><br>      <td>111</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>10</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>top</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>1</td><br>      <td>NaN</td><br>      <td>6</td><br>      <td>AT</td><br>      <td>…</td><br>      <td>155</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>5</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>freq</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>10619</td><br>      <td>NaN</td><br>      <td>7640</td><br>      <td>8421</td><br>      <td>…</td><br>      <td>1918</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>18238</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>mean</th><br>      <td>201490.186784</td><br>      <td>507410.234906</td><br>      <td>126.31205</td><br>      <td>643.293645</td><br>      <td>2.518033</td><br>      <td>1.860297</td><br>      <td>NaN</td><br>      <td>3.348316</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>…</td><br>      <td>NaN</td><br>      <td>4577.579600</td><br>      <td>1790.405269</td><br>      <td>1552.624448</td><br>      <td>1876.938582</td><br>      <td>1414.852657</td><br>      <td>NaN</td><br>      <td>2706.141589</td><br>      <td>1538.063055</td><br>      <td>1538.027980</td><br>    </tr><br>    <tr><br>      <th>std</th><br>      <td>157.488965</td><br>      <td>234920.469728</td><br>      <td>231.13742</td><br>      <td>250.153093</td><br>      <td>0.528447</td><br>      <td>0.608067</td><br>      <td>NaN</td><br>      <td>1.552570</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>…</td><br>      <td>NaN</td><br>      <td>266.704254</td><br>      <td>62.189750</td><br>      <td>124.673136</td><br>      <td>222.324373</td><br>      <td>208.956548</td><br>      <td>NaN</td><br>      <td>129.011827</td><br>      <td>55.662680</td><br>      <td>56.429887</td><br>    </tr><br>    <tr><br>      <th>min</th><br>      <td>201201.000000</td><br>      <td>103507.000000</td><br>      <td>5.00000</td><br>      <td>12.000000</td><br>      <td>1.000000</td><br>      <td>1.000000</td><br>      <td>NaN</td><br>      <td>1.000000</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>…</td><br>      <td>NaN</td><br>      <td>3675.000000</td><br>      <td>1510.000000</td><br>      <td>1415.000000</td><br>      <td>1350.000000</td><br>      <td>925.000000</td><br>      <td>NaN</td><br>      <td>2360.000000</td><br>      <td>1280.000000</td><br>      <td>1290.000000</td><br>    </tr><br>    <tr><br>      <th>25%</th><br>      <td>201402.000000</td><br>      <td>304458.000000</td><br>      <td>16.00000</td><br>      <td>537.000000</td><br>      <td>2.000000</td><br>      <td>2.000000</td><br>      <td>NaN</td><br>      <td>2.000000</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>…</td><br>      <td>NaN</td><br>      <td>4431.000000</td><br>      <td>1765.000000</td><br>      <td>1465.000000</td><br>      <td>1720.000000</td><br>      <td>1267.000000</td><br>      <td>NaN</td><br>      <td>2614.000000</td><br>      <td>1517.000000</td><br>      <td>1515.000000</td><br>    </tr><br>    <tr><br>      <th>50%</th><br>      <td>201506.000000</td><br>      <td>472603.000000</td><br>      <td>47.00000</td><br>      <td>750.000000</td><br>      <td>3.000000</td><br>      <td>2.000000</td><br>      <td>NaN</td><br>      <td>4.000000</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>…</td><br>      <td>NaN</td><br>      <td>4598.000000</td><br>      <td>1802.000000</td><br>      <td>1484.000000</td><br>      <td>1835.000000</td><br>      <td>1390.000000</td><br>      <td>NaN</td><br>      <td>2690.000000</td><br>      <td>1549.000000</td><br>      <td>1550.000000</td><br>    </tr><br>    <tr><br>      <th>75%</th><br>      <td>201609.000000</td><br>      <td>692703.000000</td><br>      <td>142.00000</td><br>      <td>814.000000</td><br>      <td>3.000000</td><br>      <td>2.000000</td><br>      <td>NaN</td><br>      <td>4.000000</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>…</td><br>      <td>NaN</td><br>      <td>4718.000000</td><br>      <td>1830.000000</td><br>      <td>1646.000000</td><br>      <td>2020.000000</td><br>      <td>1556.000000</td><br>      <td>NaN</td><br>      <td>2770.000000</td><br>      <td>1575.000000</td><br>      <td>1571.000000</td><br>    </tr><br>    <tr><br>      <th>max</th><br>      <td>201710.000000</td><br>      <td>978089.000000</td><br>      <td>6284.00000</td><br>      <td>985.000000</td><br>      <td>3.000000</td><br>      <td>4.000000</td><br>      <td>NaN</td><br>      <td>7.000000</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>…</td><br>      <td>NaN</td><br>      <td>5266.000000</td><br>      <td>1942.000000</td><br>      <td>1960.000000</td><br>      <td>2520.000000</td><br>      <td>2005.000000</td><br>      <td>NaN</td><br>      <td>3108.000000</td><br>      <td>1655.000000</td><br>      <td>1671.000000</td><br>    </tr><br><br>  </tbody><br><br></table><br><br><p>11 rows × 32 columns</p><br><br></div>
+
+<blockquote>
+<p>corr 计算后使用seaborn可视化。</p>
+</blockquote>
+<p><img src="http://om80aljc8.bkt.clouddn.com/18-1-10/92733800.jpg" alt=""></p>
+<p>这里我发现了一个比较有意思的情况，我们要预测的值 <strong>sale_quantity</strong> 实际上与各项参数的相关系数都不高。看来这个问题确实还需要深挖。</p>
+<h3 id="观察各个特征"><a href="#观察各个特征" class="headerlink" title="观察各个特征"></a>观察各个特征</h3><p>在观察各项特征（Feature) , 在对数据有了一个简单印象之后，我开始观察各个特征（Feature) 是以那种方式存储（int，float，string）。然后统计了一下各个Feature的一些常见数据。发现了他们基本都是离散的。</p>
+<p>在发现数据离散之后我开始逐步去了解数据，逐步发掘各个Feature 与 sale_quantity 之间的数据联系。然后我发现了一个大问题。</p>
+<h3 id="发现了问题"><a href="#发现了问题" class="headerlink" title="发现了问题"></a>发现了问题</h3><p>主办方提供的数据本身有问题。这个问题需要参赛者观察 训练集 和 要提交的测试集，并且观察完训练集之后才能发现。</p>
+<p>那就是——测试集中只提供了车型的 class_id，但是在训练集中，我们可以发现同样的 class_id 中，某几项参数仍然存在不同（<code>level_id</code>,<code>TR</code>,<code>gearbox_type</code>,<code>power</code>,<code>car_length</code>,<code>emission_standards_id</code>,<code>car_height</code>,<code>total_quality</code>,<code>equipment_quality</code>,<code>rated_passenger</code>,<code>front_track</code> ）。</p>
+<p>这也使得我必须要重新清洗数据。</p>
+<h3 id="清洗数据"><a href="#清洗数据" class="headerlink" title="清洗数据"></a>清洗数据</h3><p>清洗的思路很简单：</p>
+<ol>
+<li>利用 pandas 把以上几项特征合并起来。</li>
+<li>再利用<code>pandas.pivot</code>数据透视表功能提取出合并特征后的销量数据。</li>
+<li>选择销量最好的合并特征作为某个 class_id 的实际特征。这样我们就得到了一个车型的特征表（共140种特征）</li>
+<li>再用车型特征表，重新生成训练集数据和预测集数据。</li>
+</ol>
+<p>车型特征表长这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(class_id_param.shape)</div><div class="line">class_id_param.head(<span class="number">10</span>)</div></pre></td></tr></table></figure>
+<pre><code>(140, 28)
+</code></pre><p>​    </p>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right"><br>      <th></th><br>      <th>brand_id_code</th><br>      <th>compartment_code</th><br>      <th>type_id_code</th><br>      <th>department_id_code</th><br>      <th>displacement_code</th><br>      <th>if_charging_code</th><br>      <th>price_level_code</th><br>      <th>driven_type_id_code</th><br>      <th>fuel_type_id_code</th><br>      <th>newenergy_type_id_code</th><br>      <th>…</th><br>      <th>TR_code</th><br>      <th>gearbox_type_code</th><br>      <th>power_code</th><br>      <th>car_length_code</th><br>      <th>emission_standards_id_code</th><br>      <th>car_height_code</th><br>      <th>total_quality_code</th><br>      <th>equipment_quality_code</th><br>      <th>rated_passenger_code</th><br>      <th>front_track_code</th><br>    </tr><br>    <tr><br>      <th>class_id</th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>      <th></th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>289403</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>5</td><br>      <td>4</td><br>      <td>217</td><br>      <td>58</td><br>      <td>0</td><br>      <td>71</td><br>      <td>95</td><br>      <td>160</td><br>      <td>2</td><br>      <td>56</td><br>    </tr><br>    <tr><br>      <th>745137</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>5</td><br>      <td>4</td><br>      <td>210</td><br>      <td>47</td><br>      <td>0</td><br>      <td>42</td><br>      <td>70</td><br>      <td>132</td><br>      <td>2</td><br>      <td>53</td><br>    </tr><br>    <tr><br>      <th>714860</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>5</td><br>      <td>1</td><br>      <td>11</td><br>      <td>151</td><br>      <td>2</td><br>      <td>26</td><br>      <td>120</td><br>      <td>159</td><br>      <td>2</td><br>      <td>76</td><br>    </tr><br>    <tr><br>      <th>175962</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>3</td><br>      <td>5</td><br>      <td>186</td><br>      <td>72</td><br>      <td>2</td><br>      <td>30</td><br>      <td>27</td><br>      <td>39</td><br>      <td>2</td><br>      <td>11</td><br>    </tr><br>    <tr><br>      <th>270690</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>3</td><br>      <td>5</td><br>      <td>190</td><br>      <td>54</td><br>      <td>0</td><br>      <td>146</td><br>      <td>119</td><br>      <td>91</td><br>      <td>2</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>290854</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>3</td><br>      <td>1</td><br>      <td>74</td><br>      <td>96</td><br>      <td>2</td><br>      <td>115</td><br>      <td>196</td><br>      <td>270</td><br>      <td>2</td><br>      <td>65</td><br>    </tr><br>    <tr><br>      <th>692703</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>5</td><br>      <td>1</td><br>      <td>25</td><br>      <td>81</td><br>      <td>0</td><br>      <td>110</td><br>      <td>137</td><br>      <td>219</td><br>      <td>2</td><br>      <td>73</td><br>    </tr><br>    <tr><br>      <th>978089</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>3</td><br>      <td>5</td><br>      <td>184</td><br>      <td>122</td><br>      <td>0</td><br>      <td>31</td><br>      <td>35</td><br>      <td>87</td><br>      <td>2</td><br>      <td>22</td><br>    </tr><br>    <tr><br>      <th>219195</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>5</td><br>      <td>5</td><br>      <td>21</td><br>      <td>39</td><br>      <td>2</td><br>      <td>121</td><br>      <td>138</td><br>      <td>215</td><br>      <td>2</td><br>      <td>30</td><br>    </tr><br>    <tr><br>      <th>851857</th><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>8</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>…</td><br>      <td>7</td><br>      <td>1</td><br>      <td>110</td><br>      <td>169</td><br>      <td>0</td><br>      <td>113</td><br>      <td>236</td><br>      <td>324</td><br>      <td>2</td><br>      <td>106</td><br>    </tr><br>  </tbody><br></table><br><p>10 rows × 28 columns</p><br></div>
+
+
+
+<p>然后就是用清洗好的数据，去重新提取特征和训练就好啦。（这里牵涉到sklearn 的一些模块，以后慢慢写）</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>对我来说处理特征，主要步骤：</p>
+<ol>
+<li>初步了解数据概况</li>
+<li>​</li>
+</ol>
+<blockquote class="blockquote-center">When you are old</blockquote>
+
+<blockquote>
+<p>最近访客</p>
+</blockquote>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近开始在天池上做题，进行数据清洗的时候发现 Pandas 的数据透视表是基于MutiIndex的，这是很大一个惊喜，不过发现用起来还是有些问题。比如说&lt;code&gt;iloc&lt;/code&gt;属性没法使用（&lt;code&gt;ix&lt;/code&gt;,&lt;code&gt;iat&lt;/code&gt;估计也一样)。对于爱用 python 进行数据处理的人来说 pandas 真的是天赐宝物。&lt;/p&gt;
+&lt;p&gt;所以在这里聊聊自己用 pandas 做 Feature Enginering 的一些小体会。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="pandas" scheme="http://yoursite.com/tags/pandas/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一个数据科学框架：可以达到99%的准确度</title>
     <link href="http://yoursite.com/2018/01/04/kaggle/"/>
     <id>http://yoursite.com/2018/01/04/kaggle/</id>
     <published>2018-01-04T09:49:33.000Z</published>
-    <updated>2018-01-04T10:25:17.986Z</updated>
+    <updated>2018-01-04T10:25:17.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="A-Data-Science-Framework-To-Achieve-99-Accuracy"><a href="#A-Data-Science-Framework-To-Achieve-99-Accuracy" class="headerlink" title="A Data Science Framework: To Achieve 99% Accuracy"></a><a href="https://www.kaggle.com/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy" target="_blank" rel="external">A Data Science Framework: To Achieve 99% Accuracy</a></h2><blockquote>
 <p>很不错的一篇文章，但是英文苦手，所以就借助谷歌和自己的渣英文简单翻译了，反正自己能看懂，哈哈。<br><a id="more"></a></p>
@@ -887,7 +957,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/12/20/AmericaOpposeAmerica/"/>
     <id>http://yoursite.com/2017/12/20/AmericaOpposeAmerica/</id>
     <published>2017-12-20T09:26:42.000Z</published>
-    <updated>2017-12-20T09:32:24.787Z</updated>
+    <updated>2017-12-20T09:32:24.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>注：《美国反对美国》是王沪宁先生在上世纪80年代末赴美观察写作的。我们知道在那个年代中国对西方特别是美国的追捧有多高，所以突然看到一个学者在80年代就有如此清楚的认识，十分钦佩。由于网上只有效果很差的PDF扫描版，所以我想利用OCR技术和肉眼（人肉OCR，年代太久软件识别不能）来转成现代化的文本格式。</p>
@@ -2739,7 +2809,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/07/31/Notes-with-Numpy/"/>
     <id>http://yoursite.com/2017/07/31/Notes-with-Numpy/</id>
     <published>2017-07-31T08:17:37.000Z</published>
-    <updated>2017-07-31T10:34:08.102Z</updated>
+    <updated>2017-07-31T10:34:08.000Z</updated>
     
     <content type="html"><![CDATA[<p>我使用的环境是 ipython，所以很多时候会不使用<code>print()</code>，而是直接使用变量输出。</p>
 <h3 id="导入-numpy-库"><a href="#导入-numpy-库" class="headerlink" title="导入 numpy 库"></a>导入 numpy 库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div></pre></td></tr></table></figure>
@@ -2941,7 +3011,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/07/19/WallpaperGet/"/>
     <id>http://yoursite.com/2017/07/19/WallpaperGet/</id>
     <published>2017-07-19T09:28:04.000Z</published>
-    <updated>2017-07-31T08:19:09.296Z</updated>
+    <updated>2017-07-31T08:19:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>win10的锁屏壁纸还挺好看的。鉴于微软自己会更新壁纸，所以还是授人以渔，代码在最后。</p>
 <p><img src="http://om80aljc8.bkt.clouddn.com/17-7-19/84170274.jpg" alt=""></p>
@@ -3006,7 +3076,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/07/03/talk-about-china-and-india/"/>
     <id>http://yoursite.com/2017/07/03/talk-about-china-and-india/</id>
     <published>2017-07-03T05:28:04.000Z</published>
-    <updated>2017-07-19T10:49:18.926Z</updated>
+    <updated>2017-07-19T10:49:18.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近国内新闻关于印度越境这事儿折腾的很热闹，网上总是能看到很多人在讨论这个问题。</p>
 <p><strong>其实这事儿表现出了我们是优势，而且优势很大。</strong></p>
@@ -3062,7 +3132,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/"/>
     <id>http://yoursite.com/2017/06/02/open_your_markdown_file_when_hexo_new/</id>
     <published>2017-06-02T04:55:07.000Z</published>
-    <updated>2017-06-02T05:22:11.993Z</updated>
+    <updated>2017-06-02T05:22:11.000Z</updated>
     
     <content type="html"><![CDATA[<p>hexo用起来还是非常舒服的。但是用久了之后当你创建了新的文稿之后再去<code>`hexo-home/source/_post</code> `文件夹里狂翻真的事一件不优雅的事情。</p>
 <p>这个问题上很多人都有过类似的需求，解决方法都是监听<code>hexo new</code>命令然后使用编辑器打开。</p>
@@ -3100,7 +3170,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/05/02/anticipate_and_confidence/"/>
     <id>http://yoursite.com/2017/05/02/anticipate_and_confidence/</id>
     <published>2017-05-02T13:28:04.000Z</published>
-    <updated>2017-07-03T05:41:13.652Z</updated>
+    <updated>2017-07-03T05:41:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>博客已经好久没有更新了，这几天其实一直在想写些什么，但是苦于没找到切入点。</p>
 <p>只要你对游戏行业有一些了解，那么你自然可以知道：世界上最优秀，投资最大的游戏都始终处于主机游戏市场之中。</p>
@@ -3785,6 +3855,105 @@ Name: Survived, dtype: float64
   </entry>
   
   <entry>
+    <title>远程配置Jupyter Notebook 服务</title>
+    <link href="http://yoursite.com/2017/03/04/Jupyter-Notebook_remote_service/"/>
+    <id>http://yoursite.com/2017/03/04/Jupyter-Notebook_remote_service/</id>
+    <published>2017-03-04T10:38:37.000Z</published>
+    <updated>2018-03-19T13:33:49.886Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近朋友买了个腾讯云的VPS，让我帮忙配置一下环境。然后我就想顺便配置一个Jupyter Notebook 服务（毕竟机器配置不错，不能浪费2333）.</p>
+<p>所以记录一下配置过程。</p>
+<h3 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h3><ol>
+<li>首先去<a href="https://www.anaconda.com/download/" target="_blank" rel="external">Anaconda官网</a>获取linux 版本的下载链接，我现在拿到的是：</li>
+</ol>
+<p><a href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh" target="_blank" rel="external">https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh</a></p>
+<ol>
+<li><p>使用xshell等方式连接上vps</p>
+</li>
+<li><p>下载文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https://repo.continuum.io/archive/Anaconda3<span class="number">-5.1</span><span class="number">.0</span>-Linux-x86_64.sh</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bash Anaconda3-5.1.0-Linux-x86_64.sh</div></pre></td></tr></table></figure>
+<p>or 要权限的话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bash Anaconda3-5.1.0-Linux-x86_64.sh</div></pre></td></tr></table></figure>
+<p>然后按照提示安装完Anaconda</p>
+</li>
+<li><p>测试 conda</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda --v</div></pre></td></tr></table></figure>
+<p>out: </p>
+<p>conda 4.4.10</p>
+<p>5.1 错误</p>
+<p>如果提示： -bash: conda ：command not found</p>
+<p>则输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"export PATH="</span>~/anaconda2/bin:<span class="string">"<span class="variable">$PATH</span> "</span> &gt;&gt; ~/.bashrc</div></pre></td></tr></table></figure>
+<p>这样就不会报错了</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/18-3-19/99542104.jpg" alt=""></p>
+</li>
+<li><p>配置jupyter notebook 远程服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jupyter notebook --generate-config</div></pre></td></tr></table></figure>
+<p>系统会提示 </p>
+<p>created /root/.jupyter/jupyter_notebook_config.py </p>
+</li>
+<li><p>生成密码：</p>
+<p>打开ipython</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ipython</div></pre></td></tr></table></figure>
+<p>输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">In [1]: from notebook.auth import passwd</div><div class="line">In [2]: passwd()</div><div class="line">Enter password: </div><div class="line">Verify password: </div><div class="line">Out[2]: &apos;sha1:--&apos;</div></pre></td></tr></table></figure>
+<p>输入两次你的密码，然后你就会获得一个 ‘sha1:——-‘ 的输出。</p>
+<p>复制它</p>
+</li>
+<li><p>修改jupyter_notebook_config.py</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vi [文件路径]</div><div class="line"><span class="comment">#比如我的是 vi /root/.jupyter/jupyter_notebook_config.py</span></div></pre></td></tr></table></figure>
+<p>这个是我的路径，请根据自己的情况修改</p>
+<p>主要是要修改四处设置：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">c</span>.NotebookApp.open_browser = False </div><div class="line"></div><div class="line"><span class="keyword">c</span>.NotebookApp.password = <span class="keyword">u</span><span class="string">'sha1:（填你的sha1）'</span></div><div class="line"><span class="keyword">c</span>.NotebookApp.ip = <span class="string">'*'</span></div><div class="line"><span class="keyword">c</span>.NotebookApp.port = <span class="number">8000</span> </div><div class="line">#port 看你喜欢填哪个</div></pre></td></tr></table></figure>
+<blockquote>
+<p>vim 查找文字的方式是  </p>
+<ul>
+<li><p>按 <code>Esc</code></p>
+</li>
+<li><p>输入 /text  ，其中text 是你要查找的文本</p>
+</li>
+<li><p><code>enter</code> 就可以跳转到你要找的段落了</p>
+</li>
+</ul>
+<p>对VIM的命令感兴趣可以<a href="http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html" target="_blank" rel="external">看这里</a> </p>
+</blockquote>
+<p>然后：</p>
+<ul>
+<li><code>Esc</code></li>
+<li><code>:wq</code></li>
+</ul>
+<p>保存并退出</p>
+</li>
+<li><p>启动Jupyter Notebook 服务</p>
+<p>首先使用<code>jupyter notebook</code>系统会报错 提醒你添加 –allow-root </p>
+<p>所以实际的启动命令是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jupyer notebook --allow-root</div></pre></td></tr></table></figure>
+<p><img src="http://om80aljc8.bkt.clouddn.com/18-3-19/42519579.jpg" alt=""></p>
+<p>​</p>
+</li>
+</ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近朋友买了个腾讯云的VPS，让我帮忙配置一下环境。然后我就想顺便配置一个Jupyter Notebook 服务（毕竟机器配置不错，不能浪费2333）.&lt;/p&gt;
+&lt;p&gt;所以记录一下配置过程。&lt;/p&gt;
+&lt;h3 id=&quot;安装Anaconda&quot;&gt;&lt;a href=&quot;#安装Anaco
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Jupyter Notebook" scheme="http://yoursite.com/tags/Jupyter-Notebook/"/>
+    
+  </entry>
+  
+  <entry>
     <title>未来会更新的内容</title>
     <link href="http://yoursite.com/2017/03/03/future_updates_of_content/"/>
     <id>http://yoursite.com/2017/03/03/future_updates_of_content/</id>
@@ -3821,7 +3990,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/03/03/build_your_own_blog%20with%20git+hexo/"/>
     <id>http://yoursite.com/2017/03/03/build_your_own_blog with git+hexo/</id>
     <published>2017-03-03T02:58:33.000Z</published>
-    <updated>2017-12-20T09:36:38.590Z</updated>
+    <updated>2017-12-20T09:36:38.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="为什么要搭建自己的博客？"><a href="#为什么要搭建自己的博客？" class="headerlink" title="为什么要搭建自己的博客？"></a>为什么要搭建自己的博客？</h1><ul>
 <li>想自己练练手。</li>
@@ -3867,9 +4036,9 @@ Name: Survived, dtype: float64
       <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
     
     
-      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
-    
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
     
   </entry>
   
@@ -3878,7 +4047,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/01/05/about_PD/"/>
     <id>http://yoursite.com/2017/01/05/about_PD/</id>
     <published>2017-01-05T10:38:37.000Z</published>
-    <updated>2018-01-05T03:24:20.575Z</updated>
+    <updated>2018-01-05T03:24:20.000Z</updated>
     
     <content type="html"><![CDATA[<p>刚刚逛知乎，看到一个人说 UI 如何提升自己的问题，我想这个东西放到其他地方也是合适的。比如产品设计、程序设计等等。</p>
 <a id="more"></a>
