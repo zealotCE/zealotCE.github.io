@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-29T08:46:44.887Z</updated>
+  <updated>2018-04-26T03:50:52.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聊聊《塞尔达传说：荒野之息》</title>
+    <link href="http://yoursite.com/2018/04/10/talk_about_zelda/"/>
+    <id>http://yoursite.com/2018/04/10/talk_about_zelda/</id>
+    <published>2018-04-10T12:29:01.000Z</published>
+    <updated>2018-04-26T03:50:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>说来惭愧，作为一个（伪）HardCore玩家，我在今年2月才买了Switch。而且Switch也是我买的第一台任天堂的主机。所以《塞尔达 - 荒野之息》是我第一款玩到的荒野之息系列的作品。</p>
+<a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>熟悉主机游戏的朋友都知道2017年的游戏界简直是神仙打架。2017年出现了非常多的优秀游戏，其中有：</p>
+<ul>
+<li>Cup Head （茶杯头）—— 以上世纪 30 年代画风使用纯手绘制作的游戏</li>
+<li>Horizon Zero Dawn（地平线：黎明曙光）—— 索尼游戏开发技术代表作</li>
+<li>Persona 5（女神异闻录 5）——atlus 新作，潮到爆炸的荣格心理学游戏</li>
+<li>Nier Automata（尼尔：机械纪元）——优秀的人设，横尾太郎编写的新作。</li>
+<li>ETC…</li>
+</ul>
+<p>但是</p>
+<p><strong>任天堂今年把自家最大IP都抬出来了</strong> ——《塞尔达传说：荒野之息》和《超级马里奥：奥德赛》</p>
+<p>所以最大悬念就只有这俩到底是谁能拿冠军，放个图大家感受一下：</p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/18-4-10/52574633.jpg" alt=""></p>
+<p><img src="http://om80aljc8.bkt.clouddn.com/18-4-10/93478315.jpg" alt=""></p>
+<p><strong>最后的结果大家都知道了年度游戏是：</strong>《塞尔达传说：荒野之息》</p>
+<p>好了不废话了。我们来聊聊荒野之息的游戏内和游戏外。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h4 id="需求诞生"><a href="#需求诞生" class="headerlink" title="需求诞生"></a>需求诞生</h4><p><strong>当时的时代背景：</strong></p>
+<p>在塞尔达传说：天空之剑之后，任天堂就开始着手系列下一代的开发准备了。塞尔达荒野之息开发在2011年就开始了，而正式开发时间是2013年1月，所以我们可以确认它本身时为了任天堂的 <strong>Wii U</strong> 主机准备的（一代主机的生命周期一般是8年左右，所以Wii U直到退市才5年，可以看出来它有多失败了）。但2017年 <strong>Wii U</strong> 宣布停产，从此销量就定在了1356 万台这个数字上。所以根据访谈中开发团队透露在2016年就接到了移植到新主机的任务。所以我们最终才在2017年3月发现荒野之息成为了Nintendo  Switch的护航之作（虽然有Wii U版本，但是已经不重要了）。</p>
+<p>熟悉主机行业的朋友应该很清楚，一款足够优秀的游戏是主机销量的强心剂。一台主机只有拥有足够多的优秀游戏才能让足够多的人购买。从而平台才可以用销量让游戏开发商为自己平台开发游戏。</p>
+<p>主机商业模式可以查看我之前的文章。</p>
+<p>所以需求的答案是一句话:</p>
+<p><strong>制作一款足够优秀的游戏用以提振销量。</strong></p>
+<p>立项时为了Wii U，但由于Wii U的失败，让任天堂需要在新主机上挽回颓势，所以最终受益的是 Nintendo Switch。</p>
+<h4 id="那么该怎么做呢？"><a href="#那么该怎么做呢？" class="headerlink" title="那么该怎么做呢？"></a>那么该怎么做呢？</h4><p>玩过任天堂游戏的人往往对它的有一个简单且直观的评价<strong>有趣</strong>。</p>
+<p>没错，就是<strong>「有趣」</strong>。</p>
+<p>任天堂开发团队重新审视了过去的塞尔达系列。看着初代塞尔达由一个一个关卡组合出来的世界，他们找到了自己的答案——「open air」（开放世界）</p>
+<p>开放世界是当前游戏行业最热门的类型，似乎你一个游戏不是开放世界就Out了。</p>
+<p>那么</p>
+<h4 id="什么是开放世界？"><a href="#什么是开放世界？" class="headerlink" title="什么是开放世界？"></a>什么是开放世界？</h4><p>任天堂的答案是：</p>
+<ul>
+<li><p>没有任何强制你去做的主线。</p>
+<p>no checklist</p>
+</li>
+<li><p>可以攀爬，越过的障碍。</p>
+<p>可以爬墙爬山，只要你体力or药剂足够。</p>
+</li>
+<li><p>丰富多彩的支线。</p>
+<p>多到让人害怕，我不敢想这要花多少时间。</p>
+</li>
+<li><p>耳目一新的物理引擎和化学引擎。</p>
+<p>让物体之间相互作用创造出无数种玩法，关键是它符合你的直觉。</p>
+</li>
+<li><p>​wo</p>
+</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;说来惭愧，作为一个（伪）HardCore玩家，我在今年2月才买了Switch。而且Switch也是我买的第一台任天堂的主机。所以《塞尔达 - 荒野之息》是我第一款玩到的荒野之息系列的作品。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Game" scheme="http://yoursite.com/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>远程配置Jupyter Notebook 服务</title>
@@ -3269,7 +3338,7 @@ Name: Survived, dtype: float64
     <link href="http://yoursite.com/2017/05/02/anticipate_and_confidence/"/>
     <id>http://yoursite.com/2017/05/02/anticipate_and_confidence/</id>
     <published>2017-05-02T13:28:04.000Z</published>
-    <updated>2017-07-03T05:41:13.000Z</updated>
+    <updated>2018-05-16T05:56:56.402Z</updated>
     
     <content type="html"><![CDATA[<p>博客已经好久没有更新了，这几天其实一直在想写些什么，但是苦于没找到切入点。</p>
 <p>只要你对游戏行业有一些了解，那么你自然可以知道：世界上最优秀，投资最大的游戏都始终处于主机游戏市场之中。</p>
@@ -3421,7 +3490,7 @@ Name: Survived, dtype: float64
 <p>其实在我的理解中，现代的主机模式应该是：<strong>通过生产出杰出的游戏和培育优质的用户群体，去降低投资者们投资认真开发游戏的预期风险。</strong></p>
 <p>我增加了<strong>培育优质的用户群体</strong>这个条件的原因是：</p>
 <ul>
-<li><strong>降低风险预期，不是实际降低风险，所以风险预期是长期来看要兑换的。兑换条件则是市场反映良好，玩家积极购买游戏。</strong></li>
+<li><strong>降低风险预期，不是实际降低风险，所以风险预期是长期来看要兑现的。兑现条件则是市场反映良好，玩家积极购买游戏。</strong></li>
 <li>优质玩家群体意味着：有鉴别能力，愿意付费。</li>
 </ul>
 <blockquote>
@@ -3456,7 +3525,7 @@ Name: Survived, dtype: float64
 </blockquote>
 <p>大家请记住<strong>投资的边际效率是呈递减态势的</strong> </p>
 <p>这就是为什么手游、页游热衷于换皮，IP的根本原因，因为他符合资本主义客观规律——规避风险。</p>
-<h4 id="怎么降低市场的风险预期？"><a href="#怎么降低市场的风险预期？" class="headerlink" title="怎么降低市场的风险预期？"></a>怎么降低市场的风险预期？</h4><h5 id="一群经营创造出一个优秀的产品来培育和证明一个市场"><a href="#一群经营创造出一个优秀的产品来培育和证明一个市场" class="headerlink" title="一群经营创造出一个优秀的产品来培育和证明一个市场"></a>一群经营创造出一个优秀的产品来培育和证明一个市场</h5><p>看看任天堂是怎么做的把：</p>
+<h4 id="怎么降低市场的风险预期？"><a href="#怎么降低市场的风险预期？" class="headerlink" title="怎么降低市场的风险预期？"></a>怎么降低市场的风险预期？</h4><h5 id="一群精英创造出一个优秀的产品来培育和证明一个市场"><a href="#一群精英创造出一个优秀的产品来培育和证明一个市场" class="headerlink" title="一群精英创造出一个优秀的产品来培育和证明一个市场"></a>一群精英创造出一个优秀的产品来培育和证明一个市场</h5><p>看看任天堂是怎么做的把：</p>
 <blockquote>
 <p>各位必须要知道，雅达利冲击其实并没有一夜之间完全消灭欧美和日本的游戏市场参与者；还是有很多公司之前积攒了许多现金，仍然在试图通过自有资金重建游戏市场的，包括霸主雅达利本身——但他们的玩法，其实和之前并无不同，只是试图通过压低成本、提高机能、开发新用户这些方法来挽回玩家。所以，如果没有任天堂，我们或许不会拥有如今的游戏主机市场这个强大的新生商业文明，而是眼睁睁看着整个游戏市场在这些残存玩家的“洗量”和“资本运作”中走向衰败。</p>
 <p>更具体一点来说，1984年的任天堂，是通过这样几件事情，完成这个游戏主机体系的：销售拥有“内容控制与授权体系”的廉价游戏机红白机FC（美版的NES）；通过严格的审查剔除粗制滥造的山寨和克隆游戏；通过卡带制造和加密技术收取“制造费”（这确实比授权金听起来合理多了，也难怪当时他们能迅速建立商业模型）；最后，他们拥有一批即便以现在的眼光来看，也是世界最顶级的游戏开发与设计人员，为任天堂主机制造出了完全碾压其他竞争对手的伟大游戏。</p>
@@ -4039,35 +4108,6 @@ Name: Survived, dtype: float64
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
       <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>提高设计产品能力的一些观点</title>
-    <link href="http://yoursite.com/2017/01/05/about_PD/"/>
-    <id>http://yoursite.com/2017/01/05/about_PD/</id>
-    <published>2017-01-05T10:38:37.000Z</published>
-    <updated>2018-01-05T03:24:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>刚刚逛知乎，看到一个人说 UI 如何提升自己的问题，我想这个东西放到其他地方也是合适的。比如产品设计、程序设计等等。</p>
-<a id="more"></a>
-<p>可能楼主自己在做UI设计，尤其是在构思和落地的时候想的比较少。平时也对这个行业的关注度不够的原因造成的。在如今的互联网设计中，大部分的设计师是称不上“大神级”UI设计师，很多在行业里做的不错的设计师，其实也是通过自身努力和对行业的高关注度，做过一些大家耳熟能详的产品而被人熟知的。我个人的观点是这批人最多是“网红设计师”，还没有达到能影响整个行业的实力。</p>
-<p>楼主也坦露心声的说出了很多设计师在做设计的思维方式，各种抄。今天运气好点开站酷、花瓣能找到个与需求相似度很高的界面就抄抄抄，这种方式很短时间高效的解决现阶段的问题，但是长此以往是会暴露出缺乏原创能力、设计基础差、思维方式迟钝等负面问题的。</p>
-<p>个人建议楼主在以后的设计中，尝试比较古老的笨办法。先动脑不接触任何外在元素的情况把自己脑子所想到的设计方向都写下来，在根据自己写的内容进行头脑风暴，产出一些关键词、核心元素等内容。然后根据这些筛查出来的内容有针对性的去结合现在互联网比较热门的应用进行学习研究，分析问题和解决方法。最后在绘制草图，转到电脑上进行精准的界面设计。再初稿形成后，开会进行评审和提意见，修整方案。把每一次的评审记录备案留存下来。确定整体产品设计，以每次评审出现的问题和调整的思路进行总结复盘。最终完成整个项目~</p>
-<blockquote>
-<p>作者：SA九五二七<br>链接：<a href="https://www.zhihu.com/question/37196898/answer/288292827" target="_blank" rel="external">https://www.zhihu.com/question/37196898/answer/288292827</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;刚刚逛知乎，看到一个人说 UI 如何提升自己的问题，我想这个东西放到其他地方也是合适的。比如产品设计、程序设计等等。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
