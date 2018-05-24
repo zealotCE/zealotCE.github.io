@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-26T03:50:52.000Z</updated>
+  <updated>2018-05-22T11:10:00.247Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,16 +20,16 @@
     <link href="http://yoursite.com/2018/04/10/talk_about_zelda/"/>
     <id>http://yoursite.com/2018/04/10/talk_about_zelda/</id>
     <published>2018-04-10T12:29:01.000Z</published>
-    <updated>2018-04-26T03:50:52.000Z</updated>
+    <updated>2018-05-22T11:10:00.247Z</updated>
     
     <content type="html"><![CDATA[<p>说来惭愧，作为一个（伪）HardCore玩家，我在今年2月才买了Switch。而且Switch也是我买的第一台任天堂的主机。所以《塞尔达 - 荒野之息》是我第一款玩到的荒野之息系列的作品。</p>
 <a id="more"></a>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>熟悉主机游戏的朋友都知道2017年的游戏界简直是神仙打架。2017年出现了非常多的优秀游戏，其中有：</p>
 <ul>
-<li>Cup Head （茶杯头）—— 以上世纪 30 年代画风使用纯手绘制作的游戏</li>
-<li>Horizon Zero Dawn（地平线：黎明曙光）—— 索尼游戏开发技术代表作</li>
-<li>Persona 5（女神异闻录 5）——atlus 新作，潮到爆炸的荣格心理学游戏</li>
-<li>Nier Automata（尼尔：机械纪元）——优秀的人设，横尾太郎编写的新作。</li>
+<li>Cup Head （茶杯头）—— 以上世纪 30 年代画风使用纯手绘制作的游戏（死的我头疼）</li>
+<li>Horizon Zero Dawn（地平线：黎明曙光）—— 索尼游戏开发技术代表作（拍照曙光）</li>
+<li>Persona 5（女神异闻录 5）——atlus 新作，潮到爆炸的荣格心理学游戏（P5 天下第一）</li>
+<li>Nier Automata（尼尔：机械纪元）——优秀的人设，横尾太郎编写的新作。（2B/2A 小姐姐）</li>
 <li>ETC…</li>
 </ul>
 <p>但是</p>
@@ -39,7 +39,7 @@
 <p><img src="http://om80aljc8.bkt.clouddn.com/18-4-10/93478315.jpg" alt=""></p>
 <p><strong>最后的结果大家都知道了年度游戏是：</strong>《塞尔达传说：荒野之息》</p>
 <p>好了不废话了。我们来聊聊荒野之息的游戏内和游戏外。</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h4 id="需求诞生"><a href="#需求诞生" class="headerlink" title="需求诞生"></a>需求诞生</h4><p><strong>当时的时代背景：</strong></p>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><h4 id="需求诞生"><a href="#需求诞生" class="headerlink" title="需求诞生"></a>需求诞生</h4><p><strong>当时的时代背景：</strong></p>
 <p>在塞尔达传说：天空之剑之后，任天堂就开始着手系列下一代的开发准备了。塞尔达荒野之息开发在2011年就开始了，而正式开发时间是2013年1月，所以我们可以确认它本身时为了任天堂的 <strong>Wii U</strong> 主机准备的（一代主机的生命周期一般是8年左右，所以Wii U直到退市才5年，可以看出来它有多失败了）。但2017年 <strong>Wii U</strong> 宣布停产，从此销量就定在了1356 万台这个数字上。所以根据访谈中开发团队透露在2016年就接到了移植到新主机的任务。所以我们最终才在2017年3月发现荒野之息成为了Nintendo  Switch的护航之作（虽然有Wii U版本，但是已经不重要了）。</p>
 <p>熟悉主机行业的朋友应该很清楚，一款足够优秀的游戏是主机销量的强心剂。一台主机只有拥有足够多的优秀游戏才能让足够多的人购买。从而平台才可以用销量让游戏开发商为自己平台开发游戏。</p>
 <p>主机商业模式可以查看我之前的文章。</p>
@@ -51,23 +51,23 @@
 <p>任天堂开发团队重新审视了过去的塞尔达系列。看着初代塞尔达由一个一个关卡组合出来的世界，他们找到了自己的答案——「open air」（开放世界）</p>
 <p>开放世界是当前游戏行业最热门的类型，似乎你一个游戏不是开放世界就Out了。</p>
 <p>那么</p>
-<h4 id="什么是开放世界？"><a href="#什么是开放世界？" class="headerlink" title="什么是开放世界？"></a>什么是开放世界？</h4><p>任天堂的答案是：</p>
+<h3 id="什么是开放世界？"><a href="#什么是开放世界？" class="headerlink" title="什么是开放世界？"></a>什么是开放世界？</h3><p>任天堂的答案是：</p>
 <ul>
 <li><p>没有任何强制你去做的主线。</p>
 <p>no checklist</p>
 </li>
 <li><p>可以攀爬，越过的障碍。</p>
-<p>可以爬墙爬山，只要你体力or药剂足够。</p>
+<p>这个世界只要你觉得能上去，那就肯定有办法上去。可以爬墙爬山，只要你体力or药剂足够。</p>
 </li>
 <li><p>丰富多彩的支线。</p>
 <p>多到让人害怕，我不敢想这要花多少时间。</p>
 </li>
 <li><p>耳目一新的物理引擎和化学引擎。</p>
 <p>让物体之间相互作用创造出无数种玩法，关键是它符合你的直觉。</p>
+<p>你可以拿炸药桶去炸怪物；你可以看着风向点把火烧过去。但是不要在高温的地方用炸弹箭哦！</p>
 </li>
-<li><p>​wo</p>
-</li>
-</ul>]]></content>
+</ul>
+<p>塞尔达给你一个开放世界，一个可以自由操作，完全符合你只直觉的世界。所以在这一作塞尔达和核心大概就是<strong>自由</strong></p>]]></content>
     
     <summary type="html">
     
